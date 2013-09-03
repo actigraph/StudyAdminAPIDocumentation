@@ -12,7 +12,7 @@ Authorized Request
 All requests will be authorized by including the HTTP authorization header.  The scheme will be "AGS" to indicate ActiGraph's proprietary means of request formatting before implementing [HMAC](http://tools.ietf.org/html/rfc2104) [SHA256](http://tools.ietf.org/html/rfc4634).  The parameter is your access key followed by a colon followed by the signature.  See the following example:
 
     GET /v1/studies HTTP/1.1
-    Host: api.studyadmin.actigraphcorp.com
+    Host: studyadmin-api.actigraphcorp.com
     Date: Mon, 26 Mar 2007 19:37:58 +0000
     
     Authorization: AGS AKIAIOSFODNN7EXAMPLE:frJIUN8DYpKDtOLCwo//yllqDzg=
@@ -27,22 +27,20 @@ Following is pseudogrammar that illustrates the construction of the Authorizatio
     	Date + "\n" +
     	CanonicalizedResource;
 
-    Authorization = "AGS" + " " + AccessKey + ":" + Signature;
+    CanonicalizedResource = <HTTP-Request-URI, from the protocol name up to the query string>;
 
     Signature = Base64( HMAC-SHA256( AccessKey, UTF-8-Encoding-Of( StringToSign ) ) );
 
-    CanonicalizedResource = [ "/" + Bucket ] +
-    	<HTTP-Request-URI, from the protocol name up to the query string> +
-    	[ subresource, if present. For example "?timesync"];
+    Authorization = "AGS" + " " + AccessKey + ":" + Signature;
 
 ###Example 1
     GET /v1/studies HTTP/1.1
-    Host: api.studyadmin.actigraphcorp.com
+    Host: studyadmin-api.actigraphcorp.com
     Date: Tue, 27 Mar 2007 19:36:42 +0000
 
     Authorization: AWS AKIAIOSFODNN7EXAMPLE:frJIUN8DYpKDtOLCwo//yllqDzg=
 
-    StringToSign = "GET\n\n\nTue, 27 Mar 2007 19:36:42 +0000\n/v1/studies";
+    StringToSign = "GET\n\n\nTue, 27 Mar 2007 19:36:42 +0000\nhttps://studyadmin-api.actigraphcorp.com/v1/studies";
 
 ###Using Base64 Encoding
 
