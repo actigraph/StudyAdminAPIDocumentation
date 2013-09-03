@@ -1,7 +1,7 @@
 Study Admin API v1
 ===============
 
-The ActiGraph Study Admin API provides access to the same data and features that can be accessed in the [Study Admin](http://studyadmin.actigraphcorp.com) system.
+The ActiGraph Study Admin API provides access to the same core study and de-identified subject data that can be accessed in the [Study Admin](http://studyadmin.actigraphcorp.com) Web Portal.
 
 Enabling API Access
 -------------------
