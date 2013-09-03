@@ -21,3 +21,8 @@ Endpoints
 ---------
  * [Studies](sections/studies.md)
  * [Subjects](sections/subjects.md)
+ * 
+
+Limits
+------
+A maximum requests per day may exist.  Contact [sales@actigraphcorp.com](mailto:sales@actigraphcorp.com) for details.
