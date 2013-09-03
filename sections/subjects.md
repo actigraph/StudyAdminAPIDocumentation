@@ -58,6 +58,20 @@ Returns statistics about the requested subject.
         "FirstDayOfData": "2013-03-21T00:00:00",
         "LastDayOfData": "2013-08-20T00:00:00",
         "TotalDays": 153,
+        "WearFilteredBouts": "[
+            {"Name":"10 minutes or more","Count":213},
+            {"Name":"20 minutes or more","Count":73},
+            {"Name":"30 minutes or more","Count":24},
+            {"Name":"40 minutes or more","Count":41}
+        ]",
+        "WearFilteredCutpoints": "[
+            {"Name":"Sedentary","Count":132155},
+            {"Name":"Light","Count"9233},
+            {"Name":"Lifestyle","Count":10324},
+            {"Name":"Moderate","Count":10144},
+            {"Name":"Vigorous","Count":0},
+            {"Name":"Very Vigorous","Count":0}
+        ]",
     }
 
 Get daily stats for a subject
