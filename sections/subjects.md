@@ -1,16 +1,40 @@
 Subjects
 ===
 
-Get all subjects
+Get all subjects (in context of a study)
 ---
 
-A list of subjects can only be obtained within the context of a study. Refer to the [Study](studies.md#get-all-subjects-within-a-study) documentation.
+A list of subjects can only be obtained within the context of a study.
+
+* `GET /v1/studies/{id}/subjects` returns a list of all subjects within the requested study
+
+**Response:**
+
+    [
+        {
+			"Id":123,
+			"SubjectIdentifier": "013001",
+			"DOB": "1974-02-11T00:00:00",
+			"Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+			"Gender": "Female",
+			"WearPosition": "Left Wrist"
+        },
+        {
+			"Id":125,
+			"SubjectIdentifier": "013002",
+			"DOB": "1988-07-14T00:00:00",
+			"Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+			"Gender": "Male",
+			"WearPosition": "Right Wrist"
+        },
+        ...
+    ]
 
 Get a subject
 ---
 Returns detailed information about the requested subject.
 
-* `GET /v1/subjects/#{id}`
+* `GET /v1/subjects/{id}`
 
 **Response:**
 
@@ -25,7 +49,7 @@ Get overall stats for a subject
 ---
 Returns statistics about the requested subject.
 
-* `GET /v1/subjects/#{id}/stats`
+* `GET /v1/subjects/{id}/stats`
 
 **Response:**
 
@@ -78,11 +102,11 @@ Get daily stats for a subject
 ---
 Returns daily-level statistics about the requested subject.
 
-* `GET /v1/subjects/#{id}/daystats`
+* `GET /v1/subjects/{id}/daystats`
 
 **Response:**
 
-    {[
+    [
         {
             "Date": "2013-03-21T00:00:00",
             "Bouts": "[
@@ -125,31 +149,48 @@ Returns daily-level statistics about the requested subject.
             "WearMinutes": 0,
         },
         ...
-    ]}
+    ]
 
 Get daily minutes for a subject
 ---
 Returns daily-level minute epochs about the requested subject.
 
-* `GET /v1/subjects/#{id}/dayminutes`
+* `GET /v1/subjects/{id}/dayminutes/{day}`
+
+**Note:** Format of {day} is "yyyy-MM-dd" Examples: `2012-12-01` and Dec. 1, 2012 and `2012-01-30` for Jan. 30, 2013.
 
 **Response:**
 
-    {[
+    [
         {
-            "Timestamp": "2013-07-14T00:00:00",
-            "Calories": :0.0,
-            "DownProjectedCounts": 0.0,
-            "DownX": 0.992125984251969,
-            "DownY": 0.047244094488189,
-            "DownZ": -0.102362204724409,
+            "Timestamp": "2013-03-21T16:59:00",
+            "Calories": 6.88872851708981,
+            "DownProjectedCounts": 3972.0,
+            "DownX": -0.68503937007874,
+            "DownY": 0.181102362204724,
+            "DownZ": 0.700787401574803,
             "HR": 0.0,
-            "Lux": 9.0,
-            "Steps": 123,
-            "Wear": 1,
-            "x": 0,
-            "y": 0,
-            "z": 0
+            "Lux": 46.0,
+            "Steps": 45.0,
+            "Wear": true,
+            "x": 4922,
+            "y": 4392,
+            "z": 3775
+        },
+        {
+            "Timestamp": "2013-03-21T17:00:00",
+            "Calories": 6.91655624935538,
+            "DownProjectedCounts": 4765.0,
+            "DownX": -0.322834645669291,
+            "DownY": 0.259842519685039,
+            "DownZ": 0.913385826771654,
+            "HR": 0.0,
+            "Lux": 37.0,
+            "Steps": 67.0,
+            "Wear": true,
+            "x": 5424,
+            "y": 5222,
+            "z": 5031
         },
         ...
-    ]}
+    ]
