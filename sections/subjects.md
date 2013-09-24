@@ -111,14 +111,33 @@ Returns daily-level statistics about the requested subject.
             "Date": "2013-04-15T00:00:00",
             "Bouts": [{"Name":"10 minutes or more","Count":3},{"Name":"20 minutes or more","Count":0},{"Name":"30 minutes or more","Count":0},{"Name":"40 minutes or more","Count":0}],
             "Calories": 1601.1461012482916,
-            "Cutpoints": [{"Name":"Sedentary","Count":912},{"Name":"Light","Count":224},{"Name":"Lifestyle","Count":201},{"Name":"Moderate","Count":101},{"Name":"Vigorous","Count":0},{"Name":"Very Vigorous","Count":0}],
+            "Cutpoints": [
+                { "Name":"Sedentary", "Count":912},
+                { "Name":"Light", "Count":224 },
+                { "Name":"Lifestyle", "Count":201 },
+                { "Name":"Moderate", "Count":101 },
+                { "Name":"Vigorous", "Count":0 },
+                { "Name":"Very Vigorous", "Count":0 }
+            ],
             "DownProjectedCounts": 868621.0,
             "Epochs": 1440,
             "MVPA": 101,
             "Steps": 14287.0,
-            "WearFilteredBouts": [{"Name":"10 minutes or more","Count":3},{"Name":"20 minutes or more","Count":0},{"Name":"30 minutes or more","Count":0},{"Name":"40 minutes or more","Count":0}],
+            "WearFilteredBouts": [
+                { "Name":"10 minutes or more", "Count":3 },
+                { "Name":"20 minutes or more", "Count":0 },
+                { "Name":"30 minutes or more", "Count":0 },
+                { "Name":"40 minutes or more", "Count":0 }
+            ],
             "WearFilteredCalories": 1601.1461012482916,
-            "WearFilteredCutPoints": [{"Name":"Sedentary","Count":214},{"Name":"Light","Count":224},{"Name":"Lifestyle","Count":201},{"Name":"Moderate","Count":101},{"Name":"Vigorous","Count":0},{"Name":"Very Vigorous","Count":0}],
+            "WearFilteredCutPoints": [
+                { "Name":"Sedentary", "Count":214 },
+                { "Name":"Light", "Count":224 },
+                { "Name":"Lifestyle","Count":201 },
+                { "Name":"Moderate", "Count":101 },
+                { "Name":"Vigorous", "Count":0 },
+                { "Name":"Very Vigorous","Count":0 }
+            ],
             "WearFilteredDownProjectedCounts": 867791.0,
             "WearFilteredMVPA": 101,
             "WearFilteredSteps": 14284.0,
@@ -126,16 +145,40 @@ Returns daily-level statistics about the requested subject.
         },
         {
             "Date": "2013-04-16T00:00:00",
-            "Bouts": [{"Name":"10 minutes or more","Count":2},{"Name":"20 minutes or more","Count":0},{"Name":"30 minutes or more","Count":1},{"Name":"40 minutes or more","Count":0}],
+            "Bouts": [
+                { "Name":"10 minutes or more", "Count":2 },
+                { "Name":"20 minutes or more", "Count":0 },
+                { "Name":"30 minutes or more", "Count":1 },
+                { "Name":"40 minutes or more", "Count":0 }
+            ],
             "Calories": 1819.3762418797176,
-            "Cutpoints": [{"Name":"Sedentary","Count":984},{"Name":"Light","Count":151},{"Name":"Lifestyle","Count":157},{"Name":"Moderate","Count":148},{"Name":"Vigorous","Count":0},{"Name":"Very Vigorous","Count":0}],
+            "Cutpoints": [
+                { "Name":"Sedentary", "Count":984 },
+                { "Name":"Light", "Count":151 },
+                { "Name":"Lifestyle", "Count":157 },
+                { "Name":"Moderate", "Count":148 },
+                { "Name":"Vigorous", "Count":0 },
+                { "Name":"Very Vigorous", "Count":0 }
+            ],
             "DownProjectedCounts": 1057931.0,
             "Epochs": 1440,
             "MVPA": 148,
             "Steps": 17365.0,
-            "WearFilteredBouts": [{"Name":"10 minutes or more","Count":2},{"Name":"20 minutes or more","Count":0},{"Name":"30 minutes or more","Count":1},{"Name":"40 minutes or more","Count":0}],
+            "WearFilteredBouts": [
+                { "Name":"10 minutes or more", "Count":2 },
+                { "Name":"20 minutes or more", "Count":0 },
+                { "Name":"30 minutes or more", "Count":1 },
+                { "Name":"40 minutes or more", "Count":0 }
+            ],
             "WearFilteredCalories": 1819.3707163288436,
-            "WearFilteredCutPoints": [{"Name":"Sedentary","Count":186},{"Name":"Light","Count":151},{"Name":"Lifestyle","Count":157},{"Name":"Moderate","Count":148},{"Name":"Vigorous","Count":0},{"Name":"Very Vigorous","Count":0}],
+            "WearFilteredCutPoints": [
+                { "Name":"Sedentary", "Count":186 },
+                { "Name":"Light", "Count":151 },
+                { "Name":"Lifestyle", "Count":157 },
+                { "Name":"Moderate", "Count":148 },
+                { "Name":"Vigorous", "Count":0 },
+                { "Name":"Very Vigorous", "Count":0 }
+            ],
             "WearFilteredDownProjectedCounts": 1057078.0,
             "WearFilteredMVPA": 148,
             "WearFilteredSteps": 17363.0,
