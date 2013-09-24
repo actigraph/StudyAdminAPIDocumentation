@@ -21,7 +21,6 @@ Endpoints
 ---------
  * [Studies](sections/studies.md)
  * [Subjects](sections/subjects.md)
- * 
 
 Limits
 ------
