@@ -12,20 +12,20 @@ A list of subjects can only be obtained within the context of a study.
 
     [
         {
-			"Id":123,
-			"SubjectIdentifier": "013001",
-			"DOB": "1974-02-11T00:00:00",
-			"Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
-			"Gender": "Female",
-			"WearPosition": "Left Wrist"
+            "Id":123,
+            "SubjectIdentifier": "013001",
+            "DOB": "1974-02-11T00:00:00",
+            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+            "Gender": "Female",
+            "WearPosition": "Left Wrist"
         },
         {
-			"Id":125,
-			"SubjectIdentifier": "013002",
-			"DOB": "1988-07-14T00:00:00",
-			"Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
-			"Gender": "Male",
-			"WearPosition": "Right Wrist"
+            "Id":125,
+            "SubjectIdentifier": "013002",
+            "DOB": "1988-07-14T00:00:00",
+            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+            "Gender": "Male",
+            "WearPosition": "Right Wrist"
         },
         ...
     ]
@@ -43,6 +43,8 @@ Returns detailed information about the requested subject.
         "SubjectIdentifier": "013001",
         "DOB": "1974-02-11T00:00:00",
         "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+        "Gender": "Female",
+        "WearPosition": "Left Wrist"
     }
 
 Get overall stats for a subject
