@@ -125,6 +125,7 @@ Returns daily-level statistics about the requested subject.
             "Epochs": 1440,
             "MVPA": 101,
             "Steps": 14287.0,
+            "TotalMinutes": 1440,
             "WearFilteredBouts": [
                 { "Name":"10 minutes or more", "Count":3 },
                 { "Name":"20 minutes or more", "Count":0 },
@@ -166,6 +167,7 @@ Returns daily-level statistics about the requested subject.
             "Epochs": 1440,
             "MVPA": 148,
             "Steps": 17365.0,
+            "TotalMinutes": 1440,
             "WearFilteredBouts": [
                 { "Name":"10 minutes or more", "Count":2 },
                 { "Name":"20 minutes or more", "Count":0 },
