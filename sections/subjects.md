@@ -279,3 +279,27 @@ Returns a range of minute epochs about the requested subject where each is denot
         },
         ...
     ]
+
+
+Get sleep score for a subject
+---
+Returns the score of a subject's data over a sleep period.
+
+* `GET /v1/subjects/{id}/sleepscore?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}`
+
+**Response:**
+
+    {
+        "InBedTime": "2013-03-21T20:00:00",
+        "OutBedTime": "2013-03-22T06:30:00",
+        "Onset": "2013-03-21T20:00:00",
+        "LatencyInMinutes": 0.0,
+        "AvgAwakeningInMinutes": 0.0,
+        "AwakeningCount": 0.0,
+        "Efficiency": 1.0,
+        "TimeAsleepInMinutes": 631.0,
+        "TimeAwakeInMinutes": 0.0,
+        "TimeInBedInMinutes": 631.0,
+        "WakeAfterOnsetInMinutes": 0.0,
+        "TotalCounts": 20
+    }
