@@ -40,7 +40,7 @@ Following is pseudogrammar that illustrates the construction of the Authorizatio
 
     Authorization: AWS AKIAIOSFODNN7EXAMPLE:frJIUN8DYpKDtOLCwo//yllqDzg=
 
-    StringToSign = "GET\n\n\nTue, 27 Mar 2007 19:36:42 +0000\nhttps://studyadmin-api.actigraphcorp.com/v1/studies";
+    StringToSign = "GET\n\n\n2007-03-27T19:36:42Z\nhttps://studyadmin-api.actigraphcorp.com/v1/studies";
 
 ###Using Base64 Encoding
 
