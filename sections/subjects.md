@@ -234,3 +234,48 @@ Returns daily-level minute epochs about the requested subject.
         },
         ...
     ]
+
+
+Get sleep epochs for a subject
+---
+Returns a range of minute epochs about the requested subject where each is denoted if the subject is asleep or not.
+
+* `GET /v1/subjects/{id}/sleepepochs?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}`
+
+**Response:**
+
+    [
+        {
+            "Timestamp": "2013-03-21T16:59:00",
+            "Calories": 6.88872851708981,
+            "DownProjectedCounts": 3972.0,
+            "DownX": -0.68503937007874,
+            "DownY": 0.181102362204724,
+            "DownZ": 0.700787401574803,
+            "HR": 0.0,
+            "Lux": 46.0,
+            "Steps": 45.0,
+            "Wear": true,
+            "Sleep": false,
+            "x": 4922,
+            "y": 4392,
+            "z": 3775
+        },
+        {
+            "Timestamp": "2013-03-21T17:00:00",
+            "Calories": 6.91655624935538,
+            "DownProjectedCounts": 4765.0,
+            "DownX": -0.322834645669291,
+            "DownY": 0.259842519685039,
+            "DownZ": 0.913385826771654,
+            "HR": 0.0,
+            "Lux": 37.0,
+            "Steps": 67.0,
+            "Wear": true,
+            "Sleep": false,
+            "x": 5424,
+            "y": 5222,
+            "z": 5031
+        },
+        ...
+    ]
