@@ -236,7 +236,7 @@ Returns daily-level minute epochs about the requested subject.
     ]
 
 
-Get sleep epochs for a subject
+Get sleep epochs for a subject [v1.1]
 ---
 Returns a range of minute epochs about the requested subject where each is denoted if the subject is asleep or not.
 
@@ -280,8 +280,7 @@ Returns a range of minute epochs about the requested subject where each is denot
         ...
     ]
 
-
-Get sleep score for a subject
+Get sleep score for a subject [v1.1]
 ---
 Returns the score of a subject's data over a sleep period.
 
@@ -303,3 +302,34 @@ Returns the score of a subject's data over a sleep period.
         "WakeAfterOnsetInMinutes": 0.0,
         "TotalCounts": 20
     }
+
+Get bout periods for a subject [v1.2]
+---
+Returns a list of bout periods for a range of subject's data.
+
+* `GET /v1/subjects/{id}/bouts?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}`
+
+**Response:**
+
+    {
+        "WearFilteredBouts": [
+            {
+                "Start": "2013-03-21T12:00:00",
+                "Stop": "2013-03-21T12:17:00"
+            },
+            {
+                "Start": "2013-03-21T12:25:00",
+                "Stop": "2013-03-22T12:35:00"
+            }
+        ],
+        "NonWearFilteredBouts": [
+            {
+                "Start": "2013-03-21T12:00:00",
+                "Stop": "2013-03-21T12:17:00"
+            },
+            {
+                "Start": "2013-03-21T12:25:00",
+                "Stop": "2013-03-22T12:35:00"
+            }
+        ]
+    ]
