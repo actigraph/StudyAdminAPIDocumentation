@@ -305,7 +305,7 @@ Returns the score of a subject's data over a sleep period.
 
 Get bout periods for a subject [v1.2]
 ---
-Returns a list of bout periods for a range of subject's data.
+Returns a list of wear filtered and non-wear filtered bout periods for a range of subject's data.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
 
 * `GET /v1/subjects/{id}/bouts?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}`
 
