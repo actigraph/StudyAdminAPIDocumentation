@@ -333,3 +333,34 @@ Returns a list of bout periods for a range of subject's data.
             }
         ]
     ]
+
+##Get bed times for a subject [v1.3]
+
+ Returns a list of bed times for a subject.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
+
+* `GET /v1/subjects/{id}/bedtimes?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}`
+
+**Response:**
+
+    {
+        "WearFilteredBouts": [
+            {
+                "Start": "2013-03-21T12:00:00",
+                "Stop": "2013-03-21T12:17:00"
+            },
+            {
+                "Start": "2013-03-21T12:25:00",
+                "Stop": "2013-03-22T12:35:00"
+            }
+        ],
+        "NonWearFilteredBouts": [
+            {
+                "Start": "2013-03-21T12:00:00",
+                "Stop": "2013-03-21T12:17:00"
+            },
+            {
+                "Start": "2013-03-21T12:25:00",
+                "Stop": "2013-03-22T12:35:00"
+            }
+        ]
+    ]
