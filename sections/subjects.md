@@ -342,25 +342,16 @@ Returns a list of wear filtered and non-wear filtered bout periods for a range o
 
 **Response:**
 
-    {
-        "WearFilteredBouts": [
-            {
-                "Start": "2013-03-21T12:00:00",
-                "Stop": "2013-03-21T12:17:00"
-            },
-            {
-                "Start": "2013-03-21T12:25:00",
-                "Stop": "2013-03-22T12:35:00"
-            }
-        ],
-        "NonWearFilteredBouts": [
-            {
-                "Start": "2013-03-21T12:00:00",
-                "Stop": "2013-03-21T12:17:00"
-            },
-            {
-                "Start": "2013-03-21T12:25:00",
-                "Stop": "2013-03-22T12:35:00"
-            }
-        ]
+    [
+        {
+            "SubjectId": 114,
+            "InBedTime": "2013-03-21T20:00:00",
+            "OutBedTime": "2013-03-22T08:25:00"
+        },
+        {
+            "SubjectId": 114,
+            "InBedTime": "2013-03-22T20:15:00",
+            "OutBedTime": "2013-03-23T08:05:00"
+        }
+        ...
     ]
