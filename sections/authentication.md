@@ -36,12 +36,6 @@ Following is pseudogrammar that illustrates the construction of the Authorizatio
 ###Example 1
 The following was generated with the access key of "testaccesskey" and the secret key "testsecretkey".
 
-    Request
-    -------
-    GET /v1/studies HTTP/1.1
-    Host: studyadmin-api.actigraphcorp.com
-    Date: {6/19/2014 3:14:31 PM +00:00}
-
     String to Sign
     --------------
     GET\n\n\n2014-06-19T15:14:31Z\nhttps://studyadmin-api.actigraphcorp.com/v1/studies
