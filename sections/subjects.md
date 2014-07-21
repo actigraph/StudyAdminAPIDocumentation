@@ -1,7 +1,7 @@
 Subjects
 ===
 
-Get all subjects (in context of a study)
+Study Subjects
 ---
 
 A list of subjects can only be obtained within the context of a study.
@@ -30,7 +30,7 @@ A list of subjects can only be obtained within the context of a study.
         ...
     ]
 
-Get a subject
+Subject Details
 ---
 Returns detailed information about the requested subject.
 
@@ -47,7 +47,7 @@ Returns detailed information about the requested subject.
         "WearPosition": "Left Wrist"
     }
 
-Get overall stats for a subject
+Subject Stats (overall)
 ---
 Returns statistics about the requested subject.
 
@@ -100,7 +100,7 @@ Returns statistics about the requested subject.
         ]
     }
 
-Get daily stats for a subject
+Subject Day Stats
 ---
 Returns daily-level statistics about the requested subject.
 
@@ -191,7 +191,7 @@ Returns daily-level statistics about the requested subject.
         ...
     ]
 
-Get daily minutes for a subject
+Subject Day Minutes
 ---
 Returns daily-level minute epochs about the requested subject.
 
@@ -236,7 +236,7 @@ Returns daily-level minute epochs about the requested subject.
     ]
 
 
-Get sleep epochs for a subject [v1.1]
+Subject Sleep Epochs [v1.1]
 ---
 Returns a range of minute epochs about the requested subject where each is denoted if the subject is asleep or not.
 
@@ -280,7 +280,7 @@ Returns a range of minute epochs about the requested subject where each is denot
         ...
     ]
 
-Get sleep score for a subject [v1.1]
+Subject Sleep Score [v1.1]
 ---
 Returns the score of a subject's data over a sleep period.
 
@@ -303,7 +303,7 @@ Returns the score of a subject's data over a sleep period.
         "TotalCounts": 20
     }
 
-Get bout periods for a subject [v1.2]
+Subject Bouts [v1.2]
 ---
 Returns a list of wear filtered and non-wear filtered bout periods for a range of subject's data.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
 
@@ -334,8 +334,8 @@ Returns a list of wear filtered and non-wear filtered bout periods for a range o
         ]
     ]
 
-##Get bed times for a subject [v1.3]
-
+Subject Bed Times [v1.3
+---
  Returns a list of bed times for a subject.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
 
 * `GET /v1/subjects/{id}/bedtimes?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}`
