@@ -1,7 +1,7 @@
 Studies
 ===
 
-Get all studies
+List Studies
 ---
 
 * `GET /v1/studies` returns a list of studies that are within your organization
@@ -22,7 +22,7 @@ Get all studies
         ...
     ]
 
-Get a study
+Study Details
 ---
 
 * `GET /v1/studies/{id}` returns detailed information about the requested study
@@ -36,7 +36,7 @@ Get a study
     }
 
 
-Get all subjects within a study
+Study Subjects
 ---
 
 * `GET /v1/studies/{id}/subjects` returns a list of all subjects within the requested study
