@@ -1,7 +1,7 @@
 Studies
 ===
 
-Get all studies
+List Studies
 ---
 
 Returns a list of studies that are within your organization.
@@ -26,7 +26,7 @@ Returns a list of studies that are within your organization.
         ...
     ]
 
-Get a study
+Study Details
 ---
 
 Returns detailed information about the requested study.
@@ -44,7 +44,7 @@ Returns detailed information about the requested study.
     }
 
 
-Get all subjects within a study
+Study Subjects
 ---
 
 Returns a list of all subjects within the requested study.

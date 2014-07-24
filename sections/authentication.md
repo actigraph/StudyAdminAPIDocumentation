@@ -34,13 +34,15 @@ Following is pseudogrammar that illustrates the construction of the Authorizatio
     Authorization = "AGS" + " " + AccessKey + ":" + Signature;
 
 ###Example 1
-    GET /v1/studies HTTP/1.1
-    Host: studyadmin-api.actigraphcorp.com
-    Date: Tue, 27 Mar 2007 19:36:42 +0000
+The following was generated with the access key of "testaccesskey" and the secret key "testsecretkey".
 
-    Authorization: AWS AKIAIOSFODNN7EXAMPLE:frJIUN8DYpKDtOLCwo//yllqDzg=
+    String to Sign
+    --------------
+    GET\n\n\n2014-06-19T15:14:31Z\nhttps://studyadmin-api.actigraphcorp.com/v1/studies
 
-    StringToSign = "GET\n\n\n2007-03-27T19:36:42Z\nhttps://studyadmin-api.actigraphcorp.com/v1/studies";
+    Request "Authorization" Header Value
+    ------------------------------------
+    AGS testaccesskey:J+9FTQTAkfGmUsaRmB/HBMJOXG+4Xqbo3drXBVQwZ4o=
 
 ###Using Base64 Encoding
 
