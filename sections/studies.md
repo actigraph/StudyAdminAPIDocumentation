@@ -4,7 +4,11 @@ Studies
 Get all studies
 ---
 
-* `GET /v1/studies` returns a list of studies that are within your organization
+Returns a list of studies that are within your organization.
+
+**Request:**
+
+    GET /v1/studies
 
 **Response:**
 
@@ -25,7 +29,11 @@ Get all studies
 Get a study
 ---
 
-* `GET /v1/studies/{id}` returns detailed information about the requested study
+Returns detailed information about the requested study.
+
+**Request:**
+
+    GET /v1/studies/{id}
 
 **Response:**
 
@@ -39,7 +47,11 @@ Get a study
 Get all subjects within a study
 ---
 
-* `GET /v1/studies/{id}/subjects` returns a list of all subjects within the requested study
+Returns a list of all subjects within the requested study.
+
+**Request:**
+
+    GET /v1/studies/{id}/subjects
 
 **Response:**
 

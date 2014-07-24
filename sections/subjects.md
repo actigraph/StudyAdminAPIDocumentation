@@ -6,7 +6,9 @@ Get all subjects (in context of a study)
 
 A list of subjects can only be obtained within the context of a study.
 
-* `GET /v1/studies/{id}/subjects` returns a list of all subjects within the requested study
+**Request:**
+
+    GET /v1/studies/{id}/subjects
 
 **Response:**
 
@@ -34,7 +36,9 @@ Get a subject
 ---
 Returns detailed information about the requested subject.
 
-* `GET /v1/subjects/{id}`
+**Request:**
+
+    GET /v1/subjects/{id}
 
 **Response:**
 
@@ -51,7 +55,9 @@ Get overall stats for a subject
 ---
 Returns statistics about the requested subject.
 
-* `GET /v1/subjects/{id}/stats`
+**Request:**
+
+    GET /v1/subjects/{id}/stats
 
 **Response:**
 
@@ -104,7 +110,9 @@ Get daily stats for a subject
 ---
 Returns daily-level statistics about the requested subject.
 
-* `GET /v1/subjects/{id}/daystats`
+**Request:**
+
+    GET /v1/subjects/{id}/daystats
 
 **Response:**
 
@@ -195,7 +203,9 @@ Get daily minutes for a subject
 ---
 Returns daily-level minute epochs about the requested subject.
 
-* `GET /v1/subjects/{id}/dayminutes/{day}`
+**Request:**
+
+    GET /v1/subjects/{id}/dayminutes/{day}
 
 **Note:** Format of {day} is "yyyy-MM-dd" Examples: `2012-12-01` and Dec. 1, 2012 and `2012-01-30` for Jan. 30, 2013.
 
@@ -240,7 +250,9 @@ Get sleep epochs for a subject [v1.1]
 ---
 Returns a range of minute epochs about the requested subject where each is denoted if the subject is asleep or not.
 
-* `GET /v1/subjects/{id}/sleepepochs?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}`
+**Request:**
+
+    GET /v1/subjects/{id}/sleepepochs?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}
 
 **Response:**
 
@@ -284,7 +296,9 @@ Get sleep score for a subject [v1.1]
 ---
 Returns the score of a subject's data over a sleep period.
 
-* `GET /v1/subjects/{id}/sleepscore?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}`
+**Request:**
+
+    GET /v1/subjects/{id}/sleepscore?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}
 
 **Response:**
 
@@ -307,7 +321,9 @@ Get bout periods for a subject [v1.2]
 ---
 Returns a list of wear filtered and non-wear filtered bout periods for a range of subject's data.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
 
-* `GET /v1/subjects/{id}/bouts?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}`
+**Request:**
+
+    GET /v1/subjects/{id}/bouts?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}
 
 **Response:**
 
@@ -338,7 +354,9 @@ Returns a list of wear filtered and non-wear filtered bout periods for a range o
 
  Returns a list of bed times for a subject.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
 
-* `GET /v1/subjects/{id}/bedtimes?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}`
+**Request:**
+
+    GET /v1/subjects/{id}/bedtimes?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}
 
 **Response:**
 
