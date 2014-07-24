@@ -57,20 +57,22 @@ Returns a list of all subjects within the requested study.
 
     [
         {
-			"Id":123,
-			"SubjectIdentifier": "013001",
-			"DOB": "1974-02-11T00:00:00",
-			"Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
-			"Gender": "Female",
-			"WearPosition": "Left Wrist"
+            "Id":123,
+            "SubjectIdentifier": "013001",
+            "DOB": "1974-02-11T00:00:00",
+            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+            "Gender": "Female",
+            "WearPosition": "Left Wrist",
+            "WeightLbs": "105.74",
         },
         {
-			"Id":125,
-			"SubjectIdentifier": "013002",
-			"DOB": "1988-07-14T00:00:00",
-			"Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
-			"Gender": "Male",
-			"WearPosition": "Right Wrist"
+            "Id":125,
+            "SubjectIdentifier": "013002",
+            "DOB": "1988-07-14T00:00:00",
+            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+            "Gender": "Male",
+            "WearPosition": "Right Wrist"
+            "WeightLbs": "198",
         },
         ...
     ]
