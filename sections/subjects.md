@@ -4,7 +4,7 @@ Subjects
 Study Subjects
 ---
 
-A list of subjects can only be obtained within the context of a study.
+Returns a list of all subjects within the requested study.
 
 **Request:**
 
@@ -19,7 +19,8 @@ A list of subjects can only be obtained within the context of a study.
             "DOB": "1974-02-11T00:00:00",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
             "Gender": "Female",
-            "WearPosition": "Left Wrist"
+            "WearPosition": "Left Wrist",
+            "WeightLbs": "105.74",
         },
         {
             "Id":125,
@@ -28,6 +29,7 @@ A list of subjects can only be obtained within the context of a study.
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
             "Gender": "Male",
             "WearPosition": "Right Wrist"
+            "WeightLbs": "198",
         },
         ...
     ]
