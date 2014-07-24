@@ -106,6 +106,29 @@ WeightLbs|Number|1|2000|Yes|-
 
     200 OK
 
+Subject Weight History
+---
+Returns all weight entries for a subject.
+
+**Request:**
+
+    GET /v1/subjects/{id}/weighthistory
+
+**Response:**
+
+    200 OK
+    [
+        {
+            "DateAdded": "2013-07-26T15:02:34Z",
+            "WeightLbs": 165.00
+        },
+        {
+            "DateAdded": "2013-08-01T12:09:55Z",
+            "WeightLbs": 173.00
+        },
+        ...
+    ]
+
 Subject Stats (overall)
 ---
 Returns statistics about the requested subject.
