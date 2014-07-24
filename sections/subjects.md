@@ -81,6 +81,31 @@ WeightLbs|Number|1|2000|Yes|-
         "SubjectId":789
     }
 
+Edit Subject
+---
+Modifies an existing subject.  List sites to find out which you can access.  You must have CanEditSubjects=true for a Site in order to edit a subject in it.  A 200 OK response is returned for a successfully edited subject.
+
+**Request:**
+
+    PUT /v1/subjects
+    Content-Type:application/json
+
+    SubjectId=789&SubjectIdentifier=000071&SiteId=224&WearPosition=Waist&DOB=1988-08-01&Gender=Male&WeightLbs=205
+
+Field|Type|Min|Max|Required|Notes
+-----|----|---|---|--------|-----
+DOB|ISO8601 Date|n/a|Yesterday|Yes|Must be before today
+Gender|String|n/a|n/a|Yes|Male, Female
+SiteId|Number|n/a|n/a|Yes|Must have permission
+SubjectId|Number|n/a|n/a|Yes|Must have permission
+SubjectIdentifier|String|1|50|Yes|Unique within study
+WearPosition|String|n/a|n/a|Yes|Left Wrist, Right Wrist, Waist
+WeightLbs|Number|1|2000|Yes|-
+
+**Response:**
+
+    200 OK
+
 Subject Stats (overall)
 ---
 Returns statistics about the requested subject.
