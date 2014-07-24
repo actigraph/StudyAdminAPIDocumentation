@@ -54,6 +54,33 @@ Returns detailed information about the requested subject.
         "WeightLbs": "105.74",
     }
 
+Add Subject
+---
+Creates a new subject.  Subjects are created at the site level.  List sites to find out which you can access.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  The new Subject's Id is returned upon successful creation along with a 201 Created response.
+
+**Request:**
+
+    POST /v1/subjects
+    Content-Type:application/json
+
+    SubjectIdentifier=000071&SiteId=224&WearPosition=Waist&DOB=1988-08-01&Gender=Male&WeightLbs=199
+
+Field|Type|Min|Max|Required|Notes
+-----|----|---|---|--------|-----
+DOB|ISO8601 Date|n/a|Yesterday|Yes|Must be before today
+Gender|String|n/a|n/a|Yes|Male, Female
+SiteId|Number|n/a|n/a|Yes|Must have permission
+SubjectIdentifier|String|1|50|Yes|Unique within study
+WearPosition|String|n/a|n/a|Yes|Left Wrist, Right Wrist, Waist
+WeightLbs|Number|1|2000|Yes|-
+
+**Response:**
+
+    201 Created
+    {
+        "SubjectId":789
+    }
+
 Subject Stats (overall)
 ---
 Returns statistics about the requested subject.
