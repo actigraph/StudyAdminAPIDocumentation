@@ -50,7 +50,8 @@ Returns detailed information about the requested subject.
         "DOB": "1974-02-11T00:00:00",
         "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
         "Gender": "Female",
-        "WearPosition": "Left Wrist"
+        "WearPosition": "Left Wrist",
+        "WeightLbs": "105.74",
     }
 
 Subject Stats (overall)
