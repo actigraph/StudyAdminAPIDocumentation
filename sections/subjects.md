@@ -266,9 +266,6 @@ Returns daily-level minute epochs about the requested subject.
             "AxisXCounts": 4922,
             "AxisYCounts": 4392,
             "AxisZCounts": 3775
-            "x": 4922,
-            "y": 4392,
-            "z": 3775
         },
         ...
     ]
@@ -296,9 +293,6 @@ Returns a range of minute epochs about the requested subject where each is denot
             "AxisXCounts": 4922,
             "AxisYCounts": 4392,
             "AxisZCounts": 3775
-            "x": 4922,
-            "y": 4392,
-            "z": 3775
         },
         ...
     ]
