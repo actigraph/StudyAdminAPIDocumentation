@@ -20,6 +20,7 @@ Refer to the [Authentication](sections/authentication.md) section for specifics 
 Endpoints
 ---------
  * [Studies](sections/studies.md) Logical structures for grouping data for one or more subjects.
+ * [Sites](sections/sites.md) Physical/geographical locations within studies.
  * [Subjects](sections/subjects.md) Participants in studies.
 
 Limits
