@@ -141,11 +141,9 @@ Returns statistics about the requested subject.
 
     {
         "AverageDailyCalories": 1095.6042426509321,
-        "AverageDailyCounts": 633700.5,
         "AverageDailyMVPA": 88.6721,
         "AverageDailySteps": 9558.4590163934427,
         "AverageDailyWearFilteredCalories": 1095.5866411630786,
-        "AverageDailyWearFilteredCounts": 632821.61475409835,
         "AverageDailyWearFilteredMVPA": 88.6721,
         "AverageDailyWearFilteredSteps": 9550.1557377049176,
         "AverageWearPercentage": 28.32022974,
@@ -207,7 +205,6 @@ Returns daily-level statistics about the requested subject.
                 { "Name":"Vigorous", "Count":0 },
                 { "Name":"Very Vigorous", "Count":0 }
             ],
-            "DownProjectedCounts": 868621.0,
             "Epochs": 1440,
             "MVPA": 101,
             "Steps": 14287.0,
@@ -227,7 +224,6 @@ Returns daily-level statistics about the requested subject.
                 { "Name":"Vigorous", "Count":0 },
                 { "Name":"Very Vigorous","Count":0 }
             ],
-            "WearFilteredDownProjectedCounts": 867791.0,
             "WearFilteredMVPA": 101,
             "WearFilteredSteps": 14284.0,
             "WearMinutes": 742
@@ -249,7 +245,6 @@ Returns daily-level statistics about the requested subject.
                 { "Name":"Vigorous", "Count":0 },
                 { "Name":"Very Vigorous", "Count":0 }
             ],
-            "DownProjectedCounts": 1057931.0,
             "Epochs": 1440,
             "MVPA": 148,
             "Steps": 17365.0,
@@ -269,7 +264,6 @@ Returns daily-level statistics about the requested subject.
                 { "Name":"Vigorous", "Count":0 },
                 { "Name":"Very Vigorous", "Count":0 }
             ],
-            "WearFilteredDownProjectedCounts": 1057078.0,
             "WearFilteredMVPA": 148,
             "WearFilteredSteps": 17363.0,
             "WearMinutes": 642
@@ -293,10 +287,6 @@ Returns daily-level minute epochs about the requested subject.
         {
             "Timestamp": "2013-03-21T16:59:00",
             "Calories": 6.88872851708981,
-            "DownProjectedCounts": 3972.0,
-            "DownX": -0.68503937007874,
-            "DownY": 0.181102362204724,
-            "DownZ": 0.700787401574803,
             "HR": 0.0,
             "Lux": 46.0,
             "Steps": 45.0,
@@ -308,10 +298,6 @@ Returns daily-level minute epochs about the requested subject.
         {
             "Timestamp": "2013-03-21T17:00:00",
             "Calories": 6.91655624935538,
-            "DownProjectedCounts": 4765.0,
-            "DownX": -0.322834645669291,
-            "DownY": 0.259842519685039,
-            "DownZ": 0.913385826771654,
             "HR": 0.0,
             "Lux": 37.0,
             "Steps": 67.0,
@@ -338,10 +324,6 @@ Returns a range of minute epochs about the requested subject where each is denot
         {
             "Timestamp": "2013-03-21T16:59:00",
             "Calories": 6.88872851708981,
-            "DownProjectedCounts": 3972.0,
-            "DownX": -0.68503937007874,
-            "DownY": 0.181102362204724,
-            "DownZ": 0.700787401574803,
             "HR": 0.0,
             "Lux": 46.0,
             "Steps": 45.0,
@@ -354,10 +336,6 @@ Returns a range of minute epochs about the requested subject where each is denot
         {
             "Timestamp": "2013-03-21T17:00:00",
             "Calories": 6.91655624935538,
-            "DownProjectedCounts": 4765.0,
-            "DownX": -0.322834645669291,
-            "DownY": 0.259842519685039,
-            "DownZ": 0.913385826771654,
             "HR": 0.0,
             "Lux": 37.0,
             "Steps": 67.0,
