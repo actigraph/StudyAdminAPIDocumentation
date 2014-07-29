@@ -146,6 +146,9 @@ Returns statistics about the requested subject.
         "AverageDailyWearFilteredCalories": 1095.5866411630786,
         "AverageDailyWearFilteredMVPA": 88.6721,
         "AverageDailyWearFilteredSteps": 9550.1557377049176,
+        "AxisXAverageDailyCounts": 4411.156774332323,
+        "AxisYAverageDailyCounts": 1286.232321552524,
+        "AxisZAverageDailyCounts": 1900.443311432239,
         "AverageWearPercentage": 28.32022974,
         "Bouts": [
             { "Name":"10 minutes or more", "Count":194 },
@@ -166,6 +169,9 @@ Returns statistics about the requested subject.
         "FirstDayOfData": "2013-03-21T00:00:00",
         "LastDayOfData": "2013-08-04T00:00:00",
         "TotalDays": 137,
+        "WearFilteredAxisXAverageDailyCounts": 3876.156774332323,
+        "WearFilteredAxisYAverageDailyCounts": 999.232321552524,
+        "WearFilteredAxisZAverageDailyCounts": 1645.443311432239,
         "WearFilteredBouts": [
             { "Name":"10 minutes or more", "Count":194 },
             { "Name":"20 minutes or more", "Count":54 },
@@ -193,8 +199,11 @@ Returns daily-level statistics about the requested subject.
 **Response:**
 
     [
-        {   
+        {
             "Date": "2013-04-15T00:00:00",
+            "AxisXCounts": "44144",
+            "AxisYCounts": "38873",
+            "AxisZCounts": "11123",
             "Bouts": [{"Name":"10 minutes or more","Count":3},{"Name":"20 minutes or more","Count":0},{"Name":"30 minutes or more","Count":0},{"Name":"40 minutes or more","Count":0}],
             "Calories": 1601.1461012482916,
             "Cutpoints": [
@@ -209,6 +218,9 @@ Returns daily-level statistics about the requested subject.
             "MVPA": 101,
             "Steps": 14287.0,
             "TotalMinutes": 1440,
+            "WearFilteredAxisXCounts": "37888",
+            "WearFilteredAxisYCounts": "32443",
+            "WearFilteredAxisZCounts": "9123",
             "WearFilteredBouts": [
                 { "Name":"10 minutes or more", "Count":3 },
                 { "Name":"20 minutes or more", "Count":0 },
@@ -227,46 +239,6 @@ Returns daily-level statistics about the requested subject.
             "WearFilteredMVPA": 101,
             "WearFilteredSteps": 14284.0,
             "WearMinutes": 742
-        },
-        {
-            "Date": "2013-04-16T00:00:00",
-            "Bouts": [
-                { "Name":"10 minutes or more", "Count":2 },
-                { "Name":"20 minutes or more", "Count":0 },
-                { "Name":"30 minutes or more", "Count":1 },
-                { "Name":"40 minutes or more", "Count":0 }
-            ],
-            "Calories": 1819.3762418797176,
-            "Cutpoints": [
-                { "Name":"Sedentary", "Count":984 },
-                { "Name":"Light", "Count":151 },
-                { "Name":"Lifestyle", "Count":157 },
-                { "Name":"Moderate", "Count":148 },
-                { "Name":"Vigorous", "Count":0 },
-                { "Name":"Very Vigorous", "Count":0 }
-            ],
-            "Epochs": 1440,
-            "MVPA": 148,
-            "Steps": 17365.0,
-            "TotalMinutes": 1440,
-            "WearFilteredBouts": [
-                { "Name":"10 minutes or more", "Count":2 },
-                { "Name":"20 minutes or more", "Count":0 },
-                { "Name":"30 minutes or more", "Count":1 },
-                { "Name":"40 minutes or more", "Count":0 }
-            ],
-            "WearFilteredCalories": 1819.3707163288436,
-            "WearFilteredCutPoints": [
-                { "Name":"Sedentary", "Count":186 },
-                { "Name":"Light", "Count":151 },
-                { "Name":"Lifestyle", "Count":157 },
-                { "Name":"Moderate", "Count":148 },
-                { "Name":"Vigorous", "Count":0 },
-                { "Name":"Very Vigorous", "Count":0 }
-            ],
-            "WearFilteredMVPA": 148,
-            "WearFilteredSteps": 17363.0,
-            "WearMinutes": 642
         },
         ...
     ]
@@ -291,20 +263,12 @@ Returns daily-level minute epochs about the requested subject.
             "Lux": 46.0,
             "Steps": 45.0,
             "Wear": true,
+            "AxisXCounts": 4922,
+            "AxisYCounts": 4392,
+            "AxisZCounts": 3775
             "x": 4922,
             "y": 4392,
             "z": 3775
-        },
-        {
-            "Timestamp": "2013-03-21T17:00:00",
-            "Calories": 6.91655624935538,
-            "HR": 0.0,
-            "Lux": 37.0,
-            "Steps": 67.0,
-            "Wear": true,
-            "x": 5424,
-            "y": 5222,
-            "z": 5031
         },
         ...
     ]
@@ -329,21 +293,12 @@ Returns a range of minute epochs about the requested subject where each is denot
             "Steps": 45.0,
             "Wear": true,
             "Sleep": false,
+            "AxisXCounts": 4922,
+            "AxisYCounts": 4392,
+            "AxisZCounts": 3775
             "x": 4922,
             "y": 4392,
             "z": 3775
-        },
-        {
-            "Timestamp": "2013-03-21T17:00:00",
-            "Calories": 6.91655624935538,
-            "HR": 0.0,
-            "Lux": 37.0,
-            "Steps": 67.0,
-            "Wear": true,
-            "Sleep": false,
-            "x": 5424,
-            "y": 5222,
-            "z": 5031
         },
         ...
     ]
