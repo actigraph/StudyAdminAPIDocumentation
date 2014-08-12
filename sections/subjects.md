@@ -253,6 +253,8 @@ Returns daily-level minute epochs about the requested subject.
 
 **Note:** Format of {day} is "yyyy-MM-dd" Examples: `2012-12-01` and Dec. 1, 2012 and `2012-01-30` for Jan. 30, 2013.
 
+**Note:** x, y and z have been deprecated for AxisXCounts, AxisYCounts and AxisZCounts respectively.
+
 **Response:**
 
     [
@@ -265,7 +267,10 @@ Returns daily-level minute epochs about the requested subject.
             "Wear": true,
             "AxisXCounts": 4922,
             "AxisYCounts": 4392,
-            "AxisZCounts": 3775
+            "AxisZCounts": 3775,
+            "x": 4922,
+            "y": 4392,
+            "z": 3775
         },
         ...
     ]
@@ -278,6 +283,8 @@ Returns a range of minute epochs about the requested subject where each is denot
 **Request:**
 
     GET /v1/subjects/{id}/sleepepochs?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}
+
+**Note:** x, y and z have been deprecated for AxisXCounts, AxisYCounts and AxisZCounts respectively.
 
 **Response:**
 
@@ -292,7 +299,10 @@ Returns a range of minute epochs about the requested subject where each is denot
             "Sleep": false,
             "AxisXCounts": 4922,
             "AxisYCounts": 4392,
-            "AxisZCounts": 3775
+            "AxisZCounts": 3775,
+            "x": 4922,
+            "y": 4392,
+            "z": 3775
         },
         ...
     ]
