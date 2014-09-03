@@ -365,7 +365,7 @@ Returns a list of wear filtered and non-wear filtered bout periods for a range o
         ]
     ]
 
-Subject Bed Times [v1.3
+Subject Bed Times [v1.3]
 ---
  Returns a list of bed times for a subject.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
 
