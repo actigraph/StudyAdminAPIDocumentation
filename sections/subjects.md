@@ -62,8 +62,15 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
 
     POST /v1/subjects
     Content-Type:application/json
-
-    SubjectIdentifier=000071&SiteId=224&WearPosition=Waist&DOB=1988-08-01&Gender=Male&WeightLbs=199
+    {
+        "SubjectIdentifier": "000071",
+        "SiteId": 224,
+        "WearPosition": "Waist",
+        "DOB": "1988-08-01",
+        "Gender": "Male",
+        "WearPosition": "Right Wrist"
+        "WeightLbs": "198",
+    }
 
 Field|Type|Min|Max|Required|Notes
 -----|----|---|---|--------|-----
@@ -89,8 +96,16 @@ Modifies an existing subject.  List sites to find out which you can access.  You
 
     PUT /v1/subjects
     Content-Type:application/json
-
-    SubjectId=789&SubjectIdentifier=000071&SiteId=224&WearPosition=Waist&DOB=1988-08-01&Gender=Male&WeightLbs=205
+    {
+        "SubjectId" : 123,
+        "SubjectIdentifier": "000071",
+        "SiteId": 224,
+        "WearPosition": "Waist",
+        "DOB": "1988-08-01",
+        "Gender": "Male",
+        "WearPosition": "Right Wrist"
+        "WeightLbs": "198",
+    }
 
 Field|Type|Min|Max|Required|Notes
 -----|----|---|---|--------|-----
