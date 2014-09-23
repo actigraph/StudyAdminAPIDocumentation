@@ -25,15 +25,13 @@ Following is pseudogrammar that illustrates the construction of the Authorizatio
     	Content-MD5 + "\n" +
     	Content-Type + "\n" +
     	Date + "\n" +
-    	CanonicalizedResource;
-
-    CanonicalizedResource = <HTTP-Request-URI, from the protocol name up to the query string>;
+    	URLAndQueryString;
 
     Signature = Base64( HMAC-SHA256( AccessKey, UTF-8-Encoding-Of( StringToSign ) ) );
 
     Authorization = "AGS" + " " + AccessKey + ":" + Signature;
 
-###Example 1
+###GET Example
 The following was generated with the access key of "testaccesskey" and the secret key "testsecretkey".
 
     String to Sign
