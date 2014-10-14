@@ -68,7 +68,6 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
         "WearPosition": "Waist",
         "DOB": "1988-08-01",
         "Gender": "Male",
-        "WearPosition": "Right Wrist"
         "WeightLbs": "198",
     }
 
@@ -103,7 +102,6 @@ Modifies an existing subject.  List sites to find out which you can access.  You
         "WearPosition": "Waist",
         "DOB": "1988-08-01",
         "Gender": "Male",
-        "WearPosition": "Right Wrist"
         "WeightLbs": "198",
     }
 
