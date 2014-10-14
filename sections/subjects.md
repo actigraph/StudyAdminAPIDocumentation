@@ -20,7 +20,6 @@ Returns a list of all subjects within the requested study.
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "Gender": "Female",
             "WearPosition": "Left Wrist",
-            "WeightLbs": "105.74",
         },
         {
             "Id":125,
@@ -29,7 +28,6 @@ Returns a list of all subjects within the requested study.
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "Gender": "Male",
             "WearPosition": "Right Wrist"
-            "WeightLbs": "198",
         },
         ...
     ]
