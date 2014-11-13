@@ -117,7 +117,7 @@ SubjectIdentifier|String|n/a|n/a|Yes||Unique within study
 WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", "Waist"|**In accordance with Study settings
 WeightLbs|Number|1|2000|Yes (*site dependent)||
 
-* Depending on the site in which the subject is being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
+*** Depending on the site in which the subject is being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
 
 ** Depending on the site's study settings, the wear postion might be restricted to a single default value ("Left Wrist", "Right Wrist", or "Waist"). 
 
