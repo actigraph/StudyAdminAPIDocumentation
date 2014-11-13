@@ -71,14 +71,16 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
 
 Field|Type|Min|Max|Required|Accepted Values|Notes
 -----|----|---|---|--------|-----------------|-----
-DOB|ISO8601 Date|n/a|day before present day|Yes (site dependent)||must be day before present day
-Gender|String|n/a|n/a|Yes (site dependent)|"Male", "Female"
+DOB|ISO8601 Date|n/a|day before present day|Yes (*site dependent)||must be day before present day
+Gender|String|n/a|n/a|Yes (*site dependent)|"Male", "Female"
 SiteId|Number|n/a|n/a|Yes||Must have permission
 SubjectIdentifier|String|n/a|n/a|Yes| |Unique within study
-WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", or "Waist"| 
-WeightLbs|Number|1|2000|Yes (site dependent)| |
+WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", or "Waist"| **In accordance with Study settings
+WeightLbs|Number|1|2000|Yes (*site dependent)| |
 
-**NOTE:** Depending on the site in which the subject is being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
+***** Depending on the site in which the subject is being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
+
+** Depending on the site's study settings, the wear postion might be restricted to a single default value ("Left Wrist", "Right Wrist", or "Waist"). 
 
 **Response:**
 
@@ -107,15 +109,17 @@ Modifies an existing subject.  List sites to find out which you can access.  You
 
 Field|Type|Min|Max|Required|Accepted Values|Notes
 -----|----|---|---|--------|-----------------|-----
-DOB|ISO8601 Date|n/a|day before present day|Yes (site dependent)||must be day before today
-Gender|String|n/a|n/a|Yes (site dependent)|"Male", "Female"|
+DOB|ISO8601 Date|n/a|day before present day|Yes (*site dependent)||must be day before today
+Gender|String|n/a|n/a|Yes (*site dependent)|"Male", "Female"|
 SiteId|Number|n/a|n/a|Yes||Must have permission
 SubjectId|Number|n/a|n/a|Yes||Must have permission
 SubjectIdentifier|String|n/a|n/a|Yes||Unique within study
 WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", "Waist"|
-WeightLbs|Number|1|2000|Yes (site dependent)|
+WeightLbs|Number|1|2000|Yes (*site dependent)||**In accordance with Study settings
 
-**NOTE:** Depending on the site in which the subject is being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
+***** Depending on the site in which the subject is being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
+
+** Depending on the site's study settings, the wear postion might be restricted to a single default value ("Left Wrist", "Right Wrist", or "Waist"). 
 
 **Response:**
 
