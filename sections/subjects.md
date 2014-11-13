@@ -114,8 +114,8 @@ Gender|String|n/a|n/a|Yes (*site dependent)|"Male", "Female"|
 SiteId|Number|n/a|n/a|Yes||Must have permission
 SubjectId|Number|n/a|n/a|Yes||Must have permission
 SubjectIdentifier|String|n/a|n/a|Yes||Unique within study
-WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", "Waist"|
-WeightLbs|Number|1|2000|Yes (*site dependent)||**In accordance with Study settings
+WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", "Waist"|**In accordance with Study settings
+WeightLbs|Number|1|2000|Yes (*site dependent)||
 
 ***** Depending on the site in which the subject is being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
 
