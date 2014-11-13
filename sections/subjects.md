@@ -17,16 +17,16 @@ Returns a list of all subjects within the requested study.
             "Id":123,
             "SubjectIdentifier": "013001",
             "DOB": "1974-02-11T00:00:00",
+            "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
-            "Gender": "Female",
             "WearPosition": "Left Wrist",
         },
         {
             "Id":125,
             "SubjectIdentifier": "013002",
             "DOB": "1988-07-14T00:00:00",
-            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "Gender": "Male",
+            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Right Wrist"
         },
         ...
@@ -46,8 +46,8 @@ Returns detailed information about the requested subject.
         "Id":123,
         "SubjectIdentifier": "013001",
         "DOB": "1974-02-11T00:00:00",
-        "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
         "Gender": "Female",
+        "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
         "WearPosition": "Left Wrist",
         "WeightLbs": "105.74",
     }
@@ -69,14 +69,16 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
         "WeightLbs": "198",
     }
 
-Field|Type|Min|Max|Required|Notes
------|----|---|---|--------|-----
-DOB|ISO8601 Date|n/a|Yesterday|Yes|Must be before today
-Gender|String|n/a|n/a|Yes|Male, Female
-SiteId|Number|n/a|n/a|Yes|Must have permission
-SubjectIdentifier|String|1|50|Yes|Unique within study
-WearPosition|String|n/a|n/a|Yes|Left Wrist, Right Wrist, Waist
-WeightLbs|Number|1|2000|Yes|-
+Field|Type|Min|Max|Required|Accepted Values|Notes
+-----|----|---|---|--------|-----------------|-----
+DOB|ISO8601 Date|n/a|day before present day|Yes (site dependent)||must be day before present day
+Gender|String|n/a|n/a|Yes (site dependent)|"Male", "Female"
+SiteId|Number|n/a|n/a|Yes||Must have permission
+SubjectIdentifier|String|n/a|n/a|Yes| |Unique within study
+WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", or "Waist"| 
+WeightLbs|Number|1|2000|Yes (site dependent)| |
+
+**NOTE:** Depending on the site in which the subject is being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
 
 **Response:**
 
@@ -103,15 +105,17 @@ Modifies an existing subject.  List sites to find out which you can access.  You
         "WeightLbs": "198",
     }
 
-Field|Type|Min|Max|Required|Notes
------|----|---|---|--------|-----
-DOB|ISO8601 Date|n/a|Yesterday|Yes|Must be before today
-Gender|String|n/a|n/a|Yes|Male, Female
-SiteId|Number|n/a|n/a|Yes|Must have permission
-SubjectId|Number|n/a|n/a|Yes|Must have permission
-SubjectIdentifier|String|1|50|Yes|Unique within study
-WearPosition|String|n/a|n/a|Yes|Left Wrist, Right Wrist, Waist
-WeightLbs|Number|1|2000|Yes|-
+Field|Type|Min|Max|Required|Accepted Values|Notes
+-----|----|---|---|--------|-----------------|-----
+DOB|ISO8601 Date|n/a|day before present day|Yes (site dependent)||must be day before today
+Gender|String|n/a|n/a|Yes (site dependent)|"Male", "Female"|
+SiteId|Number|n/a|n/a|Yes||Must have permission
+SubjectId|Number|n/a|n/a|Yes||Must have permission
+SubjectIdentifier|String|n/a|n/a|Yes||Unique within study
+WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", "Waist"|
+WeightLbs|Number|1|2000|Yes (site dependent)|
+
+**NOTE:** Depending on the site in which the subject is being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
 
 **Response:**
 
