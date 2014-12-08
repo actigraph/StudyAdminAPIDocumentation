@@ -65,7 +65,7 @@ After successfully editing a subject through the ***PUT /v1/subjects*** endpoint
 
 For unsuccessful requests, the status code within response will be within the 400 range which may indicate an action required by API user. These responses may contain error messages in plain text, e.g:
 
-#Example 1#
+###Example 1###
 
 **Request** 
 
@@ -76,7 +76,7 @@ For unsuccessful requests, the status code within response will be within the 40
 	Status: 400 BadRequest
 	Subject Id is invalid
 
-#Example 2#
+###Example 2###
 
 **Request** 
 
@@ -103,7 +103,7 @@ Endpoints
 * [Studies](sections/studies.md) Logical structures for grouping data for one or more subjects.
 * [Sites](sections/sites.md) Physical/geographical locations within studies.
 * [Subjects](sections/subjects.md) Participants in studies.
-* [Subjects](sections/subjects.md) Participants in studies.
+
 
 Request Limiting
 ---------
