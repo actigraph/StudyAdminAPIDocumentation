@@ -69,7 +69,7 @@ For unsuccessful requests, the status code within response will be within the 40
 
 **Request** 
 
-	GET  /v1/subjects/-154/stats
+	GET  https://studyadmin-api.actigraphcorp.com/v1/subjects/-154/stats
 
 **Response**
 	
@@ -80,7 +80,7 @@ For unsuccessful requests, the status code within response will be within the 40
 
 **Request** 
 
-	PUT  /v1/subjects
+	PUT  https://studyadmin-api.actigraphcorp.com/v1/subjects
 	
 	  "SubjectId": "594",
 	  "Gender": "Male 
