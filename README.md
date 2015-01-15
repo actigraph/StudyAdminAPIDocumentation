@@ -17,8 +17,7 @@ Technical Overview
 This is a JSON API. When sending Http requests you must supply the Content-Type field within the header as  “application/json” on PUT and POST operations. If an error occurs, you may receive a text/plain response, e.g. a 400 bad   request response indicates you will need to take action.
 
 ###Date Formatting - UTC###
- * All dates will adhere to ISO 1806 and will be in UTC. So when sending Http requests you must supply the Date field  
- within the HTTP header in UTC format.
+ * All dates will adhere to ISO 1806 and will be in UTC. So when sending Http requests you must supply the Date field within the HTTP header in UTC format.
  * When the trailing 'Z' is withheld it will signify that the date should be interpreted in the subject's timezone.
 
 ###Authentication###
