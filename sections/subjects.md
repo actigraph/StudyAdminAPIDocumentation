@@ -407,3 +407,39 @@ Subject Bed Times [v1.3]
         }
         ...
     ]
+
+Subject Data Files
+---
+ Returns a list of data files for a subject. The 'dataType' argument is optional. By default, the data files returned will only contain the 'RAW' data type. 
+
+**Request:**
+
+	GET /v1/subjects/{id}/dataFiles
+
+**Response:**
+
+	 {
+	  "RAW": [
+	    {
+	      "DataFileId": 5319,
+	      "FileType": "RAW",
+	      "FileSizeInBytes": "76698",
+	      "UploadedDate": "2015-01-14T22:54:08Z",
+	      "Metadata": {
+	        "Filename": "MOS2A13510263_2015-01-14___16-54-07.gt3x",
+	        "BeginOfData": "2015-01-14T16:19:00Z",
+	        "EndOfData": "2015-01-14T22:54:07Z"
+	      }
+	    },
+	    {
+	      "DataFileId": 5323,
+	      "FileType": "RAW",
+	      "FileSizeInBytes": "1447186",
+	      "UploadedDate": "2015-01-15T21:10:00Z",
+	      "Metadata": {
+	        "Filename": "MOS2A13510263_2015-01-15___15-09-58.gt3x",
+	        "BeginOfData": "2015-01-14T22:56:00Z",
+	        "EndOfData": "2015-01-15T21:09:59Z"
+	      }
+	    }...
+	 }
