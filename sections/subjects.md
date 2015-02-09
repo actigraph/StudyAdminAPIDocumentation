@@ -448,7 +448,7 @@ Subject Data Files
 Data File Download Url
 ---
 
-Returns a pre-signed Url along with the Url's expiration date to download a specific data file.
+Returns a Pre-Signed Url where a specific data file can be downloaded. The Url's expiration date is also included within the response.
 
 **Request:**
 
