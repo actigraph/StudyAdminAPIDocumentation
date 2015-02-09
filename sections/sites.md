@@ -19,7 +19,9 @@ A list of sites you can access.  Explicit read/write permissions are included in
             "StudyId": 512,
             "StudyName": "Example Study 1",
             "OrganizationId": 1,
-            "OrganizationName": "ActiGraph"
+            "OrganizationName": "ActiGraph",
+            "CanAddSubjects": false,
+            "CanEditSubjects": false
         },
         {
             "SiteId": 11232,
@@ -27,7 +29,9 @@ A list of sites you can access.  Explicit read/write permissions are included in
             "StudyId": 512,
             "StudyName": "Example Study 1",
             "OrganizationId": 1,
-            "OrganizationName": "ActiGraph"
+            "OrganizationName": "ActiGraph",
+            "CanAddSubjects": true,
+            "CanEditSubjects": true
         },
         ...
     ]
