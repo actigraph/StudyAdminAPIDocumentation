@@ -10,7 +10,7 @@ Retrieve details of an upload by passing an Upload Int ID.
 
 **Request:**
 
-    GET /v1/uploads/418
+    GET /v1/UploadDetails/418
 
 **Response:**
 
