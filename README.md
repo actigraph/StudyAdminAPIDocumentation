@@ -102,6 +102,7 @@ Endpoints
 * [Studies](sections/studies.md) Logical structures for grouping data for one or more subjects.
 * [Sites](sections/sites.md) Physical/geographical locations within studies.
 * [Subjects](sections/subjects.md) Participants in studies.
+* [Uploads](sections/Uploads.md) Retrieve and create upload.
 
 
 Request Limiting
