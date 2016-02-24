@@ -61,6 +61,8 @@ Returns one or more subjects (within study) with specific subject identifier.
 
     GET /v1/studies/{studyId}/subjectsbyidentifier/{subjectIdentifier}
 
+    **Note:** The {subjectIdentifier} field should always be prefixed with the {siteIdentifer} if it exists.
+
 **Response:**
 
     [
