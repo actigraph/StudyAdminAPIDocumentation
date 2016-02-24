@@ -55,7 +55,7 @@ Returns detailed information about the requested subject.
 Subject(s) By Identifier
 ---
 
-Returns one or more subjects (within study) with specific subject identifier.
+Returns one or more subjects (within requested study) with specific subject identifier.
 
 **Request:**
 
