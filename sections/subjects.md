@@ -8,7 +8,7 @@ Returns a list of all subjects within the requested study.
 
 **Request:**
 
-    GET /v1/studies/{id}/subjects
+    GET /v1/studies/{studyId}/subjects
 
 **Response:**
 
@@ -71,16 +71,7 @@ Returns one or more subjects (within study) with specific subject identifier.
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Left Wrist",
-        },
-        {
-            "Id":125,
-            "SubjectIdentifier": "013002",
-            "DOB": "1988-07-14T00:00:00",
-            "Gender": "Male",
-            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
-            "WearPosition": "Right Wrist"
-        },
-        ...
+        }
     ]
 
 
