@@ -52,6 +52,38 @@ Returns detailed information about the requested subject.
         "WeightLbs": "105.74",
     }
 
+Subject(s) By Identifier
+---
+
+Returns one or more subjects (within study) with specific subject identifier.
+
+**Request:**
+
+    GET /v1/studies/{studyId}/subjectsbyidentifier/{subjectIdentifier}
+
+**Response:**
+
+    [
+        {
+            "Id":123,
+            "SubjectIdentifier": "013001",
+            "DOB": "1974-02-11T00:00:00",
+            "Gender": "Male",
+            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
+            "WearPosition": "Left Wrist",
+        },
+        {
+            "Id":125,
+            "SubjectIdentifier": "013002",
+            "DOB": "1988-07-14T00:00:00",
+            "Gender": "Male",
+            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
+            "WearPosition": "Right Wrist"
+        },
+        ...
+    ]
+
+
 Add Subject
 ---
 Creates a new subject.  Subjects are created at the site level.  List sites to find out which you can access.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  The new Subject's Id is returned upon successful creation along with a 201 Created response.
