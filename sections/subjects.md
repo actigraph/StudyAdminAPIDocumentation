@@ -55,13 +55,13 @@ Returns detailed information about the requested subject.
 Subject(s) By Identifier
 ---
 
-Returns one or more subjects (within requested study) with specific subject identifier.
+Returns one or more subjects (within requested study) with specific subject identifier. 
 
 **Request:**
 
     GET /v1/studies/{studyId}/subjectsbyidentifier/{subjectIdentifier}
 
-**Note:**  The {subjectIdentifier} field should always be prefixed with the subject's site identifier if it exists.
+**Note:**  The {subjectIdentifier} field should always be prefixed with the subject's site identifier if it exists. For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
 
 **Response:**
 
