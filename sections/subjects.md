@@ -409,9 +409,9 @@ Returns a list of wear filtered and non-wear filtered bout periods for a range o
         ]
     ]
 
-Subject Bed Times [v1.3]
+Subject Sleep Periods
 ---
- Returns a list of bed times for a subject.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
+ Returns a list of sleep periods for a subject.  `Start` and `stop` arguments are optional.  If `start` argument is supplied, sleep periods returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, sleep periods returned will be filtered where the In Bed Time falls before the supplied `stop` time.
 
 **Request:**
 
@@ -423,12 +423,14 @@ Subject Bed Times [v1.3]
         {
             "SubjectId": 114,
             "InBedTime": "2013-03-21T20:00:00",
-            "OutBedTime": "2013-03-22T08:25:00"
+            "OutBedTime": "2013-03-22T08:25:00",
+            "AutoDetected": true
         },
         {
             "SubjectId": 114,
             "InBedTime": "2013-03-22T20:15:00",
-            "OutBedTime": "2013-03-23T08:05:00"
+            "OutBedTime": "2013-03-23T08:05:00",
+            "AutoDetected": true
         }
         ...
     ]
