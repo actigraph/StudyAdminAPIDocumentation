@@ -411,7 +411,7 @@ Returns a list of wear filtered and non-wear filtered bout periods for a range o
 
 Subject Sleep Periods
 ---
- Returns a list of sleep periods for a subject.  `Start` and `stop` arguments are optional.  If `start` argument is supplied, sleep periods returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, sleep periods returned will be filtered where the In Bed Time falls before the supplied `stop` time.
+ Returns a list of sleep periods for a subject.  `Start` and `stop` arguments are optional.  If `start` argument is supplied, sleep periods returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, sleep periods returned will be filtered where the In Bed Time falls before the supplied `stop` time. If the `AutoDetected` field (in the response) denotes `true`, the sleep period was automatically detected otherwise it was manually entered.
 
 **Request:**
 
