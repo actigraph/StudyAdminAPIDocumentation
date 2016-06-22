@@ -322,9 +322,9 @@ Returns daily-level minute epochs about the requested subject.
 
 Subject Minutes on Range
 ---
-Returns minute epochs for subject between specified time range. `start` and `stop` arguments are required. Minute epochs returned will be filtered where time stamp falls on or after the supplied `start` time and before or on the supplied `stop` time. 
+Returns minute epochs for subject between specified time range. `Start` and `stop` arguments are required. Minute epochs returned will be filtered where time stamp falls on or after the supplied `start` time and before or on the supplied `stop` time. 
 
-### Filter By Timezone ###
+##### Filter By Timezone #####
 By default the minute epochs returned will be filtered by the subject's timezone. To filter minute epochs by UTC, add trailing 'Z' to the `start` and `stop` arguments. This originates from the ISO 8601 standard to denote UTC time. 
 
 **Additional Notes:** 
@@ -349,12 +349,12 @@ By default the minute epochs returned will be filtered by the subject's timezone
             "Lux": 46.0,
             "Steps": 45.0,
             "Wear": true,
-            "AxisXCounts": 4922,
-            "AxisYCounts": 4392,
-            "AxisZCounts": 3775,
             "x": 4922,
             "y": 4392,
-            "z": 3775
+            "z": 3775,
+			"AxisXCounts": 4922,
+            "AxisYCounts": 4392,
+            "AxisZCounts": 3775
         },
         ...
     ]
