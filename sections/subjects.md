@@ -61,7 +61,7 @@ Returns one or more subjects (within requested study) with specific subject iden
 
     GET /v1/studies/{studyId}/subjectsbyidentifier/{subjectIdentifier}
 
-**Note:**  The {subjectIdentifier} field should always be prefixed with the subject's site identifier if it exists. For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
+**Note:**  The {subjectIdentifier} field should always be prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
 
 **Response:**
 
@@ -304,6 +304,46 @@ Returns daily-level minute epochs about the requested subject.
     [
         {
             "Timestamp": "2013-03-21T16:59:00",
+            "Calories": 6.88872851708981,
+            "HR": 0.0,
+            "Lux": 46.0,
+            "Steps": 45.0,
+            "Wear": true,
+            "AxisXCounts": 4922,
+            "AxisYCounts": 4392,
+            "AxisZCounts": 3775,
+            "x": 4922,
+            "y": 4392,
+            "z": 3775
+        },
+        ...
+    ]
+
+
+Subject Minutes on Range
+---
+Returns minute epochs for subject between specified time range. `start` and `stop` arguments are required. Minute epochs returned will be filtered where time stamp falls on or after the supplied `start` time and before or on the supplied `stop` time. 
+
+### Filter By Timezone ###
+By default the minute epochs returned will be filtered by the subject's timezone. To filter minute epochs by UTC, add trailing 'Z' to the `start` and `stop` arguments. This originates from the ISO 8601 standard to denote UTC time. 
+
+**Additional Notes:** 
+
+- Format of `start` and `stop` is `"yyyy-MM-ddTHH:mm:ss"` which adheres to ISO 8601 standard (example: `2016-06-14T20:46:00` denotes `June 14, 2016 08:46 PM`).
+- No more than 7 days of data can be requested at a time.
+- x, y and z have been deprecated for AxisXCounts, AxisYCounts and AxisZCounts respectively.
+
+**Request:**
+
+    GET /v1/subjects/{id}/minutesonrange?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}
+
+
+**Response:**
+
+    [
+        {
+            "TimestampUTC": "2013-07-27T21:40:00Z",
+    		"TimestampSubjectTZ": "2013-07-27T16:40:00",
             "Calories": 6.88872851708981,
             "HR": 0.0,
             "Lux": 46.0,
