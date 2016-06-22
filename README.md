@@ -18,8 +18,8 @@ This is a JSON API. When sending Http requests you must supply the Content-Type 
 
 ###Date Formatting###
  * All dates will adhere to ISO 1806. So when sending Http requests you must supply the Date field in ISO 8601.
- * Dates in UTC will consist of a the trailing 'Z' character (example: 2016-06-14T20:46:00Z).
- * Dates where the trailing 'Z' is withheld will signify that the date should be interpreted in the subject's timezone.
+ * Dates in **UTC** will consist of a the trailing 'Z' character (example: 2016-06-14T20:46:00Z).
+ * Dates where the trailing 'Z' is withheld will signify that the date should be interpreted in the **subject's timezone**.
 
 ###Authentication###
 
