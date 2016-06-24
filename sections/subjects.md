@@ -289,15 +289,16 @@ Returns daily-level statistics about the requested subject.
 
 Subject Day Minutes
 ---
-Returns daily-level minute epochs about the requested subject.
+Returns daily-level minute epochs for the requested subject. The `day` argument is required. Daily-level minute epochs returned will be filtered in the subject's timezone. 
 
 **Request:**
 
     GET /v1/subjects/{id}/dayminutes/{day}
 
-**Note:** Format of {day} is "yyyy-MM-dd" Examples: `2012-12-01` and Dec. 1, 2012 and `2012-01-30` for Jan. 30, 2013.
+**Additional Notes** 
 
-**Note:** x, y and z have been deprecated for AxisXCounts, AxisYCounts and AxisZCounts respectively.
+- Format of {day} is "yyyy-MM-dd". Example: `2012-12-01` denotes December 1, 2012 and `2012-01-30` denotes January 30, 2013.
+- x, y and z have been deprecated for AxisXCounts, AxisYCounts and AxisZCounts respectively.
 
 **Response:**
 
@@ -325,7 +326,7 @@ Subject Minutes on Range
 Returns minute epochs for subject between specified time range. `Start` and `stop` arguments are required. Minute epochs returned will be filtered where time stamp falls on or after the supplied `start` time and before or on the supplied `stop` time. 
 
 ##### Filter By Timezone #####
-By default the minute epochs returned will be filtered by the subject's timezone. To filter minute epochs by UTC, add trailing 'Z' to the `start` and `stop` arguments. This originates from the ISO 8601 standard to denote UTC time. 
+By default the minute epochs returned will be filtered in the subject's timezone. To filter minute epochs in UTC, add trailing 'Z' to the `start` and `stop` arguments. This originates from the ISO 8601 standard to denote UTC time. 
 
 **Additional Notes:** 
 
