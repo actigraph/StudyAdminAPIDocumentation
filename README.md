@@ -65,7 +65,9 @@ After successfully editing a subject through the ***PUT /v1/subjects*** endpoint
 
 For unsuccessful requests, the status code within response will be within the 400 range which may indicate an action required by API user. These responses may contain error messages in plain text, e.g:
 
-###Example 1###
+###Example 1: Bad Request with invalid parameter in URI ###
+
+Example of invalid input in request URI.
 
 **Request** 
 
@@ -76,7 +78,9 @@ For unsuccessful requests, the status code within response will be within the 40
 	Status: 400 BadRequest
 	Subject Id is invalid
 
-###Example 2###
+###Example 2: Bad Request with invalid Json ###
+
+Example of invalid Raw Json content for POST and PUT requests.
 
 **Request** 
 
@@ -96,6 +100,31 @@ For unsuccessful requests, the status code within response will be within the 40
 	Status 400 BadRequest
 	Json request not well-formed
 
+###Example 3: Response with empty Json object ###
+
+Example of a response with an empty json object. Applies to API endpoints that return with a standard Json format. 
+
+**Request** 
+
+	GET  https://studyadmin-api.actigraphcorp.com/v1/subjects/912/stats
+
+**Response**
+	
+	Status 200 OK
+	{}
+
+###Example 4: Response with empty Json array ###
+
+Example of a response with an empty json array. Applies to API endpoints that return with Json array format.
+
+**Request** 
+
+	GET  https://studyadmin-api.actigraphcorp.com/v1/studies/81/subjects
+
+**Response**
+	
+	Status 200 OK
+	[]
 
 
 Endpoints
