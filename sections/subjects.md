@@ -419,7 +419,7 @@ Returns the score of a subject's data over a sleep period.
 
 Subject Bouts [v1.2]
 ---
-Returns a list of wear filtered and non-wear filtered bout periods for a range of subject's data.  `Start` and `stop` arguments are optional.  If `start` is supplied, bed times returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, bed times returned will be filtered where the In Bed Time falls before the supplied `stop` time.
+Returns a list of wear filtered and non-wear filtered bout periods for subject.  `Start` and `Stop` arguments are optional.  If `Start` is supplied, bouts returned will be filtered where the begin time falls on or after the supplied `Start` time.  If `Stop` is supplied, bouts returned will be filtered where the begin time falls before the supplied `Stop` time.
 
 **Request:**
 
