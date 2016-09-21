@@ -4,6 +4,7 @@ Subjects
 Study Subjects
 ---
 
+
 Returns a list of all subjects within the requested study.
 
 **Request:**
@@ -35,6 +36,19 @@ Returns a list of all subjects within the requested study.
         },
         ...
     ]
+
+**Table Description of Response Fields:**
+
+Field|Type|Accepted Values|Notes
+-----|----|----------|-----
+Id|Number||Internal Subject Id
+Subject Identifier|String||External Subject Identifier. The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
+DOB|ISO8601 Date||Subject's Date of Birth
+Gender|String|"Male", "Female"||
+Timezone|String||Subject's Timezone
+Wear Position|String|"Left Wrist", "Right Wrist","Waist"| 
+Data Collection Status|String|"No Device Assigned", "Collecting", "Collection Stopped"||
+Device Serial|String||The serial number of the monitor currently assigned to subject. If subject is not assigned this field will be set to `null`.|
 
 Subject Details
 ---
