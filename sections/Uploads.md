@@ -28,6 +28,7 @@ Retrieve details of an upload by passing an Upload Int ID.
     "DeviceHaltOrErrorReason": null,
     "TotalFilesUploaded": 1,
     "FilesUploaded": [{
+        "DataFileId": 1286,
         "FileType": "EPOCH",
         "FileName": null,
         "FileSizeInBytes": 0,
