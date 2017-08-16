@@ -12,24 +12,24 @@ Please contact [Actigraph](http://www.actigraphcorp.com/support/contact-support/
 Technical Overview
 -------------------
 
-###Json###
+### Json
 
 This is a JSON API. When sending Http requests you must supply the Content-Type field within the header as  “application/json” on PUT and POST operations. If an error occurs, you may receive a text/plain response, e.g. a 400 bad   request response indicates you will need to take action.
 
-###Date Formatting###
+### Date Formatting
  * All dates will adhere to ISO 1806. So when sending Http requests you must supply the Date field in ISO 8601.
  * Dates in **UTC** will consist of a the trailing 'Z' character (example: 2016-06-14T20:46:00Z).
  * Dates where the trailing 'Z' is withheld will signify that the date should be interpreted in the **subject's timezone**.
 
-###Authentication###
+### Authentication
 
  Refer to the [Authentication](https://github.com/actigraph/StudyAdminAPIDocumentation/blob/master/sections/authentication.md) section for specifics and examples on request signing.
 
-###HTTPS###
+### HTTPS
 
 Any non-HTTPS request will result in a Forbidden response.
 
-###Resource Links###
+### Resource Links
 * [HTTPS](http://tools.ietf.org/html/rfc2818) 
 * [JSON](http://tools.ietf.org/html/rfc4627)
 * [HMAC](http://tools.ietf.org/html/rfc2104) [SHA256](http://tools.ietf.org/html/rfc4634)
@@ -65,7 +65,7 @@ After successfully editing a subject through the ***PUT /v1/subjects*** endpoint
 
 For unsuccessful requests, the status code within response will be within the 400 range which may indicate an action required by API user. These responses may contain error messages in plain text, e.g:
 
-###Example 1: Bad Request with invalid parameter in URI ###
+### Example 1: Bad Request with invalid parameter in URI
 
 Example of invalid input in request URI.
 
@@ -78,7 +78,7 @@ Example of invalid input in request URI.
 	Status: 400 BadRequest
 	Subject Id is invalid
 
-###Example 2: Bad Request with invalid Json ###
+### Example 2: Bad Request with invalid Json
 
 Example of invalid Raw Json content for POST and PUT requests.
 
@@ -100,7 +100,7 @@ Example of invalid Raw Json content for POST and PUT requests.
 	Status 400 BadRequest
 	Json request not well-formed
 
-###Example 3: Response with empty Json object ###
+### Example 3: Response with empty Json object
 
 Example of a response with an empty json object. Applies to API endpoints that return with a standard Json format. 
 
@@ -113,7 +113,7 @@ Example of a response with an empty json object. Applies to API endpoints that r
 	Status 200 OK
 	{}
 
-###Example 4: Response with empty Json array ###
+### Example 4: Response with empty Json array
 
 Example of a response with an empty json array. Applies to API endpoints that return with Json array format.
 
