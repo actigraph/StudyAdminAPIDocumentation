@@ -22,6 +22,7 @@ Retrieve details of an upload by passing an Upload Int ID.
     "DeviceBatteryVoltage": 4.2,
     "DeviceFirmware": "2.2.1",
     "ClientSoftwareName": "ActiSync",
+    "ClientSoftwareVersion": "3.7.0.0",
     "ClientOSVersion": "Microsoft Windows NT 6.1.7601 Service Pack 1",
     "DeviceSampleRateHz": 30.0,
     "DeviceState": null,
