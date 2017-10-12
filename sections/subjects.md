@@ -508,6 +508,7 @@ Subject Data Files
 	  "RAW": [
 	    {
 	      "DataFileId": 5319,
+	      "UploadId": 5468,
 	      "FileType": "RAW",
 	      "FileSizeInBytes": "76698",
 	      "UploadedDate": "2015-01-14T22:54:08Z",
@@ -519,6 +520,7 @@ Subject Data Files
 	    },
 	    {
 	      "DataFileId": 5323,
+	      "UploadId": 5478,
 	      "FileType": "RAW",
 	      "FileSizeInBytes": "1447186",
 	      "UploadedDate": "2015-01-15T21:10:00Z",
