@@ -21,8 +21,8 @@ Returns a list of all subjects within the requested study.
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Left Wrist",
-		    "DataCollectionStatus": "Collecting",
-    		"DeviceSerial": "TAS1D48341371"
+	    "DataCollectionStatus": "Collecting",
+	    "DeviceSerial": "TAS1D48341371"
         },
         {
             "Id":125,
@@ -31,8 +31,8 @@ Returns a list of all subjects within the requested study.
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Right Wrist",
-			"DataCollectionStatus": "No Device Assigned",
-    		"DeviceSerial": null
+	    "DataCollectionStatus": "No Device Assigned",
+	    "DeviceSerial": null
         },
         ...
     ]
