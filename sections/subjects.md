@@ -20,7 +20,9 @@ Returns a list of all subjects within the requested study.
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
-            "WearPosition": "Left Wrist",                                                                                                           "DataCollectionStatus": "Collecting",                                                                                                   "DeviceSerial": "TAS1D48341371"
+            "WearPosition": "Left Wrist",      
+	    "DataCollectionStatus": "Collecting",      
+	    "DeviceSerial": "TAS1D48341371"
         },
         {
             "Id":125,
