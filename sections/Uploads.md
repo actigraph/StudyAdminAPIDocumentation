@@ -39,7 +39,10 @@ Retrieve details of an upload by passing an Upload Int ID.
         "FailedReason": null
     }]
     }
-    
+
+**Additional Note:**  The {SubjectId} field in this endpoint's response denotes the 'Subject Identifier' of the subject who performed the upload sync.
+
+
 POST Upload
 ---
 
