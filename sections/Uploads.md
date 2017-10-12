@@ -38,6 +38,7 @@ Retrieve details of an upload by passing an Upload Int ID.
         "Failed": false,
         "FailedReason": null
     }]
+    }
     
 POST Upload
 ---
