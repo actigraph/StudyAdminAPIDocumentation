@@ -27,7 +27,7 @@ Following is pseudogrammar that illustrates the construction of the Authorizatio
     	Date + "\n" +
     	URLAndQueryString;
 
-    Signature = Base64( HMAC-SHA256( AccessKey, UTF-8-Encoding-Of( StringToSign ) ) );
+    Signature = Base64( HMAC-SHA256( SecretKey, UTF-8-Encoding-Of( StringToSign ) ) );
 
     Authorization = "AGS" + " " + AccessKey + ":" + Signature;
 
