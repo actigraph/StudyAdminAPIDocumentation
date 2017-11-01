@@ -5,6 +5,11 @@ Overview
 -------------------
 The Study Admin API was developed to provide other software systems a web interface to the study admin web portal. The api provides access to the same core study and de-identified subject data that can be accessed within [Study Admin](http://studyadmin.actigraphcorp.com).
 
+CentrePoint Web API C# Demo
+-------------------
+To view C# client demonstration application that conntects to API, goto: https://github.com/actigraph/CentrePointWebAPIDemo
+
+
 Enabling API Access
 -------------------
 Please contact [Actigraph](http://www.actigraphcorp.com/support/contact-support/) for more information.
