@@ -73,13 +73,17 @@ Returns detailed information about the requested subject.
 Subject(s) By Identifier
 ---
 
-Returns one or more subjects (within requested study) with specific subject identifier. 
+Returns one or more subjects (within requested study) with specific subject identifier. The subject identifer is required field when creating subject data records in the CentrePoint system.
 
 **Request:**
 
     GET /v1/studies/{studyId}/subjectsbyidentifier/{subjectIdentifier}
 
-**Note:**  The {subjectIdentifier} field should always be prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
+**Notes:**  
+
+* The {subjectIdentifier} field should always be **prefixed with the subject's site identifier** (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001". 
+* For subjects in sites where the **site identifier is not set**, the {subjectIdentifier} should denote just the subject identifier without any prefix. For example, a subject with a "001" identifier in a site without a site identifier should denote "001". 
+* For subjects where the identifier consists of space character, space characters should be replaced with "%20". For example, a subject with a "S123 AE" identifier should denote "S123%20AE".
 
 **Response:**
 
