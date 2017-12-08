@@ -152,7 +152,7 @@ Modifies an existing subject.  List sites to find out which you can access.  You
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-        "ChangeReason": "Test",
+        "ChangeReason": "Error at site",
     }
 
 Field|Type|Min|Max|Required|Accepted Values|Notes
@@ -164,7 +164,7 @@ SubjectId|Number|n/a|n/a|Yes||Must have permission
 SubjectIdentifier|String|n/a|n/a|Yes||Unique within study
 WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", "Waist"|***In accordance with Study settings
 WeightLbs|Number|1|2000|Yes (**site dependent)||
-ChangeReason|String|n/a|300|Yes (**** study dependent)||**** In accordance with Study settings
+ChangeReason|String|1|300|Yes (**** study dependent)||**** In accordance with Study settings
 
 ** Depending on the site in which the subject is being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
 
