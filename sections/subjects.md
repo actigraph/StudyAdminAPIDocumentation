@@ -37,18 +37,18 @@ Returns a list of all subjects within the requested study.
         ...
     ]
 
-**Table Description of Response Fields:**
+**Response Properties**
 
-Field|Type|Accepted Values|Notes
+Field|Type|Accepted Values|Description|Notes
 -----|----|----------|-----
-Id|Number||Internal Subject Id
-Subject Identifier|String||External Subject Identifier. The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
-DOB|ISO8601 Date||Subject's Date of Birth
-Gender|String|<ul><li>Male</li><li>Female</li></ul>||
-Timezone|String||Subject's Timezone
-Wear Position|String|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>| 
-Data Collection Status|String|<ul><li>No Device Assigned</li><li>Collecting</li><li>Collection Stopped</li></ul>||
-Device Serial|String||The serial number of the monitor currently assigned to subject. If subject is not assigned this field will be set to `null`.|
+Id|Number||Primary Key of Subject Id||
+Subject Identifier|String||User-specified Subject Identifier that is unique within the study.|The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
+DOB|ISO8601 Date||Subject's Date of Birth||
+Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
+Timezone|String||Subject's Timezone||
+Wear Position|String|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>|| 
+Data Collection Status|String|<ul><li>No Device Assigned</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
+Device Serial|String||The serial number of the activity monitor currently assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
 Subject Details
 ---
@@ -107,7 +107,7 @@ Add Subject
 ---
 Creates a new subject.  Subjects are created at the site level.  List sites to find out which you can access.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  The new Subject's Id is returned upon successful creation along with a 201 Created response.
 
-**Request:**
+### Request:###
 
     POST /v1/subjects
     Content-Type:application/json
@@ -123,19 +123,18 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
 
 
 
+**Request Properties**
 
 
-
-
-Field|Type|Min|Max|Required|Accepted Values|Notes
+Field|Type|Min|Max|Required|Accepted Values|Description|Notes
 -----|----|---|---|--------|---------------|-----
-DOB|ISO8601 Date||day before present day|Yes||must be day before present day
-Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>|Study/site shall be configured to utilize this field
-SiteId|Number|||Yes||Site write access enforced
-SubjectIdentifier|String|||Yes| |Unique within study
-WearPosition|String|||Yes|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>| Study/site shall be configured in order to utilize this field
-WeightLbs|Number|1|2000|Yes||Study/site shall be configured to utilize this field
-DeviceSerial|String|||No|Monitor serial number to assign to subject. If blank, monitor assignment will not be attempted|Study/site shall be configured in order to utilize this field
+DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
+Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
+SiteId|Number|||Yes|||Site write access enforced. Therefore API user must have appropriate permissions to add subjects to given site.
+SubjectIdentifier|String|||Yes||User specified Subject Identifier that is unique within study|Subject Identifier should NOT be prefixed with Site Identifier.|
+WearPosition|String|||Yes|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>||Study/site shall be configured in order to utilize this field
+WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
+DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. 
 
 
 **Additional Notes** 
@@ -147,7 +146,7 @@ DeviceSerial|String|||No|Monitor serial number to assign to subject. If blank, m
 	- Waist 
 - Depending on the study/site configuration of subject being added, the **DeviceSerial** may or may not be allowed in order to perform an activity monitor assignment to subject
 
-**Response:**
+###Response:###
 
     201 Created
     {
@@ -158,7 +157,7 @@ Edit Subject
 ---
 Modifies an existing subject.  List sites to find out which you can access.  You must have CanEditSubjects=true for a Site in order to edit a subject in it.  A 200 OK response is returned for a successfully edited subject.
 
-**Request:**
+### Request: ###
 
     PUT /v1/subjects
     Content-Type:application/json
@@ -174,17 +173,19 @@ Modifies an existing subject.  List sites to find out which you can access.  You
 		"DeviceSerial": "TAS1D48341371"
     }
 
-Field|Type|Min|Max|Required|Accepted Values|Notes
+**Request Properties** 
+
+Field|Type|Min|Max|Required|Accepted Values|Description|Notes
 -----|----|---|---|--------|-----------------|-----
-DOB|ISO8601 Date||day before present day|Yes||must be day before present day
-Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>|Study/site shall be configured to utilize this field
-SiteId|Number|||Yes||Site write access enforced
-SubjectId|Number|||Yes||Site write access enforced
-SubjectIdentifier|String|||Yes||Unique within study
-WearPosition|String|||Yes|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>|Study/site shall be configured to utilize this field
-WeightLbs|Number|1|2000|Yes||Study/site shall be configured to utilize this field
-ChangeReason|String|||Yes||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
-DeviceSerial|String|||No|Monitor serial number to assign to subject. If blank, monitor assignment will not be attempted|Study/site shall be configured in order to utilize this field
+DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
+Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
+SiteId|Number|||Yes|||Site write access enforced
+SubjectId|Number|||Yes|||Site write access enforced
+SubjectIdentifier|String|||Yes|||Unique within study
+WearPosition|String|||Yes|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>||Study/site shall be configured to utilize this field
+WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
+ChangeReason|String|||Yes|||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
+DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted.|
 
 **Additional Notes** 
 
@@ -196,7 +197,7 @@ DeviceSerial|String|||No|Monitor serial number to assign to subject. If blank, m
 - **ChangeReason** is required for all study configurations in CentrePoint created after 2017-11-30. 
 - Depending on the study/site configuration of subject being edited, the **DeviceSerial** may or may not be allowed in order to perform an activity monitor assignment to subject 
 
-**Response:**
+### Response: ###
 
     200 OK
 
@@ -581,3 +582,30 @@ Returns a Pre-Signed Url where a specific data file can be downloaded. The Url's
         "DownloadURL": https://s3.amazonaws.com/acticloud ...,
         "URLExpirationDate": "2015-02-03T06:42:40.1654394Z"
     }
+
+
+Stop Data Collection for Subject
+---
+
+Stops data collection for requested subject by removing the subject's active monitor assignment.
+  
+###Request:###
+
+    PUT /v1/subjects/RemoveDeviceAssignment
+	Content-Type:application/json
+	{
+		"SubjectId": 3792
+		"DeviceSerial":"TAS2A13510263"
+	}
+
+####Request Properties####
+
+Field|Type|Required|Description
+-----|----|--------|-----------------
+SubjectId|number|yes|Subject's Primary Key in which API user wishes to stop activity monitor data collection
+DeviceSerial|string|yes|Activity monitor serial in which to stop collecting data for given subject
+
+
+###Response:###
+
+    200 OK

@@ -81,41 +81,49 @@ Returns a list of all subjects within the requested study.
 Study Devices
 ---
 
-Returns a list of all study devices within the requested study's inventory
+Returns a list of the activity monitors within the requested study's inventory
 
-**Request:**
+### Request: ###
 
-	GET /v1/studies/{id}/devices?assignmentStatus={assignmentStatus}
+	GET /v1/studies/{id}/devices
 
-**Response:**
+#### Request Properties ####
+
+Field|Type|Required|Accepted Values|Default Value|Description|Example Request URI
+-----|----|----------|-----
+isAssignableFilter|string|no|<ul><li>all</li><li>assignable</li><li>notAssignable</li></ul>|all|Allows API user to filter activity monitors in response by their elibibility to be assigned to a new or existing subject|/v1/studies/{id}/devices?isAssignableFilter={isAssignableValue}
+
+
+### Response: ###
 
 	[
 		{
-			"DeviceSerial":"TAS1D48341371",
-			"DataHubSerial":"CDM1448341371",
-			"Assignment": {
-							"Status": "Assigned",
-							"SubjectId": 09234
-						  }
+			"Id" = 101,
+			"DeviceSerial": "TAS1D48341371",
+			"DataHubSerial": "CDM1448341371",
+			"IsAssignable": true,
+			"AssignmentStatus": "NotAssigned",
+			"SiteName": "University of South Dakota"
 		},
 		{
-			"DeviceSerial":"TAS1D48341372",
-			"DataHubSerial":"CDM1448341371",
-			"Assignment": {
-							"Status": "Not Assigned",
-							"SubjectId": null
-						  }
+			"Id" = 102,
+			"DeviceSerial": "TAS1D48341372",
+			"DataHubSerial": "CDM1448341373",
+			"IsAssignable": false,
+			"AssignmentStatus": "IncompleteAssignment",
+			"SiteName": "University of West Florida"
 		}
+		...
 	]
 
 
+#### Response Properties ####
 
-**Additional Notes** 
-
-- ``DeviceSerial`` denotes the activity monitor's serial number
-- ``DataHubSerial`` denotes the CentrePoint DataHub (CDH) device's serial number packaged with activity monitor that is distributed to subject. 
-- ``assignmentStatus`` parameter is optional. If not specified, all devices within the study's inventory will be returned
-- Available options for ``Status`` field in the ``Assignment`` object are:
-	- Assigned (denotes if monitor is actively assigned to subject)
-	- Not Assigned (denotes if monitor is NOT actively assigned to subject)
-- ``SubjectId`` field in the ``Assignment`` object denotes the subject in which the monitor is actively assigned to. If monitor is not actively assigned, ``SubjectId`` will be return as ``null``.
+Field|Type|Accepted Values|Description
+-----|----|----------|-----
+Id|number||Primary Key of Study Device Id
+DeviceSerial|string||Activity monitor's serial number
+DataHubSerial|string||The CentrePoint DataHub (CDH) device serial number that was packaged/distributed with the activity monitor
+IsAssignable|bool|<ul><li>true</li><li>false</li></ul>|Boolean that determines if activity monitor can be assigned to a new or existing subject for data collection|
+AssignmentStatus|string|<ul><li>Assigned</li><li>NotAssigned</li><li>IncompleteAssignment</li></ul>|Assignment status of activity monitor
+SiteName|string||Site name in which activity monitor resides
