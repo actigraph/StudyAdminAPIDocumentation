@@ -91,7 +91,7 @@ Returns a list of the activity monitors within the requested study's inventory
 
 Field|Type|Required|Accepted Values|Default Value|Description|Example Request URI
 -----|----|---------|--------------|-------------|-----------|-------------------
-isAssignableFilter|string|no|<ul><li>all</li><li>assignable</li><li>notAssignable</li></ul>|all|Allows API user to filter activity monitors in response by their elibibility to be assigned to a new or existing subject|/v1/studies/{id}/devices?isAssignableFilter={isAssignableValue}
+isAssignableFilter|string|no|<ul><li>all</li><li>assignable</li><li>notAssignable</li></ul>|all|Allows API user to filter activity monitors on whether the device is eligible to be assigned to a subject|/v1/studies/{id}/devices?isAssignableFilter={isAssignableValue}
 
 
 ### Response: ###
