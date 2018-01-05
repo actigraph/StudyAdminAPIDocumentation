@@ -120,7 +120,7 @@ isAssignableFilter|string|no|<ul><li>all</li><li>assignable</li><li>notAssignabl
 #### Response Properties ####
 
 Field|Type|Accepted Values|Description
------|----|----------|-----
+-----|----|----------|-----|
 Id|number||Primary Key of Study Device Id
 DeviceSerial|string||Activity monitor's serial number
 DataHubSerial|string||The CentrePoint DataHub (CDH) device serial number that was packaged/distributed with the activity monitor
