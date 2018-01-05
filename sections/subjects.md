@@ -40,7 +40,7 @@ Returns a list of all subjects within the requested study.
 **Response Properties**
 
 Field|Type|Accepted Values|Description|Notes
------|----|----------|-----
+-----|----|----------|-----|-----
 Id|Number||Primary Key of Subject Id||
 Subject Identifier|String||User-specified Subject Identifier that is unique within the study.|The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
 DOB|ISO8601 Date||Subject's Date of Birth||
@@ -107,7 +107,7 @@ Add Subject
 ---
 Creates a new subject.  Subjects are created at the site level.  List sites to find out which you can access.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  The new Subject's Id is returned upon successful creation along with a 201 Created response.
 
-### Request:###
+### Request: ###
 
     POST /v1/subjects
     Content-Type:application/json
@@ -127,7 +127,7 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
 
 
 Field|Type|Min|Max|Required|Accepted Values|Description|Notes
------|----|---|---|--------|---------------|-----
+-----|----|---|---|--------|---------------|-----------|-----
 DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
 Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
 SiteId|Number|||Yes|||Site write access enforced. Therefore API user must have appropriate permissions to add subjects to given site.
@@ -146,7 +146,7 @@ DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject 
 	- Waist 
 - Depending on the study/site configuration of subject being added, the **DeviceSerial** may or may not be allowed in order to perform an activity monitor assignment to subject
 
-###Response:###
+### Response: ###
 
     201 Created
     {
@@ -176,7 +176,7 @@ Modifies an existing subject.  List sites to find out which you can access.  You
 **Request Properties** 
 
 Field|Type|Min|Max|Required|Accepted Values|Description|Notes
------|----|---|---|--------|-----------------|-----
+-----|----|---|---|--------|---------------|-----------|-----
 DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
 Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
 SiteId|Number|||Yes|||Site write access enforced
@@ -589,7 +589,7 @@ Stop Data Collection for Subject
 
 Stops data collection for requested subject by removing the subject's active monitor assignment.
   
-###Request:###
+### Request: ###
 
     PUT /v1/subjects/RemoveDeviceAssignment
 	Content-Type:application/json
@@ -598,7 +598,7 @@ Stops data collection for requested subject by removing the subject's active mon
 		"DeviceSerial":"TAS2A13510263"
 	}
 
-####Request Properties####
+#### Request Properties ####
 
 Field|Type|Required|Description
 -----|----|--------|-----------------
@@ -606,6 +606,6 @@ SubjectId|number|yes|Subject's Primary Key in which API user wishes to stop acti
 DeviceSerial|string|yes|Activity monitor serial in which to stop collecting data for given subject
 
 
-###Response:###
+### Response: ###
 
     200 OK
