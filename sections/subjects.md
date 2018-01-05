@@ -68,7 +68,7 @@ Returns detailed information about the requested subject.
         "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
         "WearPosition": "Left Wrist",
         "WeightLbs": "105.74",
- 		"DataCollectionStatus": "Collecting",      
+ 	"DataCollectionStatus": "Collecting",      
         "DeviceSerial": "TAS1D48341371"
     }
 
@@ -97,8 +97,8 @@ Returns one or more subjects (within requested study) with specific subject iden
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Left Wrist",      
-        	"DataCollectionStatus": "Collecting",      
-        	"DeviceSerial": "TAS1D48341371"
+            "DataCollectionStatus": "Collecting",      
+            "DeviceSerial": "TAS1D48341371"
         }
     ]
 
@@ -118,7 +118,7 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-		"DeviceSerial": "TAS1D48341371"
+	"DeviceSerial": "TAS1D48341371"
     }
 
 
@@ -169,8 +169,8 @@ Modifies an existing subject.  List sites to find out which you can access.  You
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-		"ChangeReason":"Performing monitor assignment to existing subject",
-		"DeviceSerial": "TAS1D48341371"
+	"ChangeReason":"Performing monitor assignment to existing subject",
+	"DeviceSerial": "TAS1D48341371"
     }
 
 **Request Properties** 
@@ -594,8 +594,8 @@ Stops data collection for requested subject by removing the subject's active mon
     PUT /v1/subjects/RemoveDeviceAssignment
 	Content-Type:application/json
 	{
-		"SubjectId": 3792
-		"DeviceSerial":"TAS2A13510263"
+	    "SubjectId": 3792
+	    "DeviceSerial": "TAS2A13510263"
 	}
 
 #### Request Properties ####
