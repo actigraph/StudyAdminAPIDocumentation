@@ -20,7 +20,8 @@ Returns a list of all subjects within the requested study.
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
-            "WearPosition": "Left Wrist",      
+            "WearPosition": "Left Wrist",
+			"WeightLbs": 120.00,
             "DataCollectionStatus": "Collecting",      
             "DeviceSerial": "TAS1D48341371"
         },
@@ -31,6 +32,7 @@ Returns a list of all subjects within the requested study.
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Right Wrist",
+			"WeightLbs": 150.00,
             "DataCollectionStatus": "No Device Assigned",
             "DeviceSerial": null
         },
@@ -68,7 +70,7 @@ Returns detailed information about the requested subject.
         "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
         "WearPosition": "Left Wrist",
         "WeightLbs": "105.74",
- 	"DataCollectionStatus": "Collecting",      
+		"DataCollectionStatus": "Collecting",      
         "DeviceSerial": "TAS1D48341371"
     }
 
@@ -96,7 +98,8 @@ Returns one or more subjects (within requested study) with specific subject iden
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
-            "WearPosition": "Left Wrist",      
+            "WearPosition": "Left Wrist",
+			"WeightLbs": 165.00,
             "DataCollectionStatus": "Collecting",      
             "DeviceSerial": "TAS1D48341371"
         }
@@ -118,7 +121,7 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-	"DeviceSerial": "TAS1D48341371"
+		"DeviceSerial": "TAS1D48341371"
     }
 
 
@@ -169,8 +172,8 @@ Modifies an existing subject.  List sites to find out which you can access.  You
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-	"ChangeReason":"Performing monitor assignment to existing subject",
-	"DeviceSerial": "TAS1D48341371"
+		"ChangeReason":"Performing monitor assignment to existing subject",
+		"DeviceSerial": "TAS1D48341371"
     }
 
 **Request Properties** 

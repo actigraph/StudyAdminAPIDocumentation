@@ -64,6 +64,8 @@ Returns a list of all subjects within the requested study.
             "Gender": "Female",
             "WearPosition": "Left Wrist",
             "WeightLbs": "105.74",
+			"DataCollectionStatus": "Collection Stopped",
+			"DeviceSerial": null
         },
         {
             "Id":125,
@@ -73,6 +75,8 @@ Returns a list of all subjects within the requested study.
             "Gender": "Male",
             "WearPosition": "Right Wrist"
             "WeightLbs": "198",
+			"DataCollectionStatus": "Collecting",
+			"DeviceSerial": "TAS1D48341371"
         },
         ...
     ]
@@ -102,7 +106,7 @@ isAssignableFilter|bool|no|<ul><li>true</li><li>false</li></ul>|null|Allows API 
 			"DeviceSerial": "TAS1D48341371",
 			"DataHubSerial": "CDM1448341371",
 			"IsAssignable": true,
-			"AssignmentStatus": "NotAssigned",
+			"AssignmentStatus": "Not Assigned",
 			"SiteName": "University of South Dakota"
 		},
 		{
@@ -110,7 +114,7 @@ isAssignableFilter|bool|no|<ul><li>true</li><li>false</li></ul>|null|Allows API 
 			"DeviceSerial": "TAS1D48341372",
 			"DataHubSerial": "CDM1448341373",
 			"IsAssignable": false,
-			"AssignmentStatus": "IncompleteAssignment",
+			"AssignmentStatus": "Incomplete Assignment",
 			"SiteName": "University of West Florida"
 		}
 		...
