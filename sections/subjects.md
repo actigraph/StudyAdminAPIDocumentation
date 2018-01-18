@@ -20,7 +20,8 @@ Returns a list of all subjects within the requested study.
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
-            "WearPosition": "Left Wrist",      
+            "WearPosition": "Left Wrist",
+			"WeightLbs": 120.00,
             "DataCollectionStatus": "Collecting",      
             "DeviceSerial": "TAS1D48341371"
         },
@@ -31,24 +32,25 @@ Returns a list of all subjects within the requested study.
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Right Wrist",
+			"WeightLbs": 150.00,
             "DataCollectionStatus": "No Device Assigned",
             "DeviceSerial": null
         },
         ...
     ]
 
-**Table Description of Response Fields:**
+**Response Properties**
 
-Field|Type|Accepted Values|Notes
------|----|----------|-----
-Id|Number||Internal Subject Id
-Subject Identifier|String||External Subject Identifier. The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
-DOB|ISO8601 Date||Subject's Date of Birth
-Gender|String|"Male", "Female"||
-Timezone|String||Subject's Timezone
-Wear Position|String|"Left Wrist", "Right Wrist","Waist"| 
-Data Collection Status|String|"No Device Assigned", "Collecting", "Collection Stopped"||
-Device Serial|String||The serial number of the monitor currently assigned to subject. If subject is not assigned this field will be set to `null`.|
+Field|Type|Accepted Values|Description|Notes
+-----|----|----------|-----|-----
+Id|Number||Primary Key of Subject Id||
+Subject Identifier|String||User-specified Subject Identifier that is unique within the study.|The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
+DOB|ISO8601 Date||Subject's Date of Birth||
+Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
+Timezone|String||Subject's Timezone||
+Wear Position|String|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>|| 
+Data Collection Status|String|<ul><li>No Device Assigned</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
+Device Serial|String||The serial number of the activity monitor currently assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
 Subject Details
 ---
@@ -68,6 +70,8 @@ Returns detailed information about the requested subject.
         "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
         "WearPosition": "Left Wrist",
         "WeightLbs": "105.74",
+		"DataCollectionStatus": "Collecting",      
+        "DeviceSerial": "TAS1D48341371"
     }
 
 Subject(s) By Identifier
@@ -95,6 +99,9 @@ Returns one or more subjects (within requested study) with specific subject iden
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Left Wrist",
+			"WeightLbs": 165.00,
+            "DataCollectionStatus": "Collecting",      
+            "DeviceSerial": "TAS1D48341371"
         }
     ]
 
@@ -103,7 +110,7 @@ Add Subject
 ---
 Creates a new subject.  Subjects are created at the site level.  List sites to find out which you can access.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  The new Subject's Id is returned upon successful creation along with a 201 Created response.
 
-**Request:**
+### Request: ###
 
     POST /v1/subjects
     Content-Type:application/json
@@ -114,22 +121,35 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
+		"DeviceSerial": "TAS1D48341371"
     }
 
-Field|Type|Min|Max|Required|Accepted Values|Notes
------|----|---|---|--------|-----------------|-----
-DOB|ISO8601 Date|n/a|day before present day|Yes (**site dependent)||must be day before present day
-Gender|String|n/a|n/a|Yes (**site dependent)|"Male", "Female"
-SiteId|Number|n/a|n/a|Yes||Must have permission
-SubjectIdentifier|String|n/a|n/a|Yes| |Unique within study
-WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", or "Waist"| ***In accordance with Study settings
-WeightLbs|Number|1|2000|Yes (**site dependent)| |
 
-** Depending on the site in which the subject is being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
 
-*** Depending on the site's study settings, the wear postion might be restricted to a single default value ("Left Wrist", "Right Wrist", or "Waist"). 
+**Request Properties**
 
-**Response:**
+
+Field|Type|Min|Max|Required|Accepted Values|Description|Notes
+-----|----|---|---|--------|---------------|-----------|-----
+DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
+Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
+SiteId|Number|||Yes|||Site write access enforced. Therefore API user must have appropriate permissions to add subjects to given site.
+SubjectIdentifier|String|||Yes||User specified Subject Identifier that is unique within study|Subject Identifier should NOT be prefixed with Site Identifier.|
+WearPosition|String|||Yes|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>||Study/site shall be configured in order to utilize this field
+WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
+DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. 
+
+
+**Additional Notes** 
+
+- Depending on the study/site configuration of subject being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the JSON request.
+- Depending on the study/site configuration of subject being added, the **WearPosition** may or may not limit to utilize only one of the following values: 
+	- Left Wrist
+	- Right Wrist
+	- Waist 
+- Depending on the study/site configuration of subject being added, the **DeviceSerial** may or may not be allowed in order to perform an activity monitor assignment to subject
+
+### Response: ###
 
     201 Created
     {
@@ -140,7 +160,7 @@ Edit Subject
 ---
 Modifies an existing subject.  List sites to find out which you can access.  You must have CanEditSubjects=true for a Site in order to edit a subject in it.  A 200 OK response is returned for a successfully edited subject.
 
-**Request:**
+### Request: ###
 
     PUT /v1/subjects
     Content-Type:application/json
@@ -152,27 +172,37 @@ Modifies an existing subject.  List sites to find out which you can access.  You
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-        "ChangeReason": "Error at site",
+		    "ChangeReason":"Performing monitor assignment to existing subject",
+		    "DeviceSerial": "TAS1D48341371"
     }
 
-Field|Type|Min|Max|Required|Accepted Values|Notes
------|----|---|---|--------|-----------------|-----
-DOB|ISO8601 Date|n/a|day before present day|Yes (**site dependent)||must be day before today
-Gender|String|n/a|n/a|Yes (**site dependent)|"Male", "Female"|
-SiteId|Number|n/a|n/a|Yes||Must have permission
-SubjectId|Number|n/a|n/a|Yes||Must have permission
-SubjectIdentifier|String|n/a|n/a|Yes||Unique within study
-WearPosition|String|n/a|n/a|Yes|"Left Wrist", "Right Wrist", "Waist"|***In accordance with Study settings
-WeightLbs|Number|1|2000|Yes (**site dependent)||
-ChangeReason|String|1|300|Yes (**** study dependent)||**** In accordance with Study settings
+**Request Properties** 
 
-** Depending on the site in which the subject is being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the json request.
+Field|Type|Min|Max|Required|Accepted Values|Description|Notes
+-----|----|---|---|--------|---------------|-----------|-----
+DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
+Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
+SiteId|Number|||Yes|||Site write access enforced
+SubjectId|Number|||Yes|||Site write access enforced
+SubjectIdentifier|String|||Yes|||Unique within study
+WearPosition|String|||Yes|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>||Study/site shall be configured to utilize this field
+WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
+ChangeReason|String|||Yes|||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
+DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted.|
 
-*** Depending on the site's study settings, the wear postion might be restricted to a single default value ("Left Wrist", "Right Wrist", or "Waist").
 
-**** Depending on the study settings, the change reason might be required to edit a subject.
+**Additional Notes** 
 
-**Response:**
+- Depending on the study/site configuration of subject being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the JSON request.
+- Depending on the study/site configuration of subject being edited, the **WearPosition** may or may not limit to utilize only one of the following values: 
+	- Left Wrist
+	- Right Wrist
+	- Waist
+- **ChangeReason** is required for all study configurations in CentrePoint created after 2017-11-30. 
+- Depending on the study/site configuration of subject being edited, the **DeviceSerial** may or may not be allowed in order to perform an activity monitor assignment to subject 
+
+
+### Response: ###
 
     200 OK
 
@@ -557,3 +587,30 @@ Returns a Pre-Signed Url where a specific data file can be downloaded. The Url's
         "DownloadURL": https://s3.amazonaws.com/acticloud ...,
         "URLExpirationDate": "2015-02-03T06:42:40.1654394Z"
     }
+
+
+Stop Data Collection for Subject
+---
+
+Stops data collection for requested subject by removing the subject's active monitor assignment.
+  
+### Request: ###
+
+    PUT /v1/subjects/RemoveDeviceAssignment
+	Content-Type:application/json
+	{
+	    "SubjectId": 3792,
+	    "DeviceSerial": "TAS2A13510263"
+	}
+
+#### Request Properties ####
+
+Field|Type|Required|Description
+-----|----|--------|-----------------
+SubjectId|number|yes|Subject's Primary Key in which API user wishes to stop activity monitor data collection
+DeviceSerial|string|yes|Activity monitor serial in which to stop collecting data for given subject
+
+
+### Response: ###
+
+    200 OK
