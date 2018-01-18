@@ -172,8 +172,8 @@ Modifies an existing subject.  List sites to find out which you can access.  You
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-		"ChangeReason":"Performing monitor assignment to existing subject",
-		"DeviceSerial": "TAS1D48341371"
+		    "ChangeReason":"Performing monitor assignment to existing subject",
+		    "DeviceSerial": "TAS1D48341371"
     }
 
 **Request Properties** 
@@ -190,6 +190,7 @@ WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this fie
 ChangeReason|String|||Yes|||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
 DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted.|
 
+
 **Additional Notes** 
 
 - Depending on the study/site configuration of subject being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the JSON request.
@@ -199,6 +200,7 @@ DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject 
 	- Waist
 - **ChangeReason** is required for all study configurations in CentrePoint created after 2017-11-30. 
 - Depending on the study/site configuration of subject being edited, the **DeviceSerial** may or may not be allowed in order to perform an activity monitor assignment to subject 
+
 
 ### Response: ###
 
@@ -597,7 +599,7 @@ Stops data collection for requested subject by removing the subject's active mon
     PUT /v1/subjects/RemoveDeviceAssignment
 	Content-Type:application/json
 	{
-	    "SubjectId": 3792
+	    "SubjectId": 3792,
 	    "DeviceSerial": "TAS2A13510263"
 	}
 

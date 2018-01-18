@@ -64,8 +64,8 @@ Returns a list of all subjects within the requested study.
             "Gender": "Female",
             "WearPosition": "Left Wrist",
             "WeightLbs": "105.74",
-			"DataCollectionStatus": "Collection Stopped",
-			"DeviceSerial": null
+            "DataCollectionStatus": "Collecting",    
+            "DeviceSerial": "TAS1D48341371"
         },
         {
             "Id":125,
@@ -73,10 +73,10 @@ Returns a list of all subjects within the requested study.
             "DOB": "1988-07-14T00:00:00",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
             "Gender": "Male",
-            "WearPosition": "Right Wrist"
+            "WearPosition": "Right Wrist",
             "WeightLbs": "198",
-			"DataCollectionStatus": "Collecting",
-			"DeviceSerial": "TAS1D48341371"
+            "DataCollectionStatus": "No Device Assigned",
+            "DeviceSerial": null
         },
         ...
     ]
