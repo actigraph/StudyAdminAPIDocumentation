@@ -21,7 +21,7 @@ Returns a list of all subjects within the requested study.
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
 	    "WearPosition": "Left Wrist",
-	    "WeightLbs": 120.00,
+            "WeightLbs": 120.00,
             "DataCollectionStatus": "Collecting",      
             "DeviceSerial": "TAS1D48341371"
         },
@@ -32,7 +32,7 @@ Returns a list of all subjects within the requested study.
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Right Wrist",
-	    "WeightLbs": 150.00,
+            "WeightLbs": 150.00,
             "DataCollectionStatus": "No Device Assigned",
             "DeviceSerial": null
         },
