@@ -121,7 +121,7 @@ Creates a new subject.  Subjects are created at the site level.  List sites to f
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-		"DeviceSerial": "TAS1D48341371"
+        "DeviceSerial": "TAS1D48341371"
     }
 
 
@@ -172,8 +172,8 @@ Modifies an existing subject.  List sites to find out which you can access.  You
         "DOB": "1988-08-01",
         "Gender": "Male",
         "WeightLbs": "198",
-		    "ChangeReason":"Performing monitor assignment to existing subject",
-		    "DeviceSerial": "TAS1D48341371"
+        "ChangeReason":"Performing monitor assignment to existing subject",
+        "DeviceSerial": "TAS1D48341371"
     }
 
 **Request Properties** 
