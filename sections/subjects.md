@@ -20,8 +20,7 @@ Returns a list of all subjects within the requested study.
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
-            "WearPosition": "Left Wrist",
-	    "WeightLbs": 120.00,
+	    "WearPosition": "Left Wrist",                                                                                                           "WeightLbs": 120.00,
             "DataCollectionStatus": "Collecting",      
             "DeviceSerial": "TAS1D48341371"
         },
@@ -31,8 +30,7 @@ Returns a list of all subjects within the requested study.
             "DOB": "1988-07-14T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
-            "WearPosition": "Right Wrist",
-	    "WeightLbs": 150.00,
+            "WearPosition": "Right Wrist",                                                                                                         "WeightLbs": 150.00,
             "DataCollectionStatus": "No Device Assigned",
             "DeviceSerial": null
         },
