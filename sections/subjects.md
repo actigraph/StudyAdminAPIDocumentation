@@ -187,7 +187,7 @@ Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be c
 SiteId|Number|||Yes|||Site write access enforced
 SubjectId|Number|||Yes|||Site write access enforced
 SubjectIdentifier|String|||Yes|||Unique within study
-WearPosition|String|||Yes|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>||Study/site shall be configured to utilize this field
+WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li></ul>||Study/site shall be configured to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
 ChangeReason|String|||Yes|||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
 DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted.|
