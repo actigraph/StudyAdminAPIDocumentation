@@ -135,7 +135,7 @@ DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
 Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
 SiteId|Number|||Yes|||Site write access enforced. Therefore API user must have appropriate permissions to add subjects to given site.
 SubjectIdentifier|String|||Yes||User specified Subject Identifier that is unique within study|Subject Identifier should NOT be prefixed with Site Identifier.|
-WearPosition|String|||Yes|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>||Study/site shall be configured in order to utilize this field
+WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li></ul>||Study/site shall be configured in order to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
 DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. 
 
@@ -144,6 +144,8 @@ DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject 
 
 - Depending on the study/site configuration of subject being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the JSON request.
 - Depending on the study/site configuration of subject being added, the **WearPosition** may or may not limit to utilize only one of the following values: 
+	- Non-Dominant Wrist
+	- Dominant Wrist
 	- Left Wrist
 	- Right Wrist
 	- Waist 
