@@ -48,7 +48,7 @@ Subject Identifier|String||User-specified Subject Identifier that is unique with
 DOB|ISO8601 Date||Subject's Date of Birth||
 Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
 Timezone|String||Subject's Timezone||
-Wear Position|String|<ul><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>|| 
+Wear Position|String|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Waist</li></ul>|| 
 Data Collection Status|String|<ul><li>No Device Assigned</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
 Device Serial|String||The serial number of the activity monitor currently assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
