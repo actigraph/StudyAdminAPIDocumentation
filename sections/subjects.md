@@ -70,7 +70,7 @@ Returns detailed information about the requested subject.
         "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
         "WearPosition": "Left Wrist",
         "WeightLbs": "105.74",
-		"DataCollectionStatus": "Collecting",      
+        "DataCollectionStatus": "Collecting",      
         "DeviceSerial": "TAS1D48341371"
     }
 
@@ -99,7 +99,7 @@ Returns one or more subjects (within requested study) with specific subject iden
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
             "WearPosition": "Left Wrist",
-			"WeightLbs": 165.00,
+            "WeightLbs": 165.00,
             "DataCollectionStatus": "Collecting",      
             "DeviceSerial": "TAS1D48341371"
         }
