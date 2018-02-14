@@ -402,7 +402,7 @@ By default the minute epochs returned will be filtered in the subject's timezone
     [
         {
             "TimestampUTC": "2013-07-27T21:40:00Z",
-    	    "TimestampSubjectTZ": "2013-07-27T16:40:00",
+            "TimestampSubjectTZ": "2013-07-27T16:40:00",
             "Calories": 6.88872851708981,
             "HR": 0.0,
             "Lux": 46.0,
@@ -411,7 +411,7 @@ By default the minute epochs returned will be filtered in the subject's timezone
             "x": 4922,
             "y": 4392,
             "z": 3775,
-	    "AxisXCounts": 4922,
+            "AxisXCounts": 4922,
             "AxisYCounts": 4392,
             "AxisZCounts": 3775
         },
