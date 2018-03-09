@@ -24,7 +24,7 @@ ExcludeResponseCodes|Number|no|`null`|Filter to exclude webhook requests with sp
 
 **Response:**
     
-
+    200 OK
     [
         {
           "Id": 3924,
