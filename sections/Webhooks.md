@@ -19,6 +19,7 @@ Returns a history log of Webhook requests for a given study.
 
 Field|Type|Required|Default Value|Description|Example Request URI
 |-----|----|---------|------------|-----------|-------------------|
+studyId|number|yes||primary key of the study configuration|/v1/webhooks/history?studyId=<studyId>
 startDate|DateTime|no|`null`|Start Date (UTC) to filter webhook requests on or after the given date/time|/v1/webhooks/history?studyId={studyId}&startDate=YYYY-MM-DDTHH:MM:SS|
 endDate|DateTime|no|`null`|End  Date (UTC) to filter webhook requests on or before the given date/time|/v1/webhooks/history?studyId={studyId}&endDate=YYYY-MM-DDTHH:MM:SS
 IncludeResponseCodes|Number|no|`null`|Filter to include webhooks requests with only specified response codes|/v1/webhooks/history?studyId={studyId}&IncludeResponseCodes=200
