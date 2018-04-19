@@ -137,7 +137,7 @@ SiteId|Number|||Yes|||Site write access enforced. Therefore API user must have a
 SubjectIdentifier|String|||Yes||User specified Subject Identifier that is unique within study|Subject Identifier should NOT be prefixed with Site Identifier.|
 WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li></ul>||Study/site shall be configured in order to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
-DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. 
+DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Also a CentrePoint Data Hub (CDH) device is required to complete monitor assignments created by this API call.
 
 
 **Additional Notes** 
@@ -190,7 +190,7 @@ SubjectIdentifier|String|||Yes|||Unique within study
 WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li></ul>||Study/site shall be configured to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
 ChangeReason|String|||Yes|||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
-DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted.|
+DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Also, a CentrePoint Data Hub (CDH) device is required to complete monitor assignments created by this API call.|
 
 
 **Additional Notes** 
