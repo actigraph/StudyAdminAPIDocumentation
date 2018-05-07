@@ -297,6 +297,17 @@ Returns daily-level statistics about the requested subject.
 **Request:**
 
     GET /v1/subjects/{id}/daystats
+    
+    
+    
+#### Request Properties ####
+
+Field|Type|Required|Default Value|Description|Example Request URI
+|-----|----|---------|------------|-----------|-------------------|
+subjectId|Number|yes||primary key of the subject data record|/v1/subjects/{subjectId}/daystats
+startDate|Date|no|`null`|Start Date (in subject's site timezone) to filter daily-aggregated statistics records for requsted subject on or after the given date|/v1/subjects/{subjectId}/daystats?startDate=YYYY-MM-DD
+endDate|Date|no|`null`|End Date (in subject's site timezone) to filter daily-aggregated statistics records for requsted subject on or before the given date|/v1/subjects/{subjectId}/daystats?endDate=YYYY-MM-DD
+
 
 **Response:**
 
