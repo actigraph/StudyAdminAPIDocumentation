@@ -36,7 +36,8 @@ Retrieve details of an upload by passing an Upload Int ID.
         "TotalRecords": 9956,
         "RecordsInserted": 9956,
         "Failed": false,
-        "FailedReason": null
+        "FailedReason": null,
+        "UploadStatus": "Upload Processing Completed"
     }]
     }
 
