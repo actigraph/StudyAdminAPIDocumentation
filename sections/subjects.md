@@ -563,6 +563,7 @@ Subject Data Files
 	      "FileType": "RAW",
 	      "FileSizeInBytes": "76698",
 	      "UploadedDate": "2015-01-14T22:54:08Z",
+	      "UploadStatus": "Upload Not Processed",
 	      "Metadata": {
 	        "Filename": "MOS2A13510263_2015-01-14___16-54-07.gt3x",
 	        "BeginOfData": "2015-01-14T16:19:00Z",
@@ -575,6 +576,7 @@ Subject Data Files
 	      "FileType": "RAW",
 	      "FileSizeInBytes": "1447186",
 	      "UploadedDate": "2015-01-15T21:10:00Z",
+	      "UploadStatus": "Upload Not Processed",
 	      "Metadata": {
 	        "Filename": "MOS2A13510263_2015-01-15___15-09-58.gt3x",
 	        "BeginOfData": "2015-01-14T22:56:00Z",
