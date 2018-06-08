@@ -144,11 +144,16 @@ DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject 
 
 - Depending on the study/site configuration of subject being added, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the JSON request.
 - Depending on the study/site configuration of subject being added, the **WearPosition** may or may not limit to utilize only one of the following values: 
+	- Left Non-Dominant Wrist
+	- Right Non-Dominant Wrist
+	- Left Dominant Wrist
+	- Right Dominant Wrist
 	- Non-Dominant Wrist
 	- Dominant Wrist
 	- Left Wrist
 	- Right Wrist
 	- Waist 
+	- Ankle
 - Depending on the study/site configuration of subject being added, the **DeviceSerial** may or may not be allowed in order to perform an activity monitor assignment to subject
 
 ### Response: ###
@@ -197,9 +202,16 @@ DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject 
 
 - Depending on the study/site configuration of subject being edited, the **Gender**, **DOB**, and/or **WeightLBS** fields may or may not be allowed. If the fields are allowed, then they will be required. If not allowed, then these fields must be excluded from the JSON request.
 - Depending on the study/site configuration of subject being edited, the **WearPosition** may or may not limit to utilize only one of the following values: 
+	- Left Non-Dominant Wrist
+	- Right Non-Dominant Wrist
+	- Left Dominant Wrist
+	- Right Dominant Wrist
+	- Non-Dominant Wrist
+	- Dominant Wrist
 	- Left Wrist
 	- Right Wrist
-	- Waist
+	- Waist 
+	- Ankle
 - **ChangeReason** is required for all study configurations in CentrePoint created after 2017-11-30. 
 - Depending on the study/site configuration of subject being edited, the **DeviceSerial** may or may not be allowed in order to perform an activity monitor assignment to subject 
 
