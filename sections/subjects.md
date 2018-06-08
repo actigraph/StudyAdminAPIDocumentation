@@ -48,7 +48,7 @@ Subject Identifier|String||User-specified Subject Identifier that is unique with
 DOB|ISO8601 Date||Subject's Date of Birth||
 Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
 Timezone|String||Subject's Timezone||
-Wear Position|String|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li></ul>|| 
+Wear Position|String|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>|| 
 Data Collection Status|String|<ul><li>No Device Assigned</li><li>Incomplete Assignment</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
 Device Serial|String||The serial number of the activity monitor currently assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
@@ -135,7 +135,7 @@ DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
 Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
 SiteId|Number|||Yes|||Site write access enforced. Therefore API user must have appropriate permissions to add subjects to given site.
 SubjectIdentifier|String|||Yes||User specified Subject Identifier that is unique within study|Subject Identifier should NOT be prefixed with Site Identifier.|
-WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li></ul>||Study/site shall be configured in order to utilize this field
+WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>||Study/site shall be configured in order to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
 DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Also a CentrePoint Data Hub (CDH) device is required to complete monitor assignments created by this API call.
 
@@ -187,7 +187,7 @@ Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be c
 SiteId|Number|||Yes|||Site write access enforced
 SubjectId|Number|||Yes|||Site write access enforced
 SubjectIdentifier|String|||Yes|||Unique within study
-WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li></ul>||Study/site shall be configured to utilize this field
+WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>||Study/site shall be configured to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
 ChangeReason|String|||Yes|||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
 DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Also, a CentrePoint Data Hub (CDH) device is required to complete monitor assignments created by this API call.|
