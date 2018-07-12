@@ -17,7 +17,7 @@ Returns a list of all subjects within the requested study.
         {
             "Id":123,
             "SubjectIdentifier": "013001",
-	    "SiteId": 456,
+            "SiteId": 456,
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
@@ -29,7 +29,7 @@ Returns a list of all subjects within the requested study.
         {
             "Id":125,
             "SubjectIdentifier": "013002",
-	    "SiteId": 456,
+            "SiteId": 456,
             "DOB": "1988-07-14T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
@@ -67,7 +67,7 @@ Returns detailed information about the requested subject.
     {
         "Id":123,
         "SubjectIdentifier": "013001",
-	"SiteId": 456,
+        "SiteId": 456,
         "DOB": "1974-02-11T00:00:00",
         "Gender": "Female",
         "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
@@ -98,7 +98,7 @@ Returns one or more subjects (within requested study) with specific subject iden
         {
             "Id":123,
             "SubjectIdentifier": "013001",
-	    "SiteId": 456,
+            "SiteId": 456,
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
