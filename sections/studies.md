@@ -59,6 +59,7 @@ Returns a list of all subjects within the requested study.
         {
             "Id":123,
             "SubjectIdentifier": "013001",
+	    "SiteId": 456,
             "DOB": "1974-02-11T00:00:00",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
             "Gender": "Female",
@@ -70,6 +71,7 @@ Returns a list of all subjects within the requested study.
         {
             "Id":125,
             "SubjectIdentifier": "013002",
+	    "SiteId": 456,
             "DOB": "1988-07-14T00:00:00",
             "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
             "Gender": "Male",
