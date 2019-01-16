@@ -654,15 +654,15 @@ Returns milestones for a given subject based on the 'subject-id' passed.
 
 ### Request:###
 
-    GET /v1/subjects/{id}/subjectmilestones
+    GET /v1/subjects/{id}/milestones
 
 ### Response:###
 	[
 	  {
 		"Id": 108,
-		"Timestamp": "2013-08-02T04:59:59",
+		"TimestampUtc": "2013-08-02T04:59:59",
 		"SubjectIdentifier": "000055",
-		"Name": "Visit One",
+		"MilestoneName": "Visit One",
 		"TimestampSubjectTZ": "2013-08-01T23:59:59"
 	  },
 	  ...
