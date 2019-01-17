@@ -537,7 +537,7 @@ Returns a list of wear filtered and non-wear filtered bout periods for subject. 
 
 Subject Sleep Periods
 ---
- Returns a list of sleep periods for a subject.  `Start` and `stop` arguments are optional.  If `start` argument is supplied, sleep periods returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, sleep periods returned will be filtered where the In Bed Time falls before the supplied `stop` time. If the `AutoDetected` field (in the response) denotes `true`, the sleep period was automatically detected otherwise it was manually entered.
+ Returns a list of sleep periods for a subject.  `start` and `stop` arguments are optional.  If `start` argument is supplied, sleep periods returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, sleep periods returned will be filtered where the In Bed Time falls before the supplied `stop` time. If the `AutoDetected` field (in the response) denotes `true`, the sleep period was automatically detected otherwise it was manually entered.
 
 **Request:**
 
@@ -548,14 +548,18 @@ Subject Sleep Periods
     [
         {
             "SubjectId": 114,
-            "InBedTime": "2013-03-21T20:00:00",
-            "OutBedTime": "2013-03-22T08:25:00",
+			"InBedTime": "2013-08-06T01:42:00",
+			"OutBedTime": "2013-08-06T15:30:00",
+			"InBedTimeUtc": "2013-08-06T06:42:00+05:30",
+			"OutBedTimeUtc": "2013-08-06T20:30:00+05:30",
             "AutoDetected": true
         },
         {
             "SubjectId": 114,
-            "InBedTime": "2013-03-22T20:15:00",
-            "OutBedTime": "2013-03-23T08:05:00",
+			"InBedTime": "2013-08-06T19:28:00",
+			"OutBedTime": "2013-08-06T22:33:00",
+			"InBedTimeUtc": "2013-08-07T00:28:00+05:30",
+			"OutBedTimeUtc": "2013-08-07T03:33:00+05:30",
             "AutoDetected": true
         }
         ...
