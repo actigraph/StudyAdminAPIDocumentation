@@ -487,20 +487,23 @@ Returns the score of a subject's data over a sleep period.
 
 **Response:**
 
-    {
-        "InBedTime": "2013-03-21T20:00:00",
-        "OutBedTime": "2013-03-22T06:30:00",
-        "Onset": "2013-03-21T20:00:00",
-        "LatencyInMinutes": 0.0,
-        "AvgAwakeningInMinutes": 0.0,
-        "AwakeningCount": 0.0,
-        "Efficiency": 1.0,
-        "TimeAsleepInMinutes": 631.0,
-        "TimeAwakeInMinutes": 0.0,
-        "TimeInBedInMinutes": 631.0,
-        "WakeAfterOnsetInMinutes": 0.0,
-        "TotalCounts": 20
-    }
+	{
+		"InBedTime": "2013-07-25T23:40:00",
+		"OutBedTime": "2013-07-26T06:28:00",
+		"Onset": "2013-07-25T23:40:00",
+		"InBedTimeUtc": "2013-07-26T04:40:00Z",
+		"OutBedTimeUtc": "2013-07-26T11:28:00Z",
+		"OnsetUtc": "2013-07-26T04:40:00Z",
+		"LatencyInMinutes": 0.0,
+		"AvgAwakeningInMinutes": 0.0,
+		"AwakeningCount": 0.0,
+		"Efficiency": 1.0,
+		"TimeAsleepInMinutes": 408.0,
+		"TimeAwakeInMinutes": 0.0,
+		"TimeInBedInMinutes": 408.0,
+		"WakeAfterOnsetInMinutes": 0.0,
+		"TotalCounts": 0
+	}
 
 Subject Bouts [v1.2]
 ---
