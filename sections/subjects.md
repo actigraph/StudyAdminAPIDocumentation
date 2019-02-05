@@ -605,7 +605,9 @@ Subject Data Files
 	        "BeginOfData": "2015-01-14T22:56:00Z",
 	        "EndOfData": "2015-01-15T21:09:59Z"
 	      }
-	    }...
+	    }, 
+	    ...
+	  ]
 	 }
 
 
