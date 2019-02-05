@@ -624,7 +624,7 @@ Returns a Pre-Signed Url where a specific data file can be downloaded. The Url's
 
     
     {
-        "DownloadURL": https://s3.amazonaws.com/acticloud ...,
+        "DownloadURL": "https://acticlouduploadsdev.blob.core.windows.net/study ...",
         "URLExpirationDate": "2015-02-03T06:42:40.1654394Z"
     }
 
