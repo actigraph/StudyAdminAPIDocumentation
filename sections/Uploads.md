@@ -6,11 +6,11 @@ Uploads
 GET Upload Details
 ---
 
-Retrieve details of an upload by passing an Upload Int ID. 
+Retrieve details of an upload by passing an Upload Id. 
 
 **Request:**
 
-    GET /v1/UploadDetails/418
+    GET /v1/UploadDetails/{upload Id}
 
 **Response:**
 
