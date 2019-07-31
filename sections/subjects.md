@@ -676,4 +676,64 @@ Returns milestones for a given subject
 	  },
 	  ...
 	]
-   
+
+Subject Wear Periods
+---
+Returns wear periods for the requested subject.
+
+**Request:**
+
+    GET /v1/subjects/{id}/wearperiods
+    
+    
+    
+#### Request Properties ####
+
+Field|Type|Required|Default Value|Description|Example Request URI
+|-----|----|---------|------------|-----------|-------------------|
+id|Number|yes||primary key of the subject data record|/v1/subjects/{id}/wearperiods
+start|Date|no|`null`|Start date to filter wear periods for the requsted subject on or after the date specified|/v1/subjects/{subjectId}/wearperiods?start={yyyy-MM-ddTHH:mm:ss}
+stop|Date|no|`null`|Stop date to filter wear periods for the requsted subject on or before the date specified|/v1/subjects/{subjectId}/wearperiods?stop={yyyy-MM-ddTHH:mm:ss}
+
+
+**Response:**
+
+    [
+          {
+			"Id": 22422,
+			"SubjectId": 8851,
+			"Start": "2017-03-27T20:22:00Z",
+			"Stop": "2017-03-27T20:28:00Z"
+		},
+		{
+			"Id": 22423,
+			"SubjectId": 8851,
+			"Start": "2017-03-29T18:56:00Z",
+			"Stop": "2017-03-29T20:00:00Z"
+		},
+		{
+			"Id": 22424,
+			"SubjectId": 8851,
+			"Start": "2017-03-31T19:39:00Z",
+			"Stop": "2017-03-31T19:40:00Z"
+		},
+		{
+			"Id": 22425,
+			"SubjectId": 8851,
+			"Start": "2017-04-03T13:27:00Z",
+			"Stop": "2017-04-03T13:28:00Z"
+		},
+		{
+			"Id": 22426,
+			"SubjectId": 8851,
+			"Start": "2017-04-03T21:25:00Z",
+			"Stop": "2017-04-03T21:27:00Z"
+		},
+		{
+			"Id": 22427,
+			"SubjectId": 8851,
+			"Start": "2017-04-04T18:47:00Z",
+			"Stop": "2017-04-04T18:48:00Z"
+		},
+        ...
+    ]
