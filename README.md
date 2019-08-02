@@ -1,9 +1,10 @@
-
-**NOTE:** This page consists of the documentation for the CentrePoint (V2) API. ActiGraph has recently launched **CentrePoint (V3) API** which provides additional flexibility in it's ability to retrieve RAW sub-second resolution actigraphy data and EPOCH summary data at variable lengths. To view the CentrePoint (V3) documentation, goto: https://github.com/actigraph/CentrePoint3APIDocumentation
-
-
 CentrePoint (V2) API
 ===============
+
+CentrePoint (V3) API
+-------------------
+**NOTE:** This documentation was constructed specifically for the CentrePoint (V2) API. ActiGraph has recently launched the **CentrePoint (V3) API** which provides additional flexibility in it's ability to retrieve RAW sub-second resolution actigraphy data and EPOCH summary data. To view the CentrePoint (V3) documentation, goto: https://github.com/actigraph/CentrePoint3APIDocumentation
+
 
 Overview
 -------------------
