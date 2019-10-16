@@ -17,7 +17,7 @@ To view C# client demonstration application that conntects to API, goto: https:/
 
 Enabling API Access
 -------------------
-Please contact [Actigraph](http://www.actigraphcorp.com/support/contact-support/) for more information.
+Please contact [Actigraph](https://www.actigraphcorp.com/support/software/) for more information.
 
 Technical Overview
 -------------------
