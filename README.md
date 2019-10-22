@@ -1,14 +1,14 @@
 CentrePoint (V2) API
 ===============
 
-CentrePoint (V3) API
--------------------
-This documentation was constructed specifically for the CentrePoint (V2) API. ActiGraph has recently launched the **CentrePoint (V3) API** which provides additional flexibility with it's ability to retrieve RAW sub-second resolution actigraphy data and EPOCH summary data. To view the CentrePoint (V3) documentation, goto: https://github.com/actigraph/CentrePoint3APIDocumentation
-
 
 Overview
 -------------------
 The CentrePoint (V2) API was developed to provide other software systems a web interface to the study admin web portal. The api provides access to the same core study and de-identified subject data that can be accessed within [Study Admin](http://studyadmin.actigraphcorp.com).
+
+CentrePoint (V3) API
+-------------------
+This documentation was constructed specifically for the CentrePoint (V2) API. ActiGraph has recently launched the **CentrePoint (V3) API** which provides additional flexibility with it's ability to retrieve RAW sub-second resolution actigraphy data and EPOCH summary data. To view the CentrePoint (V3) documentation, goto: https://github.com/actigraph/CentrePoint3APIDocumentation
 
 CentrePoint Web API C# Demo
 -------------------
