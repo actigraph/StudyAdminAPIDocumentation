@@ -367,7 +367,8 @@ endDate|Date|no|`null`|End Date (in subject's site timezone) to filter daily-agg
             ],
             "WearFilteredMVPA": 101,
             "WearFilteredSteps": 14284.0,
-            "WearMinutes": 742
+            "WearMinutes": 742,
+	    "AwakeWearMinutes": 309 
         },
         ...
     ]
