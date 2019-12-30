@@ -42,7 +42,6 @@ Any non-HTTPS request will result in a Forbidden response.
 * [ISO 8601](http://www.w3.org/TR/NOTE-datetime)
 
 ### C# Example/Demo
--------------------
 To view a C# client demonstration application that conntects to API, goto: [CSharpExample](CSharpExample.md)
 
 Standard Response Format
