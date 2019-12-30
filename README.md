@@ -41,7 +41,7 @@ Any non-HTTPS request will result in a Forbidden response.
 * [HMAC](http://tools.ietf.org/html/rfc2104) [SHA256](http://tools.ietf.org/html/rfc4634)
 * [ISO 8601](http://www.w3.org/TR/NOTE-datetime)
 
-### C# Example/Demo
+### API Client C# Demo
 To view a C# client demonstration application that conntects to API, goto: [CSharpExample](CSharpExample.md)
 
 Standard Response Format
