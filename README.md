@@ -10,10 +10,6 @@ CentrePoint (V3) API
 -------------------
 This documentation was constructed specifically for the CentrePoint (V2) API. ActiGraph has recently launched the **CentrePoint (V3) API** which provides additional flexibility with it's ability to retrieve RAW sub-second resolution actigraphy data and EPOCH summary data. To view the CentrePoint (V3) documentation, goto: https://github.com/actigraph/CentrePoint3APIDocumentation
 
-CentrePoint Web API C# Demo
--------------------
-To view C# client demonstration application that conntects to API, goto: https://github.com/actigraph/CentrePointWebAPIDemo
-
 
 Enabling API Access
 -------------------
@@ -44,6 +40,10 @@ Any non-HTTPS request will result in a Forbidden response.
 * [JSON](http://tools.ietf.org/html/rfc4627)
 * [HMAC](http://tools.ietf.org/html/rfc2104) [SHA256](http://tools.ietf.org/html/rfc4634)
 * [ISO 8601](http://www.w3.org/TR/NOTE-datetime)
+
+### C# Example/Demo
+-------------------
+To view a C# client demonstration application that conntects to API, goto: [CSharpExample](CSharpExample.md)
 
 Standard Response Format
 ---------
