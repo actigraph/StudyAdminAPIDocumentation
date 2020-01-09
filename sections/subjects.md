@@ -704,37 +704,49 @@ stop|Date|no|`null`|Stop date to filter wear periods for the requsted subject on
 			"Id": 22422,
 			"SubjectId": 8851,
 			"Start": "2017-03-27T20:22:00Z",
-			"Stop": "2017-03-27T20:28:00Z"
+			"Stop": "2017-03-27T20:28:00Z",
+            "StartSubjectTZ": "2017-03-27T14:22:00",
+            "StopSubjectTZ": "2017-03-27T14:28:00"
 		},
 		{
 			"Id": 22423,
 			"SubjectId": 8851,
 			"Start": "2017-03-29T18:56:00Z",
-			"Stop": "2017-03-29T20:00:00Z"
+			"Stop": "2017-03-29T20:00:00Z",
+            "StartSubjectTZ": "2017-03-29T12:56:00",
+            "StopSubjectTZ": "2017-03-29T14:00:00"
 		},
 		{
 			"Id": 22424,
 			"SubjectId": 8851,
 			"Start": "2017-03-31T19:39:00Z",
-			"Stop": "2017-03-31T19:40:00Z"
+			"Stop": "2017-03-31T19:40:00Z",
+            "StartSubjectTZ": "2017-03-31T13:39:00",
+            "StopSubjectTZ": "2017-03-31T13:40:00"
 		},
 		{
 			"Id": 22425,
 			"SubjectId": 8851,
 			"Start": "2017-04-03T13:27:00Z",
-			"Stop": "2017-04-03T13:28:00Z"
+			"Stop": "2017-04-03T13:28:00Z",
+            "StartSubjectTZ": "2017-04-03T07:27:00",
+            "StopSubjectTZ": "2017-04-03T07:28:00"
 		},
 		{
 			"Id": 22426,
 			"SubjectId": 8851,
 			"Start": "2017-04-03T21:25:00Z",
-			"Stop": "2017-04-03T21:27:00Z"
+			"Stop": "2017-04-03T21:27:00Z",
+            "StartSubjectTZ": "2017-04-03T15:25:00",
+            "StopSubjectTZ": "2017-04-03T15:27:00"
 		},
 		{
 			"Id": 22427,
 			"SubjectId": 8851,
 			"Start": "2017-04-04T18:47:00Z",
-			"Stop": "2017-04-04T18:48:00Z"
+			"Stop": "2017-04-04T18:48:00Z",
+            "StartSubjectTZ": "2017-04-04T12:47:00",
+            "StopSubjectTZ": "2017-04-04T12:47:00"
 		},
         ...
     ]
