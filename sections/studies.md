@@ -61,7 +61,7 @@ Returns a list of all subjects within the requested study.
             "SubjectIdentifier": "013001",
             "SiteId": 456,
             "DOB": "1974-02-11T00:00:00",
-            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+            "Timezone": "US/CENTRAL"
             "Gender": "Female",
             "WearPosition": "Left Wrist",
             "WeightLbs": "105.74",
@@ -73,7 +73,7 @@ Returns a list of all subjects within the requested study.
             "SubjectIdentifier": "013002",
             "SiteId": 456,
             "DOB": "1988-07-14T00:00:00",
-            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City"
+            "Timezone": "US/CENTRAL"
             "Gender": "Male",
             "WearPosition": "Right Wrist",
             "WeightLbs": "198",

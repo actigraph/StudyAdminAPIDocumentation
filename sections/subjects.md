@@ -20,7 +20,7 @@ Returns a list of all subjects within the requested study.
             "SiteId": 456,
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
-            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
+            "Timezone": "US/CENTRAL",
             "WearPosition": "Left Wrist",
             "WeightLbs": 120.00,
             "DataCollectionStatus": "Collecting",      
@@ -32,7 +32,7 @@ Returns a list of all subjects within the requested study.
             "SiteId": 456,
             "DOB": "1988-07-14T00:00:00",
             "Gender": "Male",
-            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
+            "Timezone": "US/CENTRAL",
             "WearPosition": "Right Wrist",
             "WeightLbs": 150.00,
             "DataCollectionStatus": "No Device Assigned",
@@ -70,7 +70,7 @@ Returns detailed information about the requested subject.
         "SiteId": 456,
         "DOB": "1974-02-11T00:00:00",
         "Gender": "Female",
-        "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
+        "Timezone": "US/CENTRAL",
         "WearPosition": "Left Wrist",
         "WeightLbs": "105.74",
         "DataCollectionStatus": "Collecting",      
@@ -101,7 +101,7 @@ Returns one or more subjects (within requested study) with specific subject iden
             "SiteId": 456,
             "DOB": "1974-02-11T00:00:00",
             "Gender": "Male",
-            "Timezone": "(GMT -6:00) Central Time (US & Canada), Mexico City",
+            "Timezone": "US/CENTRAL",
             "WearPosition": "Left Wrist",
             "WeightLbs": 165.00,
             "DataCollectionStatus": "Collecting",      
@@ -704,37 +704,49 @@ stop|Date|no|`null`|Stop date to filter wear periods for the requsted subject on
 			"Id": 22422,
 			"SubjectId": 8851,
 			"Start": "2017-03-27T20:22:00Z",
-			"Stop": "2017-03-27T20:28:00Z"
+			"Stop": "2017-03-27T20:28:00Z",
+                    "StartSubjectTZ": "2017-03-27T14:22:00",
+                    "StopSubjectTZ": "2017-03-27T14:28:00"
 		},
 		{
 			"Id": 22423,
 			"SubjectId": 8851,
 			"Start": "2017-03-29T18:56:00Z",
-			"Stop": "2017-03-29T20:00:00Z"
+			"Stop": "2017-03-29T20:00:00Z",
+                    "StartSubjectTZ": "2017-03-29T12:56:00",
+                    "StopSubjectTZ": "2017-03-29T14:00:00"
 		},
 		{
 			"Id": 22424,
 			"SubjectId": 8851,
 			"Start": "2017-03-31T19:39:00Z",
-			"Stop": "2017-03-31T19:40:00Z"
+			"Stop": "2017-03-31T19:40:00Z",
+                    "StartSubjectTZ": "2017-03-31T13:39:00",
+                    "StopSubjectTZ": "2017-03-31T13:40:00"
 		},
 		{
 			"Id": 22425,
 			"SubjectId": 8851,
 			"Start": "2017-04-03T13:27:00Z",
-			"Stop": "2017-04-03T13:28:00Z"
+			"Stop": "2017-04-03T13:28:00Z",
+                    "StartSubjectTZ": "2017-04-03T07:27:00",
+                    "StopSubjectTZ": "2017-04-03T07:28:00"
 		},
 		{
 			"Id": 22426,
 			"SubjectId": 8851,
 			"Start": "2017-04-03T21:25:00Z",
-			"Stop": "2017-04-03T21:27:00Z"
+			"Stop": "2017-04-03T21:27:00Z",
+                    "StartSubjectTZ": "2017-04-03T15:25:00",
+                    "StopSubjectTZ": "2017-04-03T15:27:00"
 		},
 		{
 			"Id": 22427,
 			"SubjectId": 8851,
 			"Start": "2017-04-04T18:47:00Z",
-			"Stop": "2017-04-04T18:48:00Z"
+			"Stop": "2017-04-04T18:48:00Z",
+                    "StartSubjectTZ": "2017-04-04T12:47:00",
+                    "StopSubjectTZ": "2017-04-04T12:47:00"
 		},
         ...
     ]
