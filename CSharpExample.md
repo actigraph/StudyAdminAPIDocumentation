@@ -57,7 +57,10 @@ public static async Task<HttpResponseMessage> SendRequestAsync(string endpointUr
 **Example of method building request header**
 ```c#
 public static void BuildRequestHeader(ref HttpRequestMessage requestMessage, string apiAccessKey, string apiSecretKey)
-{        
+{       
+    // set date in the request header (must be done prior to signature generation)
+    requestMessage.Headers.Date = DateTime.UtcNow;
+
     var signature = Sign(requestMessage, apiSecretKey);
     requestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("AGS", string.Format("{0}:{1}", apiAccessKey, signature));
 }
