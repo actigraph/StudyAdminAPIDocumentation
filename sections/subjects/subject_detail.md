@@ -11,7 +11,7 @@ Returns a list of all subjects within a given study.
 
 **Request:**
 
-    GET /v1/studies/{studyId}/subjects
+    GET /v1/studies/{StudyId}/subjects
 
 **Response:**
 
@@ -47,7 +47,7 @@ Returns a list of all subjects within a given study.
 
 Field|Type|Accepted Values|Description|Notes
 -----|----|----------|-----|-----
-Id|Number||Primary Key of Subject Id||
+Id|Number||System-wide primary Key of Subject Id||
 Subject Identifier|String||User-specified Subject Identifier that is unique within the study.|The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
 DOB|ISO8601 Date||Subject's Date of Birth||
 Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
@@ -58,11 +58,11 @@ Device Serial|String||The serial number of the activity monitor currently assign
 
 GET Subject Details (by system-wide primary key)
 ---
-Returns information about a given subject.
+Returns information about a given subject from the internal system-wide primary key.
 
 **Request:**
 
-    GET /v1/subjects/{id}
+    GET /v1/subjects/{SubjectId}
 
 **Response:**
 
@@ -82,11 +82,11 @@ Returns information about a given subject.
 GET Subject Details (by study-specific subject identifier)
 ---
 
-Returns one (or more) subjects (within requested study) with specific subject identifier. The subject identifier is required field when creating subject data records in the CentrePoint system.
+Returns one (or more) subjects (within requested study) with study-specific subject identifier. The subject identifier is required field when creating subject data records in the CentrePoint system.
 
 **Request:**
 
-    GET /v1/studies/{studyId}/subjectsbyidentifier/{subjectIdentifier}
+    GET /v1/studies/{StudyId}/subjectsbyidentifier/{SubjectIdentifier}
 
 **Notes:**  
 
