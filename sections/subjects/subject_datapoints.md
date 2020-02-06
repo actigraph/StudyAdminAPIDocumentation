@@ -9,7 +9,7 @@ Returns milestones for a given subject
 
 ### Request: ###
 
-    GET /v1/subjects/{id}/milestones
+    GET /v1/subjects/{SubjectId}/milestones
 
 ### Response: ###
 ```json
@@ -216,7 +216,7 @@ Returns wear periods for a given subject.
 
 **Request:**
 
-    GET /v1/subjects/{id}/wearperiods
+    GET /v1/subjects/{SubjectId}/wearperiods
     
     
     
