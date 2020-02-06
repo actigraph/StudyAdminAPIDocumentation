@@ -123,7 +123,7 @@ DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject 
     200 OK
 
 
-Un-assign Activity Monitor From Subject
+Un-Assign Activity Monitor From Subject
 ---
 
 Starts the process to un-assign an activity monitor from a given subject. The un-assignment is then completed upon "docking" the monitor (via USB).
