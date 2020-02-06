@@ -148,7 +148,7 @@ endDate|Date|no|`null`|End Date (in subject's site timezone) to filter daily-agg
 
 Field|Data Type|Units|Description
 -----|----|-------|-----
-Date|Date|||Date of Daily Statistics Record denoted in the Subject/Site Timezone|
+Date|Date||Date of Daily Statistics Record for subject denoted in the subject's site timezone|
 AxisXCounts|Integer|Counts Per Day|Total Axis Counts of the X-axis for a given subject on given day|
 AxisYCounts|Integer|Counts Per Day|Total Axis Counts of the Y-axis for a given subject on given day|
 AxisZCounts|Integer|Counts Per Day|Total Axis Counts of the Z-axis for a given subject on given day|
