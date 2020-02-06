@@ -29,7 +29,6 @@ Subject Sleep Periods
 		"OutBedTimeUtc": "2013-08-07T03:33:00+05:30",
 		"AutoDetected": true
 	}
-	...
 ]
 ```
 
@@ -63,7 +62,22 @@ Returns a range of minute epochs about the requested subject where each is denot
 	    "y": 4392,
 	    "z": 3775
 	},
-	...
+	{
+	    "Timestamp": "2013-03-21T17:00:00",
+	    "Calories": 6.88872851708981,
+	    "HR": 0.0,
+	    "Lux": 47.0,
+	    "Steps": 43.0,
+	    "Wear": true,
+	    "Sleep": false,
+	    "AxisXCounts": 4901,
+	    "AxisYCounts": 4298,
+	    "AxisZCounts": 2775,
+	    "x": 4901,
+	    "y": 4298,
+	    "z": 2775
+	},
+	
 ]
 ```
 
