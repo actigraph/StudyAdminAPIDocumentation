@@ -7,7 +7,7 @@ Subject Listing
 ---
 
 
-Returns a list of all subjects within a given study.
+Returns a list of all subjects within a given study. To retrieve a listing of studies refer to the [List Studies](/sections/studies.md#list-studies) API call.
 
 **Request:**
 
