@@ -21,12 +21,12 @@ Subject Sleep Periods
            	"AutoDetected": true
         },
         {
-            	"SubjectId": 114,
+		"SubjectId": 114,
 		"InBedTime": "2013-08-06T19:28:00",
 		"OutBedTime": "2013-08-06T22:33:00",
 		"InBedTimeUtc": "2013-08-07T00:28:00+05:30",
 		"OutBedTimeUtc": "2013-08-07T03:33:00+05:30",
-            	"AutoDetected": true
+		"AutoDetected": true
         }
         ...
     ]
