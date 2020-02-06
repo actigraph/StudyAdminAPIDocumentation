@@ -44,6 +44,14 @@ Any non-HTTPS request will result in a Forbidden response.
 ### API Client C# Demo
 To view a C# client demonstration application that conntects to API, goto: [CSharpExample](CSharpExample.md)
 
+Endpoints
+---------
+* [Studies](sections/studies.md) Logical structures for grouping data for one or more subjects.
+* [Sites](sections/sites.md) Physical/geographical locations within studies.
+* [Subjects](sections/subjects.md) Participants in studies.
+* [Uploads](sections/Uploads.md) Retrieve and create upload.
+* [Webhooks](sections/Webhooks.md) CP WebHooks System.
+
 Standard Response Format
 ---------
 All responses include a standard HTTP status code and most of them have additional information for confirming actions or explaining errors.  In this section we provide example status codes and responses to illustrate our standard response format.
@@ -135,14 +143,6 @@ Example of a response with an empty json array. Applies to API endpoints that re
 	Status 200 OK
 	[]
 
-
-Endpoints
----------
-* [Studies](sections/studies.md) Logical structures for grouping data for one or more subjects.
-* [Sites](sections/sites.md) Physical/geographical locations within studies.
-* [Subjects](sections/subjects.md) Participants in studies.
-* [Uploads](sections/Uploads.md) Retrieve and create upload.
-* [Webhooks](sections/Webhooks.md) CP WebHooks System.
 
 
 Request Limiting
