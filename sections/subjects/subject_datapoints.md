@@ -79,7 +79,7 @@ Returns a range of minute epochs about the requested subject where each is denot
 	    "x": 4901,
 	    "y": 4298,
 	    "z": 2775
-	},
+	}
 	
 ]
 ```
