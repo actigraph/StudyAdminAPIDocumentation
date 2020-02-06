@@ -10,31 +10,28 @@ Subject Sleep Periods
     GET /v1/subjects/{SubjectId}/bedtimes?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}
 
 **Response:**
-
-    [
-        {
-        	"SubjectId": 114,
+```json
+200 OK
+[
+	{
+		"SubjectId": 114,
 		"InBedTime": "2013-08-06T01:42:00",
 		"OutBedTime": "2013-08-06T15:30:00",
 		"InBedTimeUtc": "2013-08-06T06:42:00+05:30",
 		"OutBedTimeUtc": "2013-08-06T20:30:00+05:30",
-           	"AutoDetected": true
-        },
-        {
+		"AutoDetected": true
+	},
+	{
 		"SubjectId": 114,
 		"InBedTime": "2013-08-06T19:28:00",
 		"OutBedTime": "2013-08-06T22:33:00",
 		"InBedTimeUtc": "2013-08-07T00:28:00+05:30",
 		"OutBedTimeUtc": "2013-08-07T03:33:00+05:30",
 		"AutoDetected": true
-        }
-        ...
-    ]
-
-
-### Response: ###
-
-    200 OK
+	}
+	...
+]
+```
 
 
 Subject Sleep Epochs 
@@ -48,25 +45,27 @@ Returns a range of minute epochs about the requested subject where each is denot
 **Note:** x, y and z have been deprecated for AxisXCounts, AxisYCounts and AxisZCounts respectively.
 
 **Response:**
-
-    [
-        {
-            "Timestamp": "2013-03-21T16:59:00",
-            "Calories": 6.88872851708981,
-            "HR": 0.0,
-            "Lux": 46.0,
-            "Steps": 45.0,
-            "Wear": true,
-            "Sleep": false,
-            "AxisXCounts": 4922,
-            "AxisYCounts": 4392,
-            "AxisZCounts": 3775,
-            "x": 4922,
-            "y": 4392,
-            "z": 3775
-        },
-        ...
-    ]
+```json
+200 OK
+[
+	{
+	    "Timestamp": "2013-03-21T16:59:00",
+	    "Calories": 6.88872851708981,
+	    "HR": 0.0,
+	    "Lux": 46.0,
+	    "Steps": 45.0,
+	    "Wear": true,
+	    "Sleep": false,
+	    "AxisXCounts": 4922,
+	    "AxisYCounts": 4392,
+	    "AxisZCounts": 3775,
+	    "x": 4922,
+	    "y": 4392,
+	    "z": 3775
+	},
+	...
+]
+```
 
 Subject Weight History
 ---
