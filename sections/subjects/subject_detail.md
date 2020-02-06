@@ -56,7 +56,7 @@ Wear Position|String|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>L
 Data Collection Status|String|<ul><li>No Device Assigned</li><li>Incomplete Assignment</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
 Device Serial|String||The serial number of the activity monitor currently assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
-GET Subject Details (by System-wide primary key)
+GET Subject Details (by system-wide primary key)
 ---
 Returns information about a given subject.
 
@@ -79,7 +79,7 @@ Returns information about a given subject.
         "DeviceSerial": "TAS1D48341371"
     }
 
-GET Subject Details (by Study-Specific Subject Identifier)
+GET Subject Details (by study-specific subject identifier)
 ---
 
 Returns one (or more) subjects (within requested study) with specific subject identifier. The subject identifier is required field when creating subject data records in the CentrePoint system.
