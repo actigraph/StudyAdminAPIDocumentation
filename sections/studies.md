@@ -1,4 +1,7 @@
-[<< Back](/README.md)
+
+[<< Home](/README.md)
+
+
 
 Studies
 ===
