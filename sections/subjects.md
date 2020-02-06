@@ -1,4 +1,4 @@
-[<< Back](/sections/README.md)
+[<< Back](/README.md)
 
 Subjects
 ===
