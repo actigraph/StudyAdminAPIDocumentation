@@ -7,7 +7,7 @@ Add Subject (w/ Ability to Assign Activity Monitor)
 ---
 Creates a new subject with option to assign an activity monitor to the newly created subject.  
 
-Subjects are created within the context of a site, therefore the 'SiteId' property is required upon creating a new subject. The [List Sites](sections/sites.md) API call will provide a listing of sites in which you can add subjects.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  
+Subjects are created within the context of a site, therefore the 'SiteId' property is required upon creating a new subject. The [List Sites](/sections/sites.md) API call will provide a listing of sites in which you can add subjects.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  
 
 
 The new Subject's Id is returned upon successful creation along with a 201 Created response.
