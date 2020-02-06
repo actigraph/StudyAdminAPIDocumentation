@@ -1,6 +1,6 @@
 [<< Back to Subjects](/sections/subjects.md)
 
-Retrieval of Subject Data Points (Sleep, Wear, etc.)
+Retrieval of Subject Data Points (Milestones, Sleep, Wear, etc.)
 ===
 
 Subject Milestones
