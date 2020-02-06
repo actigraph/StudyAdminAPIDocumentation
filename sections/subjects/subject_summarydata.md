@@ -149,20 +149,20 @@ endDate|Date|no|`null`|End Date (in subject's site timezone) to filter daily-agg
 Field|Data Type|Units|Description
 -----|----|-------|-----
 Date|Date||Date of Daily Statistics Record for subject denoted in the subject's site timezone|
-AxisXCounts|Integer|Counts Per Day|Total Axis Counts of the X-axis for a given subject on given day|
-AxisYCounts|Integer|Counts Per Day|Total Axis Counts of the Y-axis for a given subject on given day|
-AxisZCounts|Integer|Counts Per Day|Total Axis Counts of the Z-axis for a given subject on given day|
-Bouts|JSON||Activity bouts for given subject on given day|
+AxisXCounts|Integer|Axis-Counts Per Day|Total Axis Counts of the X-axis for a given subject on given day|
+AxisYCounts|Integer|Axis-Counts Per Day|Total Axis Counts of the Y-axis for a given subject on given day|
+AxisZCounts|Integer|Axis-Counts Per Day|Total Axis Counts of the Z-axis for a given subject on given day|
+Bouts|JSON|Number of bouts per Bout Classification per Day|Activity bouts for given subject on given day|
 Calories|Decimal|kCals per day|Total Calories for given subject on given day|
 Cutpoints|JSON|Minutes Per Cut Point Per Day|Time Spent in each Cut Point classification/bucket for given subject on given day|
 Epochs|Integer|Minute Epochs per Day|Total number of minute epochs for given subject collected for a given day|
 MVPA|Integer|Minutes Per Day| The amount of time given subject has spent in Moderate to Vigourous Physical Activity|
 Steps|Integer|Steps Per Day|Total Steps for subject on given day|
 TotalMinutes|Integer|Minutes Per Day|The amount of minutes between the first minute epoch and the last minute for given subject on given day|
-WearFilteredAxisXCounts|Integer|Counts Per Day|Total (Wear-Filtered) Axis Counts of the X-axis for a given subject on given day (Non-Wear Data Excluded)|
-WearFilteredAxisYCounts|Integer|Counts Per Day|Total (Wear-Filtered) Axis Counts of the Y-axis for a given subject on given day (Non-Wear Data Excluded)|
-WearFilteredAxisZCounts|Integer|Counts Per Day|Total (Wear-Filtered) Axis Counts of the Z-axis for a given subject on given day (Non-Wear Data Excluded)|
-WearFilteredBouts|JSON|| Wear-Filterd Activity bouts for given subject on given day (Non-Wear Data Excluded)|
+WearFilteredAxisXCounts|Integer|Axis-Counts Per Day|Total (Wear-Filtered) Axis Counts of the X-axis for a given subject on given day (Non-Wear Data Excluded)|
+WearFilteredAxisYCounts|Integer|Axis-Counts Per Day|Total (Wear-Filtered) Axis Counts of the Y-axis for a given subject on given day (Non-Wear Data Excluded)|
+WearFilteredAxisZCounts|Integer|Axis-Counts Per Day|Total (Wear-Filtered) Axis Counts of the Z-axis for a given subject on given day (Non-Wear Data Excluded)|
+WearFilteredBouts|JSON|Number of bouts per Bout Classification per Day|Wear-Filterd Activity bouts for given subject on given day (Non-Wear Data Excluded)|
 WearFilteredCalories|Decimal|kCals per day|Total Wear Filtered Calories for given subject on given day (Non-Wear Data Excluded)|
 WearFilteredCutPoints|JSON|Minutes Per Cut Point Per Day|Time Spent in each Cut Point classification/bucket for given subject on given day (Non-Wear Data Excluded)|
 WearFilteredMVPA|JSON|Minutes Per day|The amount of time subject has spent in Moderate-to-Vigourous Physical Activity (Non-Wear Data Excluded)|
