@@ -44,25 +44,26 @@ Returns the score of a given sleep period. The `inBed` and `outBed` parameters a
     GET /v1/subjects/{SubjectId}/sleepscore?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}
 
 **Response:**
-
-	{
-		"InBedTime": "2013-07-25T23:40:00",
-		"OutBedTime": "2013-07-26T06:28:00",
-		"Onset": "2013-07-25T23:40:00",
-		"InBedTimeUtc": "2013-07-26T04:40:00Z",
-		"OutBedTimeUtc": "2013-07-26T11:28:00Z",
-		"OnsetUtc": "2013-07-26T04:40:00Z",
-		"LatencyInMinutes": 0.0,
-		"AvgAwakeningInMinutes": 0.0,
-		"AwakeningCount": 0.0,
-		"Efficiency": 1.0,
-		"TimeAsleepInMinutes": 408.0,
-		"TimeAwakeInMinutes": 0.0,
-		"TimeInBedInMinutes": 408.0,
-		"WakeAfterOnsetInMinutes": 0.0,
-		"TotalCounts": 0
-	}
-
+```json
+200 OK
+{
+	"InBedTime": "2013-07-25T23:40:00",
+	"OutBedTime": "2013-07-26T06:28:00",
+	"Onset": "2013-07-25T23:40:00",
+	"InBedTimeUtc": "2013-07-26T04:40:00Z",
+	"OutBedTimeUtc": "2013-07-26T11:28:00Z",
+	"OnsetUtc": "2013-07-26T04:40:00Z",
+	"LatencyInMinutes": 0.0,
+	"AvgAwakeningInMinutes": 0.0,
+	"AwakeningCount": 0.0,
+	"Efficiency": 1.0,
+	"TimeAsleepInMinutes": 408.0,
+	"TimeAwakeInMinutes": 0.0,
+	"TimeInBedInMinutes": 408.0,
+	"WakeAfterOnsetInMinutes": 0.0,
+	"TotalCounts": 0
+}
+```
 
 Subject Sleep Epochs 
 ---
@@ -123,20 +124,19 @@ Returns all weight entries for a subject.
     GET /v1/subjects/{SubjectId}/weighthistory
 
 **Response:**
-
-    200 OK
-    [
-        {
-            "DateAdded": "2013-07-26T15:02:34Z",
-            "WeightLbs": 165.00
-        },
-        {
-            "DateAdded": "2013-08-01T12:09:55Z",
-            "WeightLbs": 173.00
-        },
-        ...
-    ]
-
+```json
+200 OK
+[
+	{
+	    "DateAdded": "2013-07-26T15:02:34Z",
+	    "WeightLbs": 165.00
+	},
+	{
+	    "DateAdded": "2013-08-01T12:09:55Z",
+	    "WeightLbs": 173.00
+	}
+]
+```
 
 
 
@@ -151,30 +151,31 @@ Returns a list of wear filtered and non-wear filtered bout periods for subject. 
     GET /v1/subjects/{SubjectId}/bouts?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}
 
 **Response:**
-
-    {
-        "WearFilteredBouts": [
-            {
-                "Start": "2013-03-21T12:00:00",
-                "Stop": "2013-03-21T12:17:00"
-            },
-            {
-                "Start": "2013-03-21T12:25:00",
-                "Stop": "2013-03-22T12:35:00"
-            }
-        ],
-        "NonWearFilteredBouts": [
-            {
-                "Start": "2013-03-21T12:00:00",
-                "Stop": "2013-03-21T12:17:00"
-            },
-            {
-                "Start": "2013-03-21T12:25:00",
-                "Stop": "2013-03-22T12:35:00"
-            }
-        ]
-    ]
-
+```json
+200 OK
+{
+	"WearFilteredBouts": [
+	    {
+		"Start": "2013-03-21T12:00:00",
+		"Stop": "2013-03-21T12:17:00"
+	    },
+	    {
+		"Start": "2013-03-21T12:25:00",
+		"Stop": "2013-03-22T12:35:00"
+	    }
+	],
+	"NonWearFilteredBouts": [
+	    {
+		"Start": "2013-03-21T12:00:00",
+		"Stop": "2013-03-21T12:17:00"
+	    },
+	    {
+		"Start": "2013-03-21T12:25:00",
+		"Stop": "2013-03-22T12:35:00"
+	    }
+	]
+}
+```
 
 
 	
@@ -187,20 +188,29 @@ Returns milestones for a given subject
     GET /v1/subjects/{id}/milestones
 
 ### Response: ###
-	[
-	  {
-		"Id": 108,
-		"SubjectIdentifier": "000055",
-		"TimestampUTC": "2013-08-02T04:59:59",
-		"TimestampSubjectTZ": "2013-08-01T23:59:59",
-		"MilestoneName": "Visit One"
-	  },
-	  ...
-	]
+```json
+200 OK
+[
+  {
+	"Id": 108,
+	"SubjectIdentifier": "000055",
+	"TimestampUTC": "2013-08-02T04:59:59",
+	"TimestampSubjectTZ": "2013-08-01T23:59:59",
+	"MilestoneName": "Visit One"
+  },
+  {
+	"Id": 109,
+	"SubjectIdentifier": "000055",
+	"TimestampUTC": "2013-09-02T04:59:59",
+	"TimestampSubjectTZ": "2013-09-01T23:59:59",
+	"MilestoneName": "Visit Two"
+  }
+]
+```
 
 Subject Wear Periods
 ---
-Returns wear periods for the requested subject.
+Returns wear periods for a given subject.
 
 **Request:**
 
@@ -218,55 +228,56 @@ stop|Date|no|`null`|Stop date to filter wear periods for the requsted subject on
 
 
 **Response:**
-
-    [
-          {
-			"Id": 22422,
-			"SubjectId": 8851,
-			"Start": "2017-03-27T20:22:00Z",
-			"Stop": "2017-03-27T20:28:00Z",
-            "StartSubjectTZ": "2017-03-27T14:22:00",
-            "StopSubjectTZ": "2017-03-27T14:28:00"
-		},
-		{
-			"Id": 22423,
-			"SubjectId": 8851,
-			"Start": "2017-03-29T18:56:00Z",
-			"Stop": "2017-03-29T20:00:00Z",
-            "StartSubjectTZ": "2017-03-29T12:56:00",
-            "StopSubjectTZ": "2017-03-29T14:00:00"
-		},
-		{
-			"Id": 22424,
-			"SubjectId": 8851,
-			"Start": "2017-03-31T19:39:00Z",
-			"Stop": "2017-03-31T19:40:00Z",
-            "StartSubjectTZ": "2017-03-31T13:39:00",
-            "StopSubjectTZ": "2017-03-31T13:40:00"
-		},
-		{
-			"Id": 22425,
-			"SubjectId": 8851,
-			"Start": "2017-04-03T13:27:00Z",
-			"Stop": "2017-04-03T13:28:00Z",
-            "StartSubjectTZ": "2017-04-03T07:27:00",
-            "StopSubjectTZ": "2017-04-03T07:28:00"
-		},
-		{
-			"Id": 22426,
-			"SubjectId": 8851,
-			"Start": "2017-04-03T21:25:00Z",
-			"Stop": "2017-04-03T21:27:00Z",
-            "StartSubjectTZ": "2017-04-03T15:25:00",
-            "StopSubjectTZ": "2017-04-03T15:27:00"
-		},
-		{
-			"Id": 22427,
-			"SubjectId": 8851,
-			"Start": "2017-04-04T18:47:00Z",
-			"Stop": "2017-04-04T18:48:00Z",
-            "StartSubjectTZ": "2017-04-04T12:47:00",
-            "StopSubjectTZ": "2017-04-04T12:47:00"
-		},
-        ...
-    ]
+```json
+200 OK
+[
+  {
+		"Id": 22422,
+		"SubjectId": 8851,
+		"Start": "2017-03-27T20:22:00Z",
+		"Stop": "2017-03-27T20:28:00Z",
+		"StartSubjectTZ": "2017-03-27T14:22:00",
+		"StopSubjectTZ": "2017-03-27T14:28:00"
+	},
+	{
+		"Id": 22423,
+		"SubjectId": 8851,
+		"Start": "2017-03-29T18:56:00Z",
+		"Stop": "2017-03-29T20:00:00Z",
+		"StartSubjectTZ": "2017-03-29T12:56:00",
+		"StopSubjectTZ": "2017-03-29T14:00:00"
+	},
+	{
+		"Id": 22424,
+		"SubjectId": 8851,
+		"Start": "2017-03-31T19:39:00Z",
+		"Stop": "2017-03-31T19:40:00Z",
+		"StartSubjectTZ": "2017-03-31T13:39:00",
+		"StopSubjectTZ": "2017-03-31T13:40:00"
+	},
+	{
+		"Id": 22425,
+		"SubjectId": 8851,
+		"Start": "2017-04-03T13:27:00Z",
+		"Stop": "2017-04-03T13:28:00Z",
+		"StartSubjectTZ": "2017-04-03T07:27:00",
+		"StopSubjectTZ": "2017-04-03T07:28:00"
+	},
+	{
+		"Id": 22426,
+		"SubjectId": 8851,
+		"Start": "2017-04-03T21:25:00Z",
+		"Stop": "2017-04-03T21:27:00Z",
+		"StartSubjectTZ": "2017-04-03T15:25:00",
+		"StopSubjectTZ": "2017-04-03T15:27:00"
+	},
+	{
+		"Id": 22427,
+		"SubjectId": 8851,
+		"Start": "2017-04-04T18:47:00Z",
+		"Stop": "2017-04-04T18:48:00Z",
+		"StartSubjectTZ": "2017-04-04T12:47:00",
+		"StopSubjectTZ": "2017-04-04T12:47:00"
+	}
+]
+```
