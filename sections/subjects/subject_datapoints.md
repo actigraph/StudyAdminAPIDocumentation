@@ -37,7 +37,7 @@ Subject Sleep Periods
 
 Sleep Period Scoring
 ---
-Returns the score of a given sleep period. The `inBed` and `outBed` parameters are required and are supposed to denote a sleep period which has been retrieved in the Subject Sleep Periods API call.
+Returns the score of a given sleep period. The `inBed` and `outBed` parameters are required and denote the start and end times of a given sleep period (retrieved in the subject sleep periods call above)
 
 **Request:**
 
