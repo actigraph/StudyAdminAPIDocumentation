@@ -5,7 +5,7 @@ Add/Edit Subjects & Assign/Un-assign Monitor
 
 Add Subject (w/ Ability to Assign Activity Monitor)
 ---
-Creates a new subject and provides option to assign an activity monitor to newly created subject.  
+Creates a new subject with option to assign an activity monitor to the newly created subject.  
 
 Subjects are created within the context of a site, therefore the 'SiteId' property is required upon creating a new subject. The [List Sites](sections/sites.md) API call will provide a listing of sites in which you can add subjects.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  
 
@@ -36,7 +36,7 @@ Field|Type|Min|Max|Required|Accepted Values|Description|Notes
 DOB|ISO8601 Date||day before present day|Yes|||must be day before present day
 Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
 SiteId|Number|||Yes|||Site write access enforced. Therefore API user must have appropriate permissions to add subjects to given site.
-SubjectIdentifier|String|||Yes||User specified Subject Identifier that is unique within study|Subject Identifier should NOT be prefixed with Site Identifier.|
+SubjectIdentifier|String|||Yes||Study-specific subject identifier that is unique within study|Subject Identifier should NOT be prefixed with Site Identifier.|
 WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>||Study/site shall be configured in order to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
 DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Once monitor assignment is created, the monitor will need to be docked (via USB) to complete the assignment and begin data collection.
