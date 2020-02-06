@@ -1,4 +1,4 @@
-[<< Back to Subjects](sections/subjects.md)
+[<< Back to Subjects](/sections/subjects.md)
 
 Subject Detail and Subject Listing
 ===
