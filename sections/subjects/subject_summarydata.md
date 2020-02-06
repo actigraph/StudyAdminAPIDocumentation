@@ -144,6 +144,33 @@ endDate|Date|no|`null`|End Date (in subject's site timezone) to filter daily-agg
         ...
     ]
 
+#### Response Properties ####
+
+Field|Data Type|Units|Description
+-----|----|-------|-----
+Date|Date|||Date of Daily Statistics Record denoted in the Subject/Site Timezone|
+AxisXCounts|Integer|Counts Per Day|Total Axis Counts of the X-axis for a given subject on given day|
+AxisYCounts|Integer|Counts Per Day|Total Axis Counts of the Y-axis for a given subject on given day|
+AxisZCounts|Integer|Counts Per Day|Total Axis Counts of the Z-axis for a given subject on given day|
+Bouts|JSON||Activity bouts for given subject on given day|
+Calories|Decimal|kCals per day|Total Calories for given subject on given day|
+Cutpoints|JSON||Total Cut Points for given subject on given day|
+Epochs|Integer|Minute Epochs per Day|Total number of minute epochs for given subject collected for a given day|
+MVPA|Integer|Minutes Per Day| MVPA (Moderate-to-Vigourous Physical Activity) denotes the amount of time given subject spent in Moderate to Vigourous Physical Activity|
+Steps|Integer|Steps Per Day|Total Steps for subject on given day|
+TotalMinutes|Integer|Minutes Per Day|The amount of minutes between the first minute epoch and the last minute for given subject on given day|
+WearFilteredAxisXCounts|Integer|Counts Per Day|Total (Wear-Filtered) Axis Counts of the X-axis for a given subject on given day (Non-Wear Data Excluded)|
+WearFilteredAxisYCounts|Integer|Counts Per Day|Total (Wear-Filtered) Axis Counts of the Y-axis for a given subject on given day (Non-Wear Data Excluded)|
+WearFilteredAxisZCounts|Integer|Counts Per Day|Total (Wear-Filtered) Axis Counts of the Z-axis for a given subject on given day (Non-Wear Data Excluded)|
+WearFilteredBouts|JSON|| Wear-Filterd Activity bouts for given subject on given day (Non-Wear Data Excluded)|
+WearFilteredCalories|Decimal|kCals per day|Total Wear Filtered Calories for given subject on given day (Non-Wear Data Excluded)|
+WearFilteredCutPoints|JSON||Total Wear-Filtered Cut Points for given subject on given day (Non-Wear Data Excluded)|
+WearFilteredMVPA|JSON|Minutes Per day|Wear-Filtered MVPA (Moderate-to-Vigourous Physical Activity) denotes the amount of time given subject spent in Moderate to Vigourous Physical Activity (Non-Wear Data Excluded)|
+WearFilteredSteps|Integer|Steps per day|Total Wear-Filtered steps taken for given subject on given day (Non-Wear Data Excluded)|
+WearMinutes|Integer|Minutes per day|Total minutes for given subject on given day where subject was considered to be wearing the monitor (non-wear excluded)|
+AwakeWearMinutes|Integer|Minutes per day|Total minutes for given subject on given day where subject was considered to be BOTH wearing the monitor and awake (non-wear and sleep excluded)|
+
+
 
 
 Subject Overall Statistics
