@@ -141,8 +141,8 @@ Starts the process to un-assign an activity monitor from a given subject. The un
 
 Field|Type|Required|Default Value|Description
 -----|----|--------|-----------------|-------
-SubjectId|number|yes|`null`|Subject's Primary Key in which API user wishes to stop activity monitor data collection
-DeviceSerial|string|yes|`null`|Activity monitor serial in which to stop collecting data for given subject
+SubjectId|number|yes||Subject's Primary Key in which API user wishes to stop activity monitor data collection
+DeviceSerial|string|yes||Activity monitor serial in which to stop collecting data for given subject
 ForcefullyEndAssignment|bool|no|`false`|Determines whether to forcefully un-assign monitor from subject without recovering any data on monitor
 
 
