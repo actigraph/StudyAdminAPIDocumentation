@@ -67,7 +67,7 @@ DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject 
 
 Edit Subject (w/ Ability to Assign Activity Monitor)
 ---
-Modifies an existing subject with option to assign an activity monitor to existing subject.  The [List Sites](sections/sites.md) API call will provide a listing of sites in which you can add subjects.  You must have CanAddSubjects=true for a Site in order to create a subject in it. A 200 OK response is returned for a successfully edited subject.
+Modifies an existing subject with option to assign an activity monitor to existing subject.  The [List Sites](/sections/sites.md) API call will provide a listing of sites in which you can add subjects.  You must have CanAddSubjects=true for a Site in order to create a subject in it. A 200 OK response is returned for a successfully edited subject.
 
 ### Request: ###
 
