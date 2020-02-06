@@ -47,7 +47,7 @@ Returns a list of all subjects within a given study.
 
 Field|Type|Accepted Values|Description|Notes
 -----|----|----------|-----|-----
-Id|Number||System-wide primary Key of Subject Id||
+Id|Number||System-wide primary Key of Subject Data Record (aka. SubjectId)||
 Subject Identifier|String||User-specified Subject Identifier that is unique within the study.|The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
 DOB|ISO8601 Date||Subject's Date of Birth||
 Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
