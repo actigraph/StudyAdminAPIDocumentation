@@ -1,4 +1,4 @@
-
+[<< Back](/README.md)
 
 Uploads
 ===
@@ -10,7 +10,7 @@ Retrieve details of an upload by passing an Upload Id.
 
 **Request:**
 
-    GET /v1/UploadDetails/{upload Id}
+    GET /v1/UploadDetails/{UploadId}
 
 **Response:**
 
