@@ -1,6 +1,6 @@
 [<< Back to Subjects](/sections/subjects.md)
 
-Subjects
+Retrieval of Minute Epochs and Daily/Overall Statistics
 ===
 
 Subject Minute Epochs (for Single Day)
