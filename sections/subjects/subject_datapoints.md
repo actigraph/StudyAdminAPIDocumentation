@@ -35,10 +35,38 @@ Subject Sleep Periods
 ]
 ```
 
+Sleep Period Scoring
+---
+Returns the score of a given sleep period. The `inBed` and `outBed` parameters are required and are supposed to denote a sleep period which has been retrieved in the Subject Sleep Periods API call.
+
+**Request:**
+
+    GET /v1/subjects/{SubjectId}/sleepscore?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}
+
+**Response:**
+
+	{
+		"InBedTime": "2013-07-25T23:40:00",
+		"OutBedTime": "2013-07-26T06:28:00",
+		"Onset": "2013-07-25T23:40:00",
+		"InBedTimeUtc": "2013-07-26T04:40:00Z",
+		"OutBedTimeUtc": "2013-07-26T11:28:00Z",
+		"OnsetUtc": "2013-07-26T04:40:00Z",
+		"LatencyInMinutes": 0.0,
+		"AvgAwakeningInMinutes": 0.0,
+		"AwakeningCount": 0.0,
+		"Efficiency": 1.0,
+		"TimeAsleepInMinutes": 408.0,
+		"TimeAwakeInMinutes": 0.0,
+		"TimeInBedInMinutes": 408.0,
+		"WakeAfterOnsetInMinutes": 0.0,
+		"TotalCounts": 0
+	}
+
 
 Subject Sleep Epochs 
 ---
-Returns a range of minute epochs about the requested subject where each is denoted if the subject is asleep or not.
+Returns the sleep epochs/minutes between a given range according to the study's sleep scoring algorithm (Sadeh or Cole-Kripke).
 
 **Request:**
 
@@ -112,33 +140,6 @@ Returns all weight entries for a subject.
 
 
 
-Subject Sleep Score 
----
-Returns the score of a subject's data over a sleep period.
-
-**Request:**
-
-    GET /v1/subjects/{SubjectId}/sleepscore?inbed={yyyy-MM-ddTHH:mm:ss}&outbed={yyyy-MM-ddTHH:mm:ss}
-
-**Response:**
-
-	{
-		"InBedTime": "2013-07-25T23:40:00",
-		"OutBedTime": "2013-07-26T06:28:00",
-		"Onset": "2013-07-25T23:40:00",
-		"InBedTimeUtc": "2013-07-26T04:40:00Z",
-		"OutBedTimeUtc": "2013-07-26T11:28:00Z",
-		"OnsetUtc": "2013-07-26T04:40:00Z",
-		"LatencyInMinutes": 0.0,
-		"AvgAwakeningInMinutes": 0.0,
-		"AwakeningCount": 0.0,
-		"Efficiency": 1.0,
-		"TimeAsleepInMinutes": 408.0,
-		"TimeAwakeInMinutes": 0.0,
-		"TimeInBedInMinutes": 408.0,
-		"WakeAfterOnsetInMinutes": 0.0,
-		"TotalCounts": 0
-	}
 
 
 Subject Bouts 
