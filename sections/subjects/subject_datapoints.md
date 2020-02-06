@@ -3,6 +3,35 @@
 Retrieval of Subject Data Points (Sleep, Wear, etc.)
 ===
 
+Subject Milestones
+---
+Returns milestones for a given subject
+
+### Request: ###
+
+    GET /v1/subjects/{id}/milestones
+
+### Response: ###
+```json
+200 OK
+[
+  {
+	"Id": 108,
+	"SubjectIdentifier": "000055",
+	"TimestampUTC": "2013-08-02T04:59:59",
+	"TimestampSubjectTZ": "2013-08-01T23:59:59",
+	"MilestoneName": "Visit One"
+  },
+  {
+	"Id": 109,
+	"SubjectIdentifier": "000055",
+	"TimestampUTC": "2013-09-02T04:59:59",
+	"TimestampSubjectTZ": "2013-09-01T23:59:59",
+	"MilestoneName": "Visit Two"
+  }
+]
+```
+
 Subject Sleep Periods
 ---
  Returns a list of sleep periods for a subject.  `start` and `stop` arguments are optional.  If `start` argument is supplied, sleep periods returned will be filtered where the In Bed Time falls on or after the supplied `start` time.  If `stop` is supplied, sleep periods returned will be filtered where the In Bed Time falls before the supplied `stop` time. If the `AutoDetected` field (in the response) denotes `true`, the sleep period was automatically detected otherwise it was manually entered.
@@ -179,34 +208,7 @@ Returns a list of wear filtered and non-wear filtered bout periods for subject. 
 
 
 	
-Subject Milestones
----
-Returns milestones for a given subject
 
-### Request: ###
-
-    GET /v1/subjects/{id}/milestones
-
-### Response: ###
-```json
-200 OK
-[
-  {
-	"Id": 108,
-	"SubjectIdentifier": "000055",
-	"TimestampUTC": "2013-08-02T04:59:59",
-	"TimestampSubjectTZ": "2013-08-01T23:59:59",
-	"MilestoneName": "Visit One"
-  },
-  {
-	"Id": 109,
-	"SubjectIdentifier": "000055",
-	"TimestampUTC": "2013-09-02T04:59:59",
-	"TimestampSubjectTZ": "2013-09-01T23:59:59",
-	"MilestoneName": "Visit Two"
-  }
-]
-```
 
 Subject Wear Periods
 ---
