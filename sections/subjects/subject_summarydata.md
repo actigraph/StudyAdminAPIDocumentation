@@ -154,7 +154,7 @@ AxisYCounts|Integer|Counts Per Day|Total Axis Counts of the Y-axis for a given s
 AxisZCounts|Integer|Counts Per Day|Total Axis Counts of the Z-axis for a given subject on given day|
 Bouts|JSON||Activity bouts for given subject on given day|
 Calories|Decimal|kCals per day|Total Calories for given subject on given day|
-Cutpoints|JSON|Minutes Per Bucket Per Day|Time Spent in each Cut Point classification/bucket for given subject on given day|
+Cutpoints|JSON|Minutes Per Cut Point Per Day|Time Spent in each Cut Point classification/bucket for given subject on given day|
 Epochs|Integer|Minute Epochs per Day|Total number of minute epochs for given subject collected for a given day|
 MVPA|Integer|Minutes Per Day| The amount of time given subject has spent in Moderate to Vigourous Physical Activity|
 Steps|Integer|Steps Per Day|Total Steps for subject on given day|
@@ -164,7 +164,7 @@ WearFilteredAxisYCounts|Integer|Counts Per Day|Total (Wear-Filtered) Axis Counts
 WearFilteredAxisZCounts|Integer|Counts Per Day|Total (Wear-Filtered) Axis Counts of the Z-axis for a given subject on given day (Non-Wear Data Excluded)|
 WearFilteredBouts|JSON|| Wear-Filterd Activity bouts for given subject on given day (Non-Wear Data Excluded)|
 WearFilteredCalories|Decimal|kCals per day|Total Wear Filtered Calories for given subject on given day (Non-Wear Data Excluded)|
-WearFilteredCutPoints|JSON|Time Spent in each Cut Point classification/bucket for given subject on given day (Non-Wear Data Excluded)|
+WearFilteredCutPoints|JSON|Minutes Per Cut Point Per Day|Time Spent in each Cut Point classification/bucket for given subject on given day (Non-Wear Data Excluded)|
 WearFilteredMVPA|JSON|Minutes Per day|The amount of time subject has spent in Moderate-to-Vigourous Physical Activity (Non-Wear Data Excluded)|
 WearFilteredSteps|Integer|Steps per day|Total Wear-Filtered steps taken for given subject on given day (Non-Wear Data Excluded)|
 WearMinutes|Integer|Minutes per day|Total minutes for given subject on given day where subject was considered to be wearing the monitor (non-wear excluded)|
