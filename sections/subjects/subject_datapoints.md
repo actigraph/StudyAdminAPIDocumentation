@@ -1,6 +1,6 @@
 [<< Back to Subjects](/sections/subjects.md)
 
-Subjects
+Retrieval of Subject Data Points (Sleep, Wear, etc.)
 ===
 
 Subject Sleep Periods
