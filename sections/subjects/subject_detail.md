@@ -82,7 +82,7 @@ Returns information about a given subject from the internal system-wide primary 
 GET Subject Details (by study-specific subject identifier)
 ---
 
-Returns one (or more) subjects (within requested study) with study-specific subject identifier. The subject identifier is required field when creating subject data records in the CentrePoint system.
+Returns subject(s) within given study with study-specific subject identifier. The subject identifier is required field when creating subject data records in the CentrePoint system. To retrieve a listing of studies refer to the [List Studies](/sections/studies.md#list-studies) API call.
 
 **Request:**
 
