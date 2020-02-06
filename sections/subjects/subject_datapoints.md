@@ -10,6 +10,7 @@ Subject Sleep Periods
     GET /v1/subjects/{SubjectId}/bedtimes?start={yyyy-MM-ddTHH:mm:ss}&stop={yyyy-MM-ddTHH:mm:ss}
 
 **Response:**
+
 ```json
 200 OK
 [
@@ -44,6 +45,8 @@ Returns a range of minute epochs about the requested subject where each is denot
 **Note:** x, y and z have been deprecated for AxisXCounts, AxisYCounts and AxisZCounts respectively.
 
 **Response:**
+
+
 ```json
 200 OK
 [
