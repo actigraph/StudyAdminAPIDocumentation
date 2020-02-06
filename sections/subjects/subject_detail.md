@@ -1,4 +1,4 @@
-Subjects
+Subject Detail and Subject Listing
 ===
 
 Subject Listing
