@@ -3,7 +3,7 @@
 Subjects
 ===
 
-The subject related API calls are broken down into the following opertions:
+The subject related API calls are broken down into the following categories:
 
 * [Retrieval of Subject Details and Subject Listing](./subjects/subject_detail.md) 
 * [Add/Edit Subjects & Assign/Un-assign Monitors](./subjects/subject_add_edit.md)
