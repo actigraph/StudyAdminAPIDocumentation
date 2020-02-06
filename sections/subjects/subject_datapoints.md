@@ -96,7 +96,7 @@ Returns the score of a given sleep period. The `inBed` and `outBed` parameters a
 
 Subject Sleep Epochs 
 ---
-Returns the sleep epochs/minutes between a given range according to the study's sleep scoring algorithm (Sadeh or Cole-Kripke).
+Returns the sleep epochs/minutes between a given sleep period according to the study's sleep scoring algorithm (Sadeh or Cole-Kripke). The `inBed` and `outBed` parameters are required and denote the start and end times of a given sleep period (retrieved in the Subject Sleep Periods API call above)
 
 **Request:**
 
