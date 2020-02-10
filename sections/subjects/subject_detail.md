@@ -54,7 +54,7 @@ Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
 Timezone|String||Subject's Timezone||
 Wear Position|String|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>|| 
 Data Collection Status|String|<ul><li>No Device Assigned</li><li>Incomplete Assignment</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
-Device Serial|String||The serial number of the activity monitor currently assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
+Device Serial|String||The serial number of the activity monitor that is actively assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
 GET Subject Details (by system-wide primary key)
 ---
