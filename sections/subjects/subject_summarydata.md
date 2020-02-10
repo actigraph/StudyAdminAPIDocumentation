@@ -37,7 +37,7 @@ Returns minute epochs for a given subject on a given day. The `day` argument is 
     ]
 
 
-Subject Minute Epochs (for Custom Range)
+Subject Minute Epochs (between Custom Range)
 ---
 Returns minute epochs for a given subject between specified time range. `Start` and `stop` arguments are required. Minute epochs returned will be filtered where time stamp falls on or after the supplied `start` time and before or on the supplied `stop` time. 
 
