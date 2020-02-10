@@ -165,7 +165,7 @@ WearFilteredAxisZCounts|Integer|Axis-Counts Per Day|Total (Wear-Filtered) Axis C
 WearFilteredBouts|JSON|Number of bouts per Bout Classification per Day|Wear-Filterd Activity bouts for given subject on given day (Non-Wear Data Excluded)|
 WearFilteredCalories|Decimal|kCals per day|Total Wear Filtered Calories for given subject on given day (Non-Wear Data Excluded)|
 WearFilteredCutPoints|JSON|Minutes Per Cut Point Per Day|Time Spent in each Cut Point classification/bucket for given subject on given day (Non-Wear Data Excluded)|
-WearFilteredMVPA|JSON|Minutes Per day|The amount of time subject has spent in Moderate-to-Vigourous Physical Activity (Non-Wear Data Excluded)|
+WearFilteredMVPA|Integer|Minutes Per day|The amount of time subject has spent in Moderate-to-Vigourous Physical Activity (Non-Wear Data Excluded)|
 WearFilteredSteps|Integer|Steps per day|Total Wear-Filtered steps taken for given subject on given day (Non-Wear Data Excluded)|
 WearMinutes|Integer|Minutes per day|Total minutes for given subject on given day where subject was considered to be wearing the monitor (non-wear excluded)|
 AwakeWearMinutes|Integer|Minutes per day|Total minutes for given subject on given day where subject was considered to be BOTH wearing the monitor and awake (non-wear and sleep excluded)|
