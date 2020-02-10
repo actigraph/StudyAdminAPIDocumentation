@@ -1,6 +1,6 @@
 [<< Back to Subjects](/sections/subjects.md)
 
-Add/Edit Subjects & Assign/Un-assign Monitor
+Add/Edit Subjects & Assign/Un-assign Activity Monitor
 ===
 
 Add Subject (w/ Ability to Assign Activity Monitor)
