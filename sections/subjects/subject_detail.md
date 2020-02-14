@@ -48,10 +48,10 @@ Returns a list of all subjects within a given study. To retrieve a listing of st
 Field|Type|Accepted Values|Description|Notes
 -----|----|----------|-----|-----
 Id|Number||System-wide primary Key of Subject Data Record (aka. SubjectId)||
-Subject Identifier|String||User-specified Subject Identifier that is unique within the study.|The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
+Subject Identifier|String||Study-specific Subject Identifier that is unique within the context of a study.|The `SubjectIdentifier` field is prefixed with the subject's site identifier (if it exists). For example, a subject with a "001" identifier in a site with a "333" identifier should denote "333001".
 DOB|ISO8601 Date||Subject's Date of Birth||
 Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
-Timezone|String||Subject's Timezone||
+Timezone|String||The Subject's timezone identifier from the IANA Timezone database|To view list of ALL IANA timezones goto: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones|
 Wear Position|String|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>|| 
 Data Collection Status|String|<ul><li>No Device Assigned</li><li>Incomplete Assignment</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
 Device Serial|String||The serial number of the activity monitor that is actively assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
