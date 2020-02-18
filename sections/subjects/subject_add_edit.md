@@ -91,9 +91,9 @@ Field|Type|Min|Max|Required|Accepted Values|Description|Notes
 -----|----|---|---|--------|---------------|-----------|-----
 SubjectId|Number|||Yes||System-wide primary key of subject data record|Site write access enforced
 SubjectIdentifier|String|||Yes||Study-specific subject identifier that is Unique within given study|
+SiteId|Number|||Yes|||Site write access enforced
 DOB|ISO8601 Date||day before present day|Yes||Subject's Date of Birth|must be day before present day
 Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be configured to utilize this field
-SiteId|Number|||Yes|||Site write access enforced
 WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>||Study/site shall be configured to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
 ChangeReason|String|||Yes|||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
