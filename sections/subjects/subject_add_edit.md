@@ -39,7 +39,7 @@ SiteId|Number|||Yes|||Site write access enforced. Therefore API user must have a
 SubjectIdentifier|String|||Yes||Study-specific subject identifier that is unique within study|Subject Identifier should NOT be prefixed with Site Identifier.|
 WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>||Study/site shall be configured in order to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
-DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Once monitor assignment is created, the monitor will need to be docked (via USB) to complete the assignment and begin data collection.
+DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Once monitor assignment is created, the monitor will need to be docked (via USB) to complete the assignment and begin data collection. To view listing of assignable activity monitors in your study, utilize the [List Study Devices](https://github.com/actigraph/StudyAdminAPIDocumentation/blob/master/sections/studies.md#study-devices) API call
 
 
 **Additional Notes** 
@@ -97,7 +97,7 @@ Gender|String|||Yes|<ul><li>Male</li><li>Female</li></ul>||Study/site shall be c
 WearPosition|String|||Yes|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>||Study/site shall be configured to utilize this field
 WeightLbs|Number|1|2000|Yes|||Study/site shall be configured to utilize this field
 ChangeReason|String|||Yes|||Study/site shall be configured to utilize this field. Captured in operator audit record in accordance  with FDA 21 CFR Part 11. 
-DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Once assignment has been created, the activity monitor will need to be docked (via USB) to complete assignment and begin data collection.|
+DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject for data collection.|Study/site shall be configured in order to utilize this field. If blank or `null`, monitor assignment will not be attempted. Once assignment has been created, the activity monitor will need to be docked (via USB) to complete assignment and begin data collection.  To view listing of assignable activity monitors in your study, utilize the [List Study Devices](https://github.com/actigraph/StudyAdminAPIDocumentation/blob/master/sections/studies.md#study-devices) API call|
 
 
 **Additional Notes** 
