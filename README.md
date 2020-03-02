@@ -4,7 +4,7 @@ CentrePoint (V2) API
 
 Overview
 -------------------
-The CentrePoint (V2) API was developed to provide other software systems a web interface to the study admin web portal. The api provides access to the same core study and de-identified subject data that can be accessed within [Study Admin](http://studyadmin.actigraphcorp.com).
+The CentrePoint (V2) API was developed to provide other software systems a web interface to the CentrePoint Web Portal. The api provides access to the same core study and de-identified subject data that can be accessed within [Study Admin](http://studyadmin.actigraphcorp.com).
 
 CentrePoint (V3) API
 -------------------
