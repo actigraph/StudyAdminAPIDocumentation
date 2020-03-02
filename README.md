@@ -8,7 +8,7 @@ The CentrePoint (V2) API was developed to provide other software systems a web i
 
 CentrePoint Integration Guide
 -------------------
-To view other alternatives in order to integrate with the CentrePoint System, refer to the [CentrePoint Integration Guide](https://github.com/actigraph/CentrePointIntegrationGuide#centrepoint-system-integration-guide).
+To view other options/alternatives to integrate with the CentrePoint System, refer to the [CentrePoint Integration Guide](https://github.com/actigraph/CentrePointIntegrationGuide#centrepoint-system-integration-guide).
 
 ### CentrePoint (V3) API
 This documentation was constructed specifically for the CentrePoint (V2) API. ActiGraph has since launched the **CentrePoint (V3) API** which provides additional flexibility in retrieving RAW sub-second resolution activity data. To view the CentrePoint (V3) API documentation, goto: https://github.com/actigraph/CentrePoint3APIDocumentation
