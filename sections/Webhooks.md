@@ -35,7 +35,7 @@ Id|Number|Id of specific message|
 WebhookId|Number|Id of webhook configuration with a given study
 WebhookDeliveryHash|string|Digital Signature based on computed HMAC256-to-base64 hash
 Request|Object|Object specific to request sent from ActiGraph to study endpont
-Response|Object|Object specific to response from study's endpont back to ActiGraph
+Response|Object|Object specific to response received from study's endpont back to ActiGraph
 Created|DateTime|DateTime of when webhook was originally created and sent
 LastSentDate|DateTime|DateTime of when webhook was last sent (can be updated if webhook request was re-attempted)
 ErrorMessage|String|Detail of any error encountered upon sending the given webhook request
