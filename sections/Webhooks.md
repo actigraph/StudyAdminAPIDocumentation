@@ -48,7 +48,8 @@ ExcludeResponseCodes|Number|no|`null`|Filter to exclude webhook requests with sp
             "Body": ""
           },
           "Created": "2018-03-08T00:37:55",
-          "LastSent": "2018-03-08T08:43:12.0000000"
+          "LastSent": "2018-03-08T08:43:12",
+          "ErrorMessage": null
         },
         {
           "Id": 3925,
@@ -59,9 +60,14 @@ ExcludeResponseCodes|Number|no|`null`|Filter to exclude webhook requests with sp
             "Headers": "{\"Content-Type\":[\"application/json\"],\"User-Agent\":[\"ActiGraph-Hookshot/1.0\"],\"X-ActiGraph-Webhook-id\":[\"14\"],\"X-ActiGraph-Event\":[\"upload\"],\"X-ActiGraph-Delivery\":[\"0f9G3fde-8Baf-0c83-1591-517307kpp19c\"],\"X-Client-Cert-Used\":[\"false\"],\"Host\":[\"hostaddress.host.com\"],\"Content-Length\":[\"272\"],\"Expect\":[\"100-continue\"]}",
             "Body": "{\"status\":\"completed\",\"firstEpochUTC\":\"2018-03-08T00:20:00.0000000\",\"firstEpochSubjectTZ\":\"2018-03-08T05:50:00.0000000\",\"lastEpochUTC\":\"2018-03-08T00:34:00.0000000\",\"lastEpochSubjectTZ\":\"2018-03-08T06:04:00.0000000\",\"uploadId\":\"362288\",\"studyId\":\"8\",\"subjectId\":\"2358\"}"
           },
+           "Response": {
+            "ResponseCode": null,
+            "Headers": null,
+            "Body": null
+          },
           "Created": "2018-03-08T00:37:55",
           "LastSent": "2018-03-08T00:37:55.0000000",
-          "ErrorMessage": "An error occurred while attempting to send a webhook message: Failed to resolve domain"
+          "ErrorMessage": "An error occurred while attempting to send a webhook message: No such host is known"
         },
       ...
     ]
