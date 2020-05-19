@@ -27,6 +27,18 @@ endDate|DateTime|no|`null`|End  Date (UTC) to filter webhook requests on or befo
 IncludeResponseCodes|Number|no|`null`|Filter to include webhooks requests with only specified response codes|/v1/webhooks/history?studyId={studyId}&IncludeResponseCodes=200
 ExcludeResponseCodes|Number|no|`null`|Filter to exclude webhook requests with specified response codes|/v1/webhooks/history?studyId={studyId}&ExcludeResponseCodes=200
 
+#### Response Properties ####
+
+Field|Type|Description
+|-----|----|---------
+Id|Number|Id of specific message|
+WebhookId|Number|Id of webhook within given study configuration
+WebhookDeliveryHash|string|Digital Signature based on computed HMAC256-to-base64 hash
+Request|Object|Object specific to request sent from ActiGraph to study endpont
+Response|Object|Object specific to response from study's endpont back to ActiGraph
+Created|DateTime|DateTime of when webhook was originally created and sent
+LastSentDate|DateTime|DateTime of when webhook was last sent (can be updated if webhook request was re-attempted)
+ErrorMessage|String|Detail of any error encountered upon sending the given webhook request
 
 
 **Response:**
