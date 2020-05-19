@@ -32,7 +32,7 @@ ExcludeResponseCodes|Number|no|`null`|Filter to exclude webhook requests with sp
 Field|Type|Description
 |-----|----|---------
 Id|Number|Id of specific message|
-WebhookId|Number|Id of webhook within given study configuration
+WebhookId|Number|Id of webhook configuration with a given study
 WebhookDeliveryHash|string|Digital Signature based on computed HMAC256-to-base64 hash
 Request|Object|Object specific to request sent from ActiGraph to study endpont
 Response|Object|Object specific to response from study's endpont back to ActiGraph
