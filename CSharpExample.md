@@ -38,7 +38,7 @@ public static async Task<HttpResponseMessage> SendRequestAsync(string baseUrl, s
         
         return await client.SendAsync(httpRequest);
 
-	}
+    }
     catch (Exception)
     {
         throw;
