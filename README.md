@@ -46,7 +46,7 @@ Any non-HTTPS request will result in a Forbidden response.
 
 ### Examples
 * C# client that retrieves study listing: [CSharpExample](Examples/CSharpExample.md)
-* Python client that downloads GT3X Raw Data Files for study: [Download GT3X Files](Examples/Python.md)
+* Python client that downloads GT3X Raw Data Files for study: [Download GT3X Files](Examples/PhythonExample.md)
 
 Endpoints
 ---------
