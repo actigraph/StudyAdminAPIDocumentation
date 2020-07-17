@@ -1,0 +1,8 @@
+[
+  {
+    "Id": xxx,
+    "Name": "MyStudy",
+    "DateCreated": "2017-09-12T18:09:21.827Z",
+    "OrganizationName": "MyOrganization"
+  }
+]
