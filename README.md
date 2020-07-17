@@ -44,8 +44,9 @@ Any non-HTTPS request will result in a Forbidden response.
 * [HMAC](http://tools.ietf.org/html/rfc2104) [SHA256](http://tools.ietf.org/html/rfc4634)
 * [ISO 8601](http://www.w3.org/TR/NOTE-datetime)
 
-### API Client C# Demo
-To view a C# client demonstration application that conntects to API, goto: [CSharpExample](CSharpExample.md)
+### Examples
+* C# client that retrieves study listing: [CSharpExample](CSharpExample.md)
+* Python client that downloads GT3X Raw Data Files for study: [Download GT3X Files](https://github.com/annashcherbina/download_gt3x_files_from_CentrePoint_API_In_Python)
 
 Endpoints
 ---------
