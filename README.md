@@ -45,8 +45,8 @@ Any non-HTTPS request will result in a Forbidden response.
 * [ISO 8601](http://www.w3.org/TR/NOTE-datetime)
 
 ### Examples
-* C# client that retrieves study listing: [CSharpExample](CSharpExample.md)
-* Python client that downloads GT3X Raw Data Files for study: [Download GT3X Files](https://github.com/annashcherbina/download_gt3x_files_from_CentrePoint_API_In_Python)
+* C# client that retrieves study listing: [CSharpExample](Examples/CSharpExample.md)
+* Python client that downloads GT3X Raw Data Files for study: [Download GT3X Files](Examples/Python.md)
 
 Endpoints
 ---------
