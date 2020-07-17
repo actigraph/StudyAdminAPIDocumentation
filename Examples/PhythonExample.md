@@ -7,7 +7,7 @@ These scripts utilize the [CentrePoint V2 API](https://github.com/actigraph/Stud
 python get_study_id.py -apiAccessKey xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -apiSecretKey xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx -outf studies.txt
 ```
 
-In studies.txt , you will see the following:
+In [studies.txt](Python/Studies.txt) , you will see the following:
 
 ```
 [
@@ -22,7 +22,7 @@ In studies.txt , you will see the following:
 
 ### Step 2: Download gt3x data files
 
-Now that you have identified the study id of interest (the "Id" entry in the above-generated studies.txt), you can retrieve the raw .gt3x files for all subjects associated with that study:
+Refer to [download_data.py](Python/download_data.py). Now that you have identified the study id of interest (the "Id" entry in the above-generated studies.txt), you can retrieve the raw .gt3x files for all subjects associated with that study:
 
 
 
