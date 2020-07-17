@@ -6,23 +6,24 @@ The following is a C# example of the source code necessary to perform a request 
 ```c#
 string baseUrl = "https://studyadmin-api.actigraphcorp.com";
 string resourceUri = "/v1/studies";
+string endpointUri = baseUrl + resourceUri;
 string apiAccessKey = "<Api Access Key>";
 string apiSecretKey = "<Api Secret Key>";
 
-HttpResponseMessage resposne = SendRequestAsync(baseUrl, resourceUri, HttpMethod.Get, null, apiAccessKey, apiSecretKey).Result;
+HttpResponseMessage resposne = SendRequestAsync(endpointUri, HttpMethod.Get, null, apiAccessKey, apiSecretKey).Result;
 ```
 	
 **Example of method Sending Request to Study Admin API**
 ```c#
-public static async Task<HttpResponseMessage> SendRequestAsync(string baseUrl, string resourceUri, HttpMethod httpVerb, string requestContentJson, string apiAccessKey, string apiSecretKey)
+public static async Task<HttpResponseMessage> SendRequestAsync(string endpointUri, HttpMethod httpVerb, string requestContentJson, string apiAccessKey, string apiSecretKey)
 {
-    string endpointUri = baseUrl + resourceUri;
-    
+    // Generate HttpClient   
      HttpClient client = client = new HttpClient()
      {
-         BaseAddress = new Uri(baseUrl)
+         BaseAddress = new Uri("https://studyadmin-api.actigraphcorp.com")
      };
 
+     // Generate HttpRequestMessage
      HttpRequestMessage httpRequest = new HttpRequestMessage(httpVerb, endpointUri);
     
     try
@@ -34,11 +35,13 @@ public static async Task<HttpResponseMessage> SendRequestAsync(string baseUrl, s
             httpRequest.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
         }
 
+        // Build Request Header
         BuildRequestHeader(ref httpRequest, apiAccessKey, apiSecretKey);
         
+	// return response from API 
         return await client.SendAsync(httpRequest);
 
-    }
+	}
     catch (Exception)
     {
         throw;
