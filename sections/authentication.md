@@ -13,7 +13,7 @@ All requests will be authorized by including the HTTP authorization header.  The
 
     GET /v1/studies HTTP/1.1
     Host: studyadmin-api.actigraphcorp.com
-    Date: Mon, 26 Mar 2007 19:37:58 +0000
+    Date: Mon, 26 Mar 2007 19:37:58 GMT
     
     Authorization: AGS AKIAIOSFODNN7EXAMPLE:frJIUN8DYpKDtOLCwo//yllqDzg=
 
