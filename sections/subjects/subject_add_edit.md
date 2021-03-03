@@ -7,8 +7,7 @@ Add Subject (w/ Ability to Assign Activity Monitor)
 ---
 Creates a new subject with option to assign an activity monitor to the newly created subject.  
 
-Subjects are created within the context of a site, therefore the 'SiteId' property is required upon creating a new subject. The [List Sites](/sections/sites.md) API call will provide a listing of sites in which you can add subjects.  You must have CanAddSubjects=true for a Site in order to create a subject in it.  
-
+Subjects are created within the context of a site, therefore the 'SiteId' property is required upon creating a new subject. The [List Sites](/sections/sites.md) API call will provide a listing of sites in which you have access to. 
 
 The new Subject's Id is returned upon successful creation along with a 201 Created response.
 
@@ -67,7 +66,7 @@ DeviceSerial|String|||No||Activity Monitor's serial number to assign to subject 
 
 Edit Subject (w/ Ability to Assign Activity Monitor)
 ---
-Modifies an existing subject with option to assign an activity monitor to existing subject.  The [List Sites](/sections/sites.md) API call will provide a listing of sites in which you can add/edit subjects.  You must have CanAddSubjects=true for a Site in order to create a subject in it. A 200 OK response is returned for a successfully edited subject.
+Modifies an existing subject with option to assign an activity monitor to existing subject.  The [List Sites](/sections/sites.md) API call will provide a listing of sites in which you have access to. A 200 OK response is returned for a successfully edited subject.
 
 ### Request: ###
 
