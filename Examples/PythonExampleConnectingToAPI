@@ -48,8 +48,8 @@ def SendRequest ( httpMethod, Uri, apiAccessKey, apiSecretKey ):
     return response;
 
 baseUri = 'https://studyadmin-api.actigraphcorp.com'
-api_access_key = 'd237766e-a8d8-4aad-8e43-ce72fb388d8f'
-api_secret = str('a33c6672-4378-41e3-bbc3-557de671ee3c').encode('utf-8')
+api_access_key = '<api access key>'
+api_secret = str('<api access key>').encode('utf-8')
 
 # Get Studies Endppoint (returns list of studies)
 resourceUri = '/v1/studies'
