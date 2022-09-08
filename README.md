@@ -152,4 +152,4 @@ Example of a response with an empty json array. Applies to API endpoints that re
 
 Request Limiting
 ---------
-This API is request limited. We only allow a certain number of requests per day. Please contact [Actigraph](http://www.actigraphcorp.com/support/contact-support/) for more information.
+This API is request limited. We only allow a certain number of requests per day. Please contact [Actigraph](https://actigraphcorp.my.site.com/support/s/contactsupport) for more information.
