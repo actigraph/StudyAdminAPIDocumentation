@@ -55,8 +55,8 @@ DOB|ISO8601 Date||Subject's Date of Birth||
 Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
 Timezone|String||The Subject's timezone identifier from the IANA Timezone database|To view list of ALL IANA timezones goto: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones|
 Wear Position|String|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>|| 
-WeightLbs|Decimal||Weight ranges between 0 lbs to 2000 lbs||
-HeightCm|Decimal||Height ranges between 0 cm to 300 cm||
+WeightLbs|Decimal||Weight ranges between 1 lbs to 2000 lbs||
+HeightCm|Decimal||Height ranges between 1 cm to 300 cm||
 Data Collection Status|String|<ul><li>No Device Assigned</li><li>Incomplete Assignment</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
 Device Serial|String||The serial number of the activity monitor that is actively assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
