@@ -1,11 +1,19 @@
 [<< Back to Subjects](/sections/subjects.md)
 
-Subject Details and Subject Listing
+## Subject Details and Subject Listing
+
 ===
 
-Subject Listing
----
+### Adding Subject Height & Height Unit (32624, 32670)
 
+Height and height unit are included in the response when calling
+
+- GET /v1/studies/{StudyId}/subjects
+- GET /centrepoint/v3/Studies/{studyId}/Subjects
+
+### Subject Listing
+
+===
 
 Returns a list of all subjects within a given study. To retrieve a listing of studies refer to the [List Studies](/sections/studies.md#list-studies) API call.
 
@@ -25,6 +33,7 @@ Returns a list of all subjects within a given study. To retrieve a listing of st
             "Timezone": "US/CENTRAL",
             "WearPosition": "Left Wrist",
             "WeightLbs": 120.00,
+            "HeightCm": 299.99,
             "DataCollectionStatus": "Collecting",      
             "DeviceSerial": "TAS1D48341371"
         },
@@ -37,6 +46,7 @@ Returns a list of all subjects within a given study. To retrieve a listing of st
             "Timezone": "US/CENTRAL",
             "WearPosition": "Right Wrist",
             "WeightLbs": 150.00,
+            "HeightCm": 199.99,
             "DataCollectionStatus": "No Device Assigned",
             "DeviceSerial": null
         },
@@ -53,10 +63,13 @@ DOB|ISO8601 Date||Subject's Date of Birth||
 Gender|String|<ul><li>Male</li><li>Female</li></ul>|||
 Timezone|String||The Subject's timezone identifier from the IANA Timezone database|To view list of ALL IANA timezones goto: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones|
 Wear Position|String|<ul><li>Non-Dominant Wrist</li><li>Dominant Wrist</li><li>Left Non-Dominant Wrist</li><li>Left Dominant Wrist</li><li>Right Non-Dominant Wrist</li><li>Right Dominant Wrist</li><li>Waist</li><li>Left Wrist</li><li>Right Wrist</li><li>Ankle</li></ul>|| 
+WeightLbs|Decimal||Weight ranges between 1 lbs to 2000 lbs||
+HeightCm|Decimal||Height ranges between 1 cm to 300 cm||
 Data Collection Status|String|<ul><li>No Device Assigned</li><li>Incomplete Assignment</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
 Device Serial|String||The serial number of the activity monitor that is actively assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
-GET Subject Details (by system-wide primary key)
+### GET Subject Details (by system-wide primary key)
+
 ---
 Returns information about a given subject from the internal system-wide primary key.
 
@@ -75,11 +88,13 @@ Returns information about a given subject from the internal system-wide primary 
         "Timezone": "US/CENTRAL",
         "WearPosition": "Left Wrist",
         "WeightLbs": "105.74",
+        "HeightCm": 199.99,
         "DataCollectionStatus": "Collecting",      
         "DeviceSerial": "TAS1D48341371"
     }
 
-GET Subject Details (by study-specific subject identifier)
+### GET Subject Details (by study-specific subject identifier)
+
 ---
 
 Returns subject(s) within given study with study-specific subject identifier. The subject identifier is required field when creating subject data records in the CentrePoint system. To retrieve a listing of studies refer to the [List Studies](/sections/studies.md#list-studies) API call.
@@ -106,9 +121,8 @@ Returns subject(s) within given study with study-specific subject identifier. Th
             "Timezone": "US/CENTRAL",
             "WearPosition": "Left Wrist",
             "WeightLbs": 165.00,
+            "HeightCm": 199.99,
             "DataCollectionStatus": "Collecting",      
             "DeviceSerial": "TAS1D48341371"
         }
     ]
-
-
