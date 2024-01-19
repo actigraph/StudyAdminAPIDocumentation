@@ -1,11 +1,19 @@
 [<< Back to Subjects](/sections/subjects.md)
 
-Subject Details and Subject Listing
+## Subject Details and Subject Listing
+
 ===
 
-Subject Listing
----
+### Adding Subject Height & Height Unit (32624, 32670)
 
+Height and height unit are included in the response when calling
+
+- GET /v1/studies/{StudyId}/subjects
+- GET /centrepoint/v3/Studies/{studyId}/Subjects
+
+### Subject Listing
+
+===
 
 Returns a list of all subjects within a given study. To retrieve a listing of studies refer to the [List Studies](/sections/studies.md#list-studies) API call.
 
@@ -60,7 +68,8 @@ HeightCm|Decimal||Height ranges between 1 cm to 300 cm||
 Data Collection Status|String|<ul><li>No Device Assigned</li><li>Incomplete Assignment</li><li>Collecting</li><li>Collection Stopped</li></ul>|||
 Device Serial|String||The serial number of the activity monitor that is actively assigned to subject.|If subject is not assigned to a monitor, this field will be set to `null`.|
 
-GET Subject Details (by system-wide primary key)
+### GET Subject Details (by system-wide primary key)
+
 ---
 Returns information about a given subject from the internal system-wide primary key.
 
@@ -84,7 +93,8 @@ Returns information about a given subject from the internal system-wide primary 
         "DeviceSerial": "TAS1D48341371"
     }
 
-GET Subject Details (by study-specific subject identifier)
+### GET Subject Details (by study-specific subject identifier)
+
 ---
 
 Returns subject(s) within given study with study-specific subject identifier. The subject identifier is required field when creating subject data records in the CentrePoint system. To retrieve a listing of studies refer to the [List Studies](/sections/studies.md#list-studies) API call.
@@ -116,5 +126,3 @@ Returns subject(s) within given study with study-specific subject identifier. Th
             "DeviceSerial": "TAS1D48341371"
         }
     ]
-
-
